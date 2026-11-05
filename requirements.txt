@@ -1,0 +1,6 @@
+PyGObject>=3.36.0
+pycairo>=1.16.2
+python-xlib>=0.27
+polib>=1.1.0
+python-dbus>=1.2.16
+Pillow>=8.0.0

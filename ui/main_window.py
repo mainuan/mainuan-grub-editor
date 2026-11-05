@@ -1,0 +1,352 @@
+"""
+Main Application Window for Mainuan GRUB Editor.
+FIXED: CSS priority conflicts resolved
+"""
+
+import gi
+gi.require_version('Gtk', '3.0')
+from gi.repository import Gtk, Gdk, GLib, Pango, GdkPixbuf
+from pathlib import Path
+
+from core.i18n_manager import _
+
+# App constants
+APP_NAME = "Mainuan GRUB Editor"
+APP_VERSION = "2.0.2"
+DEFAULT_WINDOW_WIDTH = 900
+DEFAULT_WINDOW_HEIGHT = 500
+
+from ui.views.general_view import GeneralView
+from ui.views.boot_entries_view import BootEntriesView
+from ui.views.appearance_view import AppearanceView
+
+
+class MainWindow(Gtk.ApplicationWindow):
+    """Main application window for Mainuan GRUB Editor."""
+    
+    def __init__(self, application, environment_detector, theme_manager, i18n_manager, grub_manager):
+        """Initialize the main window."""
+        super().__init__(application=application)
+        
+        # Store manager references
+        self.application = application
+        self.environment_detector = environment_detector
+        self.theme_manager = theme_manager
+        self.i18n_manager = i18n_manager
+        self.grub_manager = grub_manager
+        
+        # Window properties
+        self.set_title(_(APP_NAME))
+        self.set_default_size(DEFAULT_WINDOW_WIDTH, DEFAULT_WINDOW_HEIGHT)
+        self.set_position(Gtk.WindowPosition.CENTER)
+        
+        # Apply CSS classes
+        self.get_style_context().add_class('mainuan-window')
+        try:
+            self.get_style_context().add_class('mainuan-welcome-window')
+            self.set_name('main-window')
+        except Exception:
+            pass
+        
+        # Create header bar
+        self._create_header_bar_with_fallback()
+        
+        # Setup main UI
+        self._setup_ui()
+        
+        # Show everything
+        self.show_all()
+        
+        # Set default tab and update system info
+        GLib.idle_add(lambda: self.notebook.set_current_page(0))
+        self._update_system_info()
+        
+        # Connect signals
+        self.connect('delete-event', self._on_delete_event)
+        self.connect('key-press-event', self._on_key_press)
+        
+        print(_("Main window created successfully"))
+
+    def _create_header_bar_with_fallback(self):
+        """Create HeaderBar matching Welcome apps."""
+        desktop_env = 'unknown'
+        try:
+            if self.environment_detector:
+                desktop_env = getattr(
+                    self.environment_detector.desktop_environment, 
+                    'value', 
+                    str(self.environment_detector.desktop_environment)
+                ).lower()
+        except Exception:
+            pass
+
+        print(_("[DEBUG] Desktop detected: {}").format(desktop_env))
+
+        # If XFCE/KDE, use native decorations
+        if desktop_env in ['xfce', 'kde', 'plasma']:
+            print(_("Using native window decorations (SSD)"))
+            return
+
+        # If GNOME or others, use CSD
+        print(_("Creating Client-Side Decorations (CSD)"))
+        header = Gtk.HeaderBar()
+        header.set_show_close_button(True)
+        header.set_title(_(APP_NAME))
+        
+        try:
+            header.set_has_subtitle(True)
+            header.set_subtitle(f"v{APP_VERSION}")
+        except Exception:
+            pass
+
+        header.set_decoration_layout("menu:minimize,maximize,close")
+        header.get_style_context().add_class('titlebar')
+        
+        self.set_titlebar(header)
+        self.header = header
+
+    def _setup_ui(self):
+        """Initialize main UI."""
+        main_vbox = Gtk.Box(orientation=Gtk.Orientation.VERTICAL, spacing=0)
+        self.add(main_vbox)
+
+        # Notebook
+        self.notebook = Gtk.Notebook()
+        self.notebook.set_scrollable(True)
+        self.notebook.set_tab_pos(Gtk.PositionType.TOP)
+        self.notebook.set_show_tabs(True)
+        self.notebook.set_show_border(False)
+        
+        try:
+            self.notebook.get_style_context().add_class('mainuan-notebook')
+        except Exception:
+            pass
+        
+        main_vbox.pack_start(self.notebook, True, True, 0)
+
+        # Create tabs
+        self.general_view = GeneralView(self)
+        self._add_tab(self.general_view, _("General Configuration"), "preferences-system")
+
+        self.boot_entries_view = BootEntriesView(self)
+        self._add_tab(self.boot_entries_view, _("Boot Entries"), "system-run")
+
+        self.appearance_view = AppearanceView(self)
+        self._add_tab(self.appearance_view, _("Appearance"), "preferences-desktop-theme")
+
+        # Progress bar (hidden)
+        self.progress_revealer = Gtk.Revealer()
+        self.progress_revealer.set_transition_type(Gtk.RevealerTransitionType.SLIDE_UP)
+
+        progress_box = Gtk.Box(orientation=Gtk.Orientation.VERTICAL, spacing=5)
+        progress_box.set_margin_start(20)
+        progress_box.set_margin_end(20)
+        progress_box.set_margin_bottom(10)
+
+        self.progress_bar = Gtk.ProgressBar()
+        self.progress_bar.set_show_text(True)
+        progress_box.pack_start(self.progress_bar, False, False, 0)
+
+        self.progress_label = Gtk.Label(label=_("Ready"))
+        progress_box.pack_start(self.progress_label, False, False, 0)
+
+        self.progress_revealer.add(progress_box)
+        self.progress_revealer.set_reveal_child(False)
+        
+        main_vbox.pack_end(self.progress_revealer, False, True, 0)
+
+        # Status bar
+        self._create_status_bar(main_vbox)
+
+    def _add_tab(self, content_widget, title, icon_name):
+        """Add tab with icon."""
+        label_box = Gtk.Box(orientation=Gtk.Orientation.HORIZONTAL, spacing=6)
+        icon = Gtk.Image.new_from_icon_name(icon_name, Gtk.IconSize.MENU)
+        label = Gtk.Label(label=title)
+        
+        label_box.pack_start(icon, False, False, 0)
+        label_box.pack_start(label, False, False, 0)
+        label_box.show_all()
+        
+        self.notebook.append_page(content_widget, label_box)
+
+    def _create_status_bar(self, main_vbox):
+        """Create footer status bar."""
+        status_box = Gtk.Box(orientation=Gtk.Orientation.HORIZONTAL, spacing=10)
+        status_box.set_margin_start(15)
+        status_box.set_margin_end(15)
+        status_box.set_margin_top(8)
+        status_box.set_margin_bottom(8)
+        
+        # Left: System Info
+        self.system_label = Gtk.Label()
+        self.system_label.set_halign(Gtk.Align.START)
+        self.system_label.get_style_context().add_class('dim-label')
+        status_box.pack_start(self.system_label, False, False, 0)
+        
+        # Right: Version
+        version_text = f"v{APP_VERSION}"
+        version_label = Gtk.Label(label=version_text)
+        version_label.set_halign(Gtk.Align.END)
+        version_label.get_style_context().add_class('dim-label')
+        status_box.pack_end(version_label, False, False, 0)
+        
+        main_vbox.pack_end(status_box, False, False, 0)
+
+    def _update_system_info(self):
+        """Detect and display system info."""
+        env_info = self.environment_detector.detect_all()
+        desktop = env_info['desktop_environment']
+        protocol = env_info['display_protocol']
+        
+        desktop_name = self._translate_desktop_name(desktop)
+        protocol_name = self._translate_protocol_name(protocol)
+        
+        self.system_label.set_text(f"{desktop_name}  ·  {protocol_name}")
+
+    def _translate_desktop_name(self, desktop_env):
+        """Translate desktop environment name."""
+        desktop_map = {
+            'gnome': _("GNOME"),
+            'kde': _("KDE Plasma"),
+            'plasma': _("KDE Plasma"),
+            'xfce': _("XFCE"),
+            'unknown': _("Unknown")
+        }
+        return desktop_map.get(desktop_env.lower(), _("Unknown"))
+    
+    def _translate_protocol_name(self, protocol):
+        """Translate display protocol name."""
+        protocol_map = {
+            'x11': _("X11"),
+            'wayland': _("Wayland"),
+            'unknown': _("Unknown")
+        }
+        return protocol_map.get(protocol.lower(), _("Unknown"))
+
+    def show_progress(self, message, fraction=None):
+        """Show progress bar."""
+        self.progress_label.set_text(message)
+        
+        if fraction is not None:
+            self.progress_bar.set_fraction(fraction)
+            self.progress_bar.set_text(f"{int(fraction * 100)}%")
+        else:
+            self.progress_bar.pulse()
+            self.progress_bar.set_text(_("Working..."))
+        
+        self.progress_revealer.set_reveal_child(True)
+        
+        while Gtk.events_pending():
+            Gtk.main_iteration()
+
+    def hide_progress(self):
+        """Hide progress bar."""
+        self.progress_revealer.set_reveal_child(False)
+        self.progress_label.set_text(_("Ready"))
+        self.progress_bar.set_fraction(0.0)
+        self.progress_bar.set_text("")
+
+    def _show_about(self, *args):
+        dialog = Gtk.AboutDialog()
+        dialog.set_transient_for(self)
+        dialog.set_modal(True)
+        dialog.set_program_name(_(APP_NAME))
+        dialog.set_version(APP_VERSION)
+        dialog.set_comments(_("GRUB boot loader manager for Mainuan Linux."))
+        dialog.set_authors(["David Caixinha <tugatechlab.contacto@gmail.com>"])
+        dialog.set_license_type(Gtk.License.GPL_3_0)
+        icon_path = Path(__file__).parent.parent / 'assets' / 'icons' / '64x64' / 'org.mainuan.grubeditor.png'
+        if icon_path.exists():
+            dialog.set_logo(GdkPixbuf.Pixbuf.new_from_file_at_scale(str(icon_path), 48, 48, True))
+        _about_css = Gtk.CssProvider()
+        _about_css.load_from_data(b"""
+            dialog, messagedialog {
+                background-color: #2b2b2b;
+                color: #ffffff;
+            }
+            dialog .background, messagedialog .background {
+                background-color: #2b2b2b;
+                color: #ffffff;
+            }
+            dialog > box, messagedialog > box {
+                background-color: #2b2b2b;
+            }
+            dialog label, messagedialog label {
+                color: #ffffff;
+            }
+            dialog button, messagedialog button {
+                background-image: none;
+                background-color: #333333;
+                color: #ffffff;
+                border: 1px solid #3c3c3c;
+                border-radius: 4px;
+                padding: 6px 14px;
+                min-height: 0;
+                box-shadow: none;
+            }
+            dialog button:hover, messagedialog button:hover {
+                background-color: #444444;
+                border-color: #08c8d0;
+            }
+            dialog stackswitcher button {
+                border-radius: 100px;
+                background-color: #2b2b2b;
+                background-image: none;
+                border: 1px solid #3c3c3c;
+                font-weight: normal;
+                padding: 4px 16px;
+                min-height: 0;
+                box-shadow: none;
+                color: #ffffff;
+            }
+            dialog stackswitcher button:hover {
+                background-color: #444444;
+                border-color: #08c8d0;
+            }
+            dialog stackswitcher button:checked {
+                background-color: #444444;
+                color: #ffffff;
+            }
+            dialog scrolledwindow,
+            dialog scrolledwindow viewport {
+                background-color: #2b2b2b;
+                border-radius: 0;
+            }
+        """)
+        Gtk.StyleContext.add_provider_for_screen(
+            Gdk.Screen.get_default(), _about_css,
+            Gtk.STYLE_PROVIDER_PRIORITY_USER
+        )
+        dialog.run()
+        dialog.destroy()
+
+    def _on_delete_event(self, widget, event):
+        """Handle window close."""
+        print(_("Main window closing..."))
+        return False
+
+    def _on_key_press(self, widget, event):
+        """Handle key press."""
+        keyval = event.keyval
+        state = event.state
+        
+        if keyval == Gdk.KEY_F1:
+            self._show_about()
+            return True
+
+        if state & Gdk.ModifierType.CONTROL_MASK:
+            if keyval == Gdk.KEY_q:
+                self.close()
+                return True
+            elif keyval in (Gdk.KEY_Tab, Gdk.KEY_ISO_Left_Tab):
+                current_page = self.notebook.get_current_page()
+                total_pages = self.notebook.get_n_pages()
+                if state & Gdk.ModifierType.SHIFT_MASK:
+                    next_page = (current_page - 1) % total_pages
+                else:
+                    next_page = (current_page + 1) % total_pages
+                self.notebook.set_current_page(next_page)
+                return True
+        
+        return False

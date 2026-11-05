@@ -1,0 +1,125 @@
+#!/bin/bash
+# Script generado automáticamente por Mainuan Packager
+# Para aplicaciones que requieren privilegios de root
+
+if [ $(id -u) -ne 0 ]; then
+    # No somos root, relanzar con pkexec
+    display=$DISPLAY
+    xauthority=$XAUTHORITY
+    xdg_runtime_dir=$XDG_RUNTIME_DIR
+    xdg_session_type=$XDG_SESSION_TYPE
+    xdg_current_desktop=$XDG_CURRENT_DESKTOP
+    gtk_theme=$GTK_THEME
+    
+    # Detect user theme preference (Dark/Light)
+    mainuan_theme_type="light"
+    
+    # Check GTK_THEME env var first
+    if [[ "$GTK_THEME" == *"dark"* ]]; then
+        mainuan_theme_type="dark"
+    # Check gsettings for GNOME/GTK
+    elif command -v gsettings &> /dev/null; then
+        scheme=$(gsettings get org.gnome.desktop.interface color-scheme 2>/dev/null)
+        if [[ "$scheme" == *"'prefer-dark'"* ]]; then
+            mainuan_theme_type="dark"
+        fi
+    fi
+    # Kde/Plasma check could be added here but usually GTK_THEME is set on modern Plasma
+
+    export MAINUAN_THEME_TYPE="$mainuan_theme_type"
+
+    pkexec --disable-internal-agent env \
+        DISPLAY=$display \
+        XAUTHORITY=$xauthority \
+        XDG_RUNTIME_DIR=$xdg_runtime_dir \
+        XDG_SESSION_TYPE=$xdg_session_type \
+        XDG_CURRENT_DESKTOP=$xdg_current_desktop \
+        GTK_THEME=$gtk_theme \
+        MAINUAN_THEME_TYPE=$mainuan_theme_type \
+        WMCLASS="org.mainuan.grubeditor" \
+        GDK_STARTUP_NOTIFICATION_ID="${STARTUP_ID:-0}" \
+        HOME=/root \
+        python3 -c "
+import sys
+import os
+sys.path.insert(0, '/usr/share/mainuan-grub-editor')
+os.environ['GDK_STARTUP_ID'] = '${GDK_STARTUP_NOTIFICATION_ID}'
+os.environ['WMCLASS'] = 'org.mainuan.grubeditor'
+
+import gi
+gi.require_version('Gtk', '3.0')
+from gi.repository import Gtk, GLib, Gdk
+
+# Establecer el nombre de la aplicación antes de importar módulos
+GLib.set_prgname('org.mainuan.grubeditor')
+GLib.set_application_name('mainuan-grub-editor')
+Gtk.Window.set_default_icon_name('org.mainuan.grubeditor')
+if hasattr(Gdk, 'set_program_class'):
+    Gdk.set_program_class('org.mainuan.grubeditor')
+
+# Importar y ejecutar el programa principal
+import main
+try:
+    if hasattr(main, 'main'):
+        sys.exit(main.main())
+    else:
+        # Buscar una función que pueda ser el punto de entrada
+        for attr_name in dir(main):
+            if attr_name.lower() in ['main', 'run', 'start']:
+                attr = getattr(main, attr_name)
+                if callable(attr):
+                    sys.exit(attr())
+                    break
+        else:
+            # Si no hay función main, simplemente importar es suficiente
+            pass
+except Exception as e:
+    print(f'Error al ejecutar main.py: {e}')
+    sys.exit(1)
+"
+    exit $?
+else
+    # Ya somos root, ejecutar directamente con los IDs correctos
+    export WMCLASS="org.mainuan.grubeditor"
+    export GDK_STARTUP_NOTIFICATION_ID="${STARTUP_ID:-0}"
+    cd /usr/share/mainuan-grub-editor
+    
+    python3 -c "
+import sys
+import os
+sys.path.insert(0, '/usr/share/mainuan-grub-editor')
+os.environ['GDK_STARTUP_ID'] = '${GDK_STARTUP_NOTIFICATION_ID}'
+os.environ['WMCLASS'] = 'org.mainuan.grubeditor'
+
+import gi
+gi.require_version('Gtk', '3.0')
+from gi.repository import Gtk, GLib, Gdk
+
+# Establecer el nombre de la aplicación antes de importar módulos
+GLib.set_prgname('org.mainuan.grubeditor')
+GLib.set_application_name('mainuan-grub-editor')
+Gtk.Window.set_default_icon_name('org.mainuan.grubeditor')
+if hasattr(Gdk, 'set_program_class'):
+    Gdk.set_program_class('org.mainuan.grubeditor')
+
+# Importar y ejecutar el programa principal
+import main
+try:
+    if hasattr(main, 'main'):
+        sys.exit(main.main())
+    else:
+        # Buscar una función que pueda ser el punto de entrada
+        for attr_name in dir(main):
+            if attr_name.lower() in ['main', 'run', 'start']:
+                attr = getattr(main, attr_name)
+                if callable(attr):
+                    sys.exit(attr())
+                    break
+        else:
+            # Si no hay función main, simplemente importar es suficiente
+            pass
+except Exception as e:
+    print(f'Error al ejecutar main.py: {e}')
+    sys.exit(1)
+"
+fi

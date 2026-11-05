@@ -1,0 +1,649 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Soplos GRUB Editor 2.0.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-01-11 18:39+0100\n"
+"PO-Revision-Date: 2026-01-11 00:00+0000\n"
+"Last-Translator: Sergi Perich <info@soploslinux.com>\n"
+"Language-Team: Sergi Perich <info@soploslinux.com>\n"
+"Language: de\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "/boot/grub/background.png"
+msgstr "/boot/grub/background.png"
+
+msgid "About"
+msgstr "Über"
+
+msgid "Add Entry"
+msgstr "Eintrag hinzufügen"
+
+msgid "Add entry"
+msgstr "Eintrag hinzufügen"
+
+msgid "Advanced Options"
+msgstr "Erweiterte Optionen"
+
+msgid "Appearance"
+msgstr "Erscheinungsbild"
+
+#, python-brace-format
+msgid "Application error: {err}"
+msgstr "Anwendungsfehler: {err}"
+
+msgid "Application error: {}"
+msgstr "Anwendungsfehler: {}"
+
+msgid "Application initialization completed"
+msgstr "Anwendungsinitialisierung abgeschlossen"
+
+msgid "Apply"
+msgstr "Anwenden"
+
+msgid "Apply Appearance Settings"
+msgstr "Darstellungseinstellungen anwenden"
+
+msgid "Apply Background Settings"
+msgstr "Hintergrundeinstellungen anwenden"
+
+msgid "Apply Changes"
+msgstr "Änderungen anwenden"
+
+msgid "Apply Theme"
+msgstr "Design anwenden"
+
+msgid "Apply selected font"
+msgstr "Ausgewählte Schriftart anwenden"
+
+msgid ""
+"Applying theme '{}' will disable any custom background and colors. Continue?"
+msgstr ""
+"Das Anwenden des Designs '{}' deaktiviert alle benutzerdefinierten "
+"Hintergründe und Farben. Fortfahren?"
+
+msgid "Background"
+msgstr "Hintergrund"
+
+msgid "Settings applied successfully!"
+msgstr "Einstellungen erfolgreich angewendet!"
+
+msgid "Background color:"
+msgstr "Hintergrundfarbe:"
+
+msgid "Background image:"
+msgstr "Hintergrundbild:"
+
+msgid "Background removed successfully!"
+msgstr "Hintergrund erfolgreich entfernt!"
+
+msgid "Boot Configuration"
+msgstr "Boot-Konfiguration"
+
+msgid "Boot Entries"
+msgstr "Boot-Einträge"
+
+msgid "Browse..."
+msgstr "Durchsuchen..."
+
+msgid "Changes Saved"
+msgstr "Änderungen gespeichert"
+
+#, python-brace-format
+msgid "Cleanup warning: {err}"
+msgstr "Bereinigungswarnung: {err}"
+
+msgid "Colors (when not using theme):"
+msgstr "Farben (wenn kein Design verwendet wird):"
+
+msgid "Convert TrueType fonts to GRUB format (PF2):"
+msgstr "TrueType-Schriftarten in GRUB-Format (PF2) konvertieren:"
+
+msgid "Convert and Install Font"
+msgstr "Schriftart konvertieren und installieren"
+
+msgid "Creating Client-Side Decorations (CSD)"
+msgstr "Erstelle Client-Side Decorations (CSD)"
+
+msgid "Custom entry dialog - TODO"
+msgstr "Benutzerdefinierter Eintragsdialog - TODO"
+
+msgid "Default Boot Entry:"
+msgstr "Standard-Boot-Eintrag:"
+
+#, python-brace-format
+msgid "Desktop Environment: {env}"
+msgstr "Desktop-Umgebung: {env}"
+
+msgid "Detect other operating systems"
+msgstr "Andere Betriebssysteme erkennen"
+
+msgid "Disable"
+msgstr "Deaktivieren"
+
+msgid "Disable Theme"
+msgstr "Design deaktivieren"
+
+msgid "Enabled"
+msgstr "Aktiviert"
+
+msgid ""
+"Ensure dependencies are installed: sudo apt install python3-gi python3-gi-"
+"cairo gir1.2-gtk-3.0"
+msgstr ""
+"Stellen Sie sicher, dass die Abhängigkeiten installiert sind: sudo apt "
+"install python3-gi python3-gi-cairo gir1.2-gtk-3.0"
+
+msgid "Entry {}"
+msgstr "Eintrag {}"
+
+msgid "Error"
+msgstr "Fehler"
+
+#, python-brace-format
+msgid "Error creating main window: {err}"
+msgstr "Fehler beim Erstellen des Hauptfensters: {err}"
+
+#, python-brace-format
+msgid "Error initializing GRUB Manager: {err}"
+msgstr "Fehler beim Initialisieren des GRUB-Managers: {err}"
+
+#, python-brace-format
+msgid "Error initializing environment detection: {err}"
+msgstr "Fehler beim Initialisieren der Umgebungserkennung: {err}"
+
+#, python-brace-format
+msgid "Error initializing internationalization: {err}"
+msgstr "Fehler beim Initialisieren der Internationalisierung: {err}"
+
+#, python-brace-format
+msgid "Error initializing theming: {err}"
+msgstr "Fehler beim Initialisieren des Designs: {err}"
+
+msgid "Error installing theme: {}"
+msgstr "Fehler beim Installieren des Designs: {}"
+
+msgid "Error loading GRUB config: {}"
+msgstr "Fehler beim Laden der GRUB-Konfiguration: {}"
+
+msgid "Error parsing grub.cfg: {}"
+msgstr "Fehler beim Analysieren von grub.cfg: {}"
+
+msgid "Error reading GRUB config: {}"
+msgstr "Fehler beim Lesen der GRUB-Konfiguration: {}"
+
+#, python-brace-format
+msgid "Error removing config key: {err}"
+msgstr "Fehler beim Entfernen des Konfigurationsschlüssels: {err}"
+
+#, python-brace-format
+msgid "Error running update-grub: {err}"
+msgstr "Fehler beim Ausführen von update-grub: {err}"
+
+#, python-brace-format
+msgid "Error saving GRUB config: {err}"
+msgstr "Fehler beim Speichern der GRUB-Konfiguration: {err}"
+
+msgid "Error writing custom.cfg: {err}"
+msgstr "Fehler beim Schreiben von custom.cfg: {err}"
+
+#, python-brace-format
+msgid "Error setting application icon: {err}"
+msgstr "Fehler beim Festlegen des Anwendungssymbols: {err}"
+
+#, python-brace-format
+msgid "Error setting up application menu: {err}"
+msgstr "Fehler beim Einrichten des Anwendungsmenüs: {err}"
+
+msgid "Failed to convert font: {}"
+msgstr "Fehler beim Konvertieren der Schriftart: {}"
+
+msgid "Failed to elevate privileges: {}"
+msgstr "Fehler beim Erhöhen der Rechte: {}"
+
+msgid "Failed to extract archive: {}"
+msgstr "Fehler beim Extrahieren des Archivs: {}"
+
+msgid "Failed to install theme: {}"
+msgstr "Fehler beim Installieren des Designs: {}"
+
+msgid "Failed to remove theme: {}"
+msgstr "Fehler beim Entfernen des Designs: {}"
+
+#, python-brace-format
+msgid "Failed to save config: {err}"
+msgstr "Fehler beim Speichern der Konfiguration: {err}"
+
+msgid "Failed to change 05_debian_theme permissions: {err}"
+msgstr ""
+"Berechtigungen für 05_debian_theme konnten nicht geändert werden: {err}"
+
+msgid "Failed to write custom.cfg: {err}"
+msgstr "Fehler beim Schreiben von custom.cfg: {err}"
+
+msgid "Failed to save configuration"
+msgstr "Fehler beim Speichern der Konfiguration"
+
+msgid "Failed to update GRUB"
+msgstr "Fehler beim Aktualisieren von GRUB"
+
+msgid "Failed to update GRUB. Check logs for details."
+msgstr ""
+"Fehler beim Aktualisieren von GRUB. Überprüfen Sie die Protokolle für "
+"Details."
+
+#, python-brace-format
+msgid "Failed to update GRUB: {err}"
+msgstr "Fehler beim Aktualisieren von GRUB: {err}"
+
+msgid "Font '{}' will be used after running update-grub."
+msgstr "Die Schriftart '{}' wird nach Ausführung von update-grub verwendet."
+
+msgid "Font Applied"
+msgstr "Schriftart angewendet"
+
+msgid "Font converted and installed: {}"
+msgstr "Schriftart konvertiert und installiert: {}"
+
+msgid "Font files"
+msgstr "Schriftartdateien"
+
+msgid "Font size:"
+msgstr "Schriftgröße:"
+
+msgid "Fonts"
+msgstr "Schriftarten"
+
+msgid "GNOME"
+msgstr "GNOME"
+
+msgid "GRUB Manager initialized"
+msgstr "GRUB-Manager initialisiert"
+
+msgid "GRUB config not found at {}"
+msgstr "GRUB-Konfiguration nicht gefunden unter {}"
+
+msgid "GRUB configuration updated successfully!"
+msgstr "GRUB-Konfiguration erfolgreich aktualisiert!"
+
+msgid "GRUB updated successfully!"
+msgstr "GRUB erfolgreich aktualisiert!"
+
+msgid "General Configuration"
+msgstr "Allgemeine Konfiguration"
+
+msgid "Highlight background:"
+msgstr "Hervorhebungshintergrund:"
+
+msgid "Highlight text:"
+msgstr "Hervorhebungstext:"
+
+msgid "Images"
+msgstr "Bilder"
+
+msgid "Import error: {}"
+msgstr "Importfehler: {}"
+
+msgid "Include recovery options"
+msgstr "Wiederherstellungsoptionen einschließen"
+
+msgid "Information"
+msgstr "Information"
+
+msgid "Install..."
+msgstr "Installieren..."
+
+msgid "Installed GRUB fonts:"
+msgstr "Installierte GRUB-Schriftarten:"
+
+msgid "KDE Plasma"
+msgstr "KDE Plasma"
+
+msgid "Kernel Parameters"
+msgstr "Kernel-Parameter"
+
+msgid "Kernel Parameters:"
+msgstr "Kernel-Parameter:"
+
+#, python-brace-format
+msgid "Language initialized: {lang}"
+msgstr "Sprache initialisiert: {lang}"
+
+msgid "Main window closing..."
+msgstr "Hauptfenster wird geschlossen..."
+
+msgid "Main window created successfully"
+msgstr "Hauptfenster erfolgreich erstellt"
+
+msgid "Name:"
+msgstr "Name:"
+
+msgid "No Background"
+msgstr "Kein Hintergrund"
+
+msgid "No theme.txt found in archive"
+msgstr "Keine theme.txt im Archiv gefunden"
+
+msgid "Path"
+msgstr "Pfad"
+
+msgid "Please select a background image first."
+msgstr "Bitte wählen Sie zuerst ein Hintergrundbild aus."
+
+msgid "Please select a valid font file."
+msgstr "Bitte wählen Sie eine gültige Schriftartdatei aus."
+
+msgid "Preview"
+msgstr "Vorschau"
+
+msgid "Quit"
+msgstr "Beenden"
+
+msgid "Ready"
+msgstr "Bereit"
+
+#, python-brace-format
+msgid "Received signal {num}, shutting down..."
+msgstr "Signal {num} empfangen, wird heruntergefahren..."
+
+msgid "Remove"
+msgstr "Entfernen"
+
+msgid "Remove Background"
+msgstr "Hintergrund entfernen"
+
+msgid "Remove Entry"
+msgstr "Eintrag entfernen"
+
+msgid "Remove Theme"
+msgstr "Design entfernen"
+
+msgid "Remove entry"
+msgstr "Eintrag entfernen"
+
+msgid "Remove entry '{}'?"
+msgstr "Eintrag '{}' entfernen?"
+
+#, python-brace-format
+msgid "Removed key {key} from config"
+msgstr "Schlüssel {key} aus Konfiguration entfernt"
+
+msgid "Run update-grub now to apply changes?"
+msgstr "update-grub jetzt ausführen, um Änderungen anzuwenden?"
+
+msgid "Running on {} ({})"
+msgstr "Läuft auf {} ({})"
+
+msgid "Screen Resolution:"
+msgstr "Bildschirmauflösung:"
+
+msgid "Select TTF/OTF font file..."
+msgstr "Wähle TTF/OTF-Schriftartdatei..."
+
+msgid "Select background image"
+msgstr "Hintergrundbild auswählen"
+
+msgid "No image selected"
+msgstr "Kein Bild ausgewählt"
+
+msgid "Select font file"
+msgstr "Schriftartdatei auswählen"
+
+msgid "Select theme archive"
+msgstr "Designarchiv auswählen"
+
+msgid "Set 05_debian_theme active={active}"
+msgstr "Setze 05_debian_theme aktiv={active}"
+
+msgid "Show boot menu"
+msgstr "Boot-Menü anzeigen"
+
+msgid "Shutting down Soplos Grub Editor..."
+msgstr "Soplos Grub Editor wird beendet..."
+
+#, python-brace-format
+msgid "Starting {name} v{ver}..."
+msgstr "Starte {name} v{ver}..."
+
+msgid "Success"
+msgstr "Erfolgreich"
+
+#, python-brace-format
+msgid "Successfully saved config to {path}"
+msgstr "Konfiguration erfolgreich in {path} gespeichert"
+
+msgid "Successfully saved config using pkexec"
+msgstr "Konfiguration mit pkexec erfolgreich gespeichert"
+
+msgid "Successfully updated GRUB"
+msgstr "GRUB erfolgreich aktualisiert"
+
+msgid "Text color:"
+msgstr "Textfarbe:"
+
+msgid "Theme"
+msgstr "Design"
+
+msgid "Theme '{}' installed successfully!"
+msgstr "Design '{}' erfolgreich installiert!"
+
+msgid "Theme '{}' removed successfully!"
+msgstr "Design '{}' erfolgreich entfernt!"
+
+msgid "Theme applied successfully!"
+msgstr "Design erfolgreich angewendet!"
+
+msgid "Theme archives"
+msgstr "Designarchive"
+
+msgid "Theme disabled."
+msgstr "Design deaktiviert."
+
+#, python-brace-format
+msgid "Theme loaded: {theme}"
+msgstr "Design geladen: {theme}"
+
+msgid "Theme:"
+msgstr "Design:"
+
+msgid "Themes include colors and fonts. Use 'Background' tab for custom setup."
+msgstr ""
+"Designs enthalten Farben und Schriftarten. Verwenden Sie den Tab "
+"'Hintergrund' für benutzerdefinierte Einstellungen."
+
+msgid ""
+"This will disable any theme and use your custom background/colors. Continue?"
+msgstr ""
+"Dies deaktiviert jedes Design und verwendet Ihren benutzerdefinierten "
+"Hintergrund/Farben. Fortfahren?"
+
+msgid "This will permanently delete theme '{}'. Are you sure?"
+msgstr "Dies löscht das Design '{}' dauerhaft. Sind Sie sicher?"
+
+msgid "This will remove the background image from GRUB. Continue?"
+msgstr "Dies entfernt das Hintergrundbild von GRUB. Fortfahren?"
+
+msgid "This will remove the theme and set default colors. Continue?"
+msgstr ""
+"Dies entfernt das Design und setzt die Standardfarben zurück. Fortfahren?"
+
+msgid "Timeout (seconds):"
+msgstr "Zeitüberschreitung (Sekunden):"
+
+msgid "Type:"
+msgstr "Typ:"
+
+msgid "Unknown"
+msgstr "Unbekannt"
+
+msgid "Unsupported archive format"
+msgstr "Nicht unterstütztes Archivformat"
+
+msgid "Use UUID for root partition"
+msgstr "Verwende UUID für Root-Partition"
+
+msgid "Using native window decorations (SSD)"
+msgstr "Verwende native Fensterdekorationen (SSD)"
+
+msgid "Warning: Pre-elevation detection failed: {}"
+msgstr "Warnung: Vor-Erkennung der Rechteerhöhung fehlgeschlagen: {}"
+
+msgid "Wayland"
+msgstr "Wayland"
+
+msgid "Working..."
+msgstr "Arbeite..."
+
+msgid "Would set GRUB_FONT={}"
+msgstr "Würde GRUB_FONT={} setzen"
+
+msgid "X11"
+msgstr "X11"
+
+msgid "XFCE"
+msgstr "XFCE"
+
+msgid "[DEBUG] Desktop detected: {}"
+msgstr "[DEBUG] Desktop erkannt: {}"
+
+msgid "[ThemeManager] WARNING: No theme found, using 'dark'"
+msgstr "[ThemeManager] WARNUNG: Kein Design gefunden, verwende 'dark'"
+
+msgid "[ThemeManager] ⚠ Could not set GTK theme preference: {}"
+msgstr "[ThemeManager] ⚠ Konnte GTK-Designpräferenz nicht setzen: {}"
+
+msgid "[ThemeManager] ✗ ERROR loading theme: {}"
+msgstr "[ThemeManager] ✗ FEHLER beim Laden des Designs: {}"
+
+msgid "[ThemeManager] ✗ ERROR: Theme file not found: {}"
+msgstr "[ThemeManager] ✗ FEHLER: Designdatei nicht gefunden: {}"
+
+msgid "[ThemeManager] ✗✗✗ Failed to initialize theming ✗✗✗"
+msgstr "[ThemeManager] ✗✗✗ Fehler beim Initialisieren des Designs ✗✗✗"
+
+msgid "auto"
+msgstr "automatisch"
+
+msgid "firmware"
+msgstr "Firmware"
+
+msgid "memtest"
+msgstr "Speichertest"
+
+msgid "quiet splash resume=UUID=..."
+msgstr "quiet splash resume=UUID=..."
+
+msgid "recovery"
+msgstr "Wiederherstellung"
+
+msgid "system"
+msgstr "System"
+
+msgid "update-grub not found"
+msgstr "update-grub nicht gefunden"
+
+msgid "Remove selected font"
+msgstr "Ausgewählte Schriftart entfernen"
+
+msgid "Delete Font?"
+msgstr "Schriftart löschen?"
+
+msgid "Are you sure you want to permanently delete '{}'?"
+msgstr "Möchten Sie '{}' wirklich dauerhaft löschen?"
+
+msgid "Font deleted and removed from configuration."
+msgstr "Schriftart gelöscht und aus der Konfiguration entfernt."
+
+msgid "Font deleted successfully."
+msgstr "Schriftart erfolgreich gelöscht."
+
+msgid "Failed to delete font: {}"
+msgstr "Fehler beim Löschen der Schriftart: {}"
+
+msgid "Failed to save font configuration to /etc/default/grub"
+msgstr "Fehler beim Speichern der Schriftartkonfiguration in /etc/default/grub"
+
+msgid "Font deleted. GRUB configuration updated."
+msgstr "Schriftart gelöscht. GRUB-Konfiguration aktualisiert."
+
+msgid "0: Submenu » Entry"
+msgstr "0: Untermenü » Eintrag"
+
+msgid "Silent update"
+msgstr "Stille Aktualisierung"
+
+msgid "Updating GRUB on startup..."
+msgstr "GRUB wird beim Start aktualisiert..."
+
+msgid "Disable submenus"
+msgstr "Untermenüs deaktivieren"
+
+msgid "Cancel"
+msgstr "Abbrechen"
+
+msgid "Save"
+msgstr "Speichern"
+
+msgid "Not supported"
+msgstr "Nicht unterstützt"
+
+msgid "Could not update the entry"
+msgstr "Der Eintrag konnte nicht aktualisiert werden"
+
+msgid "Failed to save the custom entry"
+msgstr "Der benutzerdefinierte Eintrag konnte nicht gespeichert werden"
+
+msgid "Delete '{}' from /boot? This also removes its serial-console variant, since both share the same file."
+msgstr "'{}' aus /boot löschen? Dadurch wird auch die Serial-Console-Variante entfernt, da beide dieselbe Datei verwenden."
+
+msgid "Delete '{}' from /etc/grub.d/40_custom? This cannot be undone."
+msgstr "'{}' aus /etc/grub.d/40_custom löschen? Dies kann nicht rückgängig gemacht werden."
+
+msgid "This entry belongs to an installed kernel or operating system. GRUB regenerates it automatically from what's installed on your disk, so it can't be disabled or removed individually here — you would need to uninstall the kernel or operating system itself."
+msgstr "Dieser Eintrag gehört zu einem installierten Kernel oder Betriebssystem. GRUB erzeugt ihn automatisch neu, basierend auf dem, was auf Ihrer Festplatte installiert ist. Er kann hier nicht einzeln deaktiviert oder entfernt werden — Sie müssten den Kernel oder das Betriebssystem selbst deinstallieren."
+
+msgid "Write the raw GRUB menuentry block (this is appended to /etc/grub.d/40_custom):"
+msgstr "Schreiben Sie den rohen GRUB-menuentry-Block (wird an /etc/grub.d/40_custom angehängt):"
+
+msgid "Refusing to delete unexpected file: {}"
+msgstr "Löschen einer unerwarteten Datei wird verweigert: {}"
+
+msgid "Could not delete {}: {}"
+msgstr "{} konnte nicht gelöscht werden: {}"
+
+msgid "Could not read {}: {}"
+msgstr "{} konnte nicht gelesen werden: {}"
+
+msgid "Entry '{}' not found in {}"
+msgstr "Eintrag '{}' nicht gefunden in {}"
+
+msgid "Could not write {}: {}"
+msgstr "{} konnte nicht geschrieben werden: {}"
+
+msgid "Could not write to {}: {}"
+msgstr "Es konnte nicht in {} geschrieben werden: {}"
+
+msgid "Set {script} active={active}"
+msgstr "{script} aktiv gesetzt auf {active}"
+
+msgid "Failed to change {script} permissions: {err}"
+msgstr "Berechtigungen von {script} konnten nicht geändert werden: {err}"
+
+msgid "Removed background cache: {path}"
+msgstr "Hintergrund-Cache entfernt: {path}"
+
+msgid "Failed to remove cache {path}: {err}"
+msgstr "Cache {path} konnte nicht entfernt werden: {err}"
+
+msgid "Default Boot Mode:"
+msgstr "Standard-Boot-Modus:"
+
+msgid "Fixed entry"
+msgstr "Fester Eintrag"
+
+msgid "Last installed kernel"
+msgstr "Zuletzt installierter Kernel"
+
+msgid "Last booted kernel"
+msgstr "Zuletzt gestarteter Kernel"

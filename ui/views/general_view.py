@@ -1,0 +1,444 @@
+"""
+General Configuration View for Mainuan Grub Editor.
+Replicates legacy v1.x functionality with modern Mainuan styling.
+"""
+
+import gi
+gi.require_version('Gtk', '3.0')
+from gi.repository import Gtk, GLib, Pango
+
+from core.i18n_manager import _
+
+
+class GeneralView(Gtk.Box):
+    """General configuration tab - matches legacy GRUB Editor functionality."""
+    
+    def __init__(self, parent_window):
+        super().__init__(orientation=Gtk.Orientation.VERTICAL, spacing=15)
+        self.parent_window = parent_window
+        self.grub_manager = parent_window.grub_manager
+
+        # Raw GRUB_DEFAULT as found on disk, plus the entry the combo was
+        # left on after loading. Both are needed so that pressing Apply
+        # without touching the boot entry never rewrites GRUB_DEFAULT.
+        self._original_default = None
+        self._initial_entry_index = -1
+        self._initial_mode = None
+
+        # Margins
+        self.set_margin_start(20)
+        self.set_margin_end(20)
+        self.set_margin_top(20)
+        self.set_margin_bottom(20)
+        
+        self._create_ui()
+        self._load_data()
+        
+    def _create_ui(self):
+        """Create the UI matching legacy layout."""
+        # Section 1: Boot Configuration (Full Width)
+        config_frame = Gtk.Frame(label=_("Boot Configuration"))
+        config_frame.get_style_context().add_class('mainuan-card')
+        config_box = Gtk.Box(orientation=Gtk.Orientation.VERTICAL, spacing=6)
+        config_box.set_margin_start(15)
+        config_box.set_margin_end(15)
+        config_box.set_margin_top(10)
+        config_box.set_margin_bottom(15)
+        
+        # Row 0: Default Boot Mode
+        row0 = Gtk.Box(orientation=Gtk.Orientation.HORIZONTAL, spacing=10)
+        label0 = Gtk.Label(label=_("Default Boot Mode:"))
+        label0.set_halign(Gtk.Align.START)
+        label0.set_width_chars(25)
+        self.boot_mode_combo = Gtk.ComboBoxText()
+        self.boot_mode_combo.set_hexpand(True)
+        # The id is the raw mode name used by the code; the label is only what
+        # the user reads, so a translated label never reaches /etc/default/grub.
+        self.boot_mode_combo.append('fixed', _("Fixed entry"))
+        self.boot_mode_combo.append('last_installed', _("Last installed kernel"))
+        self.boot_mode_combo.append('last_booted', _("Last booted kernel"))
+        self.boot_mode_combo.set_active_id('last_installed')
+        self.boot_mode_combo.connect('changed', self._on_boot_mode_changed)
+        row0.pack_start(label0, False, False, 0)
+        row0.pack_start(self.boot_mode_combo, True, True, 0)
+        config_box.pack_start(row0, False, False, 0)
+
+        # Row 1: Default Boot Entry
+        row1 = Gtk.Box(orientation=Gtk.Orientation.HORIZONTAL, spacing=10)
+        label1 = Gtk.Label(label=_("Default Boot Entry:"))
+        label1.set_halign(Gtk.Align.START)
+        label1.set_width_chars(25)
+        # Kept so the whole row can be greyed out when the mode is not "fixed"
+        self.default_entry_label = label1
+        self.default_entry_combo = Gtk.ComboBox()
+        renderer = Gtk.CellRendererText()
+        renderer.set_property("ellipsize", Pango.EllipsizeMode.END)
+        self.default_entry_combo.pack_start(renderer, True)
+        self.default_entry_combo.add_attribute(renderer, "text", 0)
+        self.default_entry_combo.set_hexpand(True)
+        # Entries loaded dynamically in _load_data()
+        row1.pack_start(label1, False, False, 0)
+        row1.pack_start(self.default_entry_combo, True, True, 0)
+        config_box.pack_start(row1, False, False, 0)
+        
+        # Row 2: Timeout (seconds)
+        row2 = Gtk.Box(orientation=Gtk.Orientation.HORIZONTAL, spacing=10)
+        label2 = Gtk.Label(label=_("Timeout (seconds):"))
+        label2.set_halign(Gtk.Align.START)
+        label2.set_width_chars(25)
+        self.timeout_spin = Gtk.SpinButton()
+        self.timeout_spin.set_range(0, 60)
+        self.timeout_spin.set_increments(1, 5)
+        self.timeout_spin.set_value(5)
+        self.timeout_spin.set_hexpand(True)
+        self.timeout_spin.connect('value-changed', self._on_timeout_changed)
+        row2.pack_start(label2, False, False, 0)
+        row2.pack_start(self.timeout_spin, True, True, 0)
+        config_box.pack_start(row2, False, False, 0)
+        
+        # Row 3: Screen Resolution
+        row3 = Gtk.Box(orientation=Gtk.Orientation.HORIZONTAL, spacing=10)
+        label3 = Gtk.Label(label=_("Screen Resolution:"))
+        label3.set_halign(Gtk.Align.START)
+        label3.set_width_chars(25)
+        self.resolution_combo = Gtk.ComboBoxText()
+        self.resolution_combo.set_hexpand(True)
+        # 16:9, 16:10, 4:3, and legacy resolutions
+        resolutions = [
+            "auto",
+            # 16:9 (widescreen)
+            "3840x2160", "2560x1440", "1920x1080", "1600x900", "1366x768", "1280x720",
+            # 16:10 (widescreen)
+            "2560x1600", "1920x1200", "1680x1050", "1440x900", "1280x800",
+            # 4:3 (standard/legacy)
+            "1600x1200", "1280x1024", "1024x768", "800x600", "640x480",
+        ]
+        for res in resolutions:
+            # The id holds the raw value written to /etc/default/grub; the
+            # label is only what the user reads. "auto" is the one entry with
+            # a translation, and writing the translated form would produce
+            # GRUB_GFXMODE=automatisch on a German system, which GRUB rejects.
+            label = _("auto") if res == "auto" else res
+            self.resolution_combo.append(res, label)
+        self.resolution_combo.set_active(0)
+        row3.pack_start(label3, False, False, 0)
+        row3.pack_start(self.resolution_combo, True, True, 0)
+        config_box.pack_start(row3, False, False, 0)
+        
+        config_frame.add(config_box)
+        self.pack_start(config_frame, False, False, 0)
+        
+        # Section 2: Two Columns (Advanced Options | Kernel Parameters)
+        middle_columns_box = Gtk.Box(orientation=Gtk.Orientation.HORIZONTAL, spacing=10)
+        # Force equal width for split columns
+        middle_columns_box.set_homogeneous(True)
+        self.pack_start(middle_columns_box, True, True, 0)
+        
+        # -- Column 1: Advanced Options --
+        advanced_frame = Gtk.Frame(label=_("Advanced Options"))
+        advanced_frame.get_style_context().add_class('mainuan-card')
+        advanced_box = Gtk.Box(orientation=Gtk.Orientation.VERTICAL, spacing=6)
+        advanced_box.set_margin_start(15)
+        advanced_box.set_margin_end(15)
+        advanced_box.set_margin_top(10)
+        advanced_box.set_margin_bottom(15)
+        
+        # Checkbox: Detect other operating systems
+        self.detect_os_check = Gtk.CheckButton(label=_("Detect other operating systems"))
+        advanced_box.pack_start(self.detect_os_check, False, False, 0)
+        
+        # Checkbox: Show boot menu
+        self.show_menu_check = Gtk.CheckButton(label=_("Show boot menu"))
+        self.show_menu_check.set_active(True)
+        advanced_box.pack_start(self.show_menu_check, False, False, 0)
+        
+        # Checkbox: Include recovery options
+        self.recovery_check = Gtk.CheckButton(label=_("Include recovery options"))
+        self.recovery_check.set_active(True)
+        advanced_box.pack_start(self.recovery_check, False, False, 0)
+        
+        advanced_frame.add(advanced_box)
+        middle_columns_box.pack_start(advanced_frame, True, True, 0)
+        
+        # -- Column 2: Kernel Parameters --
+        kernel_frame = Gtk.Frame(label=_("Kernel Parameters"))
+        kernel_frame.get_style_context().add_class('mainuan-card-compact')
+        kernel_box = Gtk.Box(orientation=Gtk.Orientation.VERTICAL, spacing=0)
+        
+        # Nested box for content with margins
+        content_box = Gtk.Box(orientation=Gtk.Orientation.VERTICAL, spacing=10)
+        content_box.set_margin_start(15)
+        content_box.set_margin_end(15)
+        content_box.set_margin_top(10)
+        
+        kernel_label = Gtk.Label(label=_("Kernel Parameters:"))
+        kernel_label.set_halign(Gtk.Align.START)
+        content_box.pack_start(kernel_label, False, False, 0)
+        
+        self.kernel_entry = Gtk.Entry()
+        self.kernel_entry.set_placeholder_text(_("quiet splash resume=UUID=..."))
+        content_box.pack_start(self.kernel_entry, False, False, 0)
+        
+        kernel_box.pack_start(content_box, False, False, 0)
+        
+        # Expanding spacer
+        kernel_box.pack_start(Gtk.Box(), True, True, 0)
+        
+        # Apply button (tucked into the corner with 0px margin, relying on card padding)
+        apply_btn = Gtk.Button(label=_("Apply Changes"))
+        apply_btn.get_style_context().add_class('suggested-action')
+        apply_btn.set_halign(Gtk.Align.END)
+        apply_btn.set_valign(Gtk.Align.END)
+        # We use 0 margins here; the 6px padding from .mainuan-card-compact provides the gap
+        apply_btn.set_margin_end(0)
+        apply_btn.set_margin_bottom(0)
+        apply_btn.connect('clicked', self._on_apply)
+        kernel_box.pack_start(apply_btn, False, False, 0)
+        
+        kernel_frame.add(kernel_box)
+        middle_columns_box.pack_start(kernel_frame, True, True, 0)
+        
+        
+        self.show_all()
+    
+    def _load_data(self):
+        """Load current GRUB configuration."""
+        try:
+            config = self.grub_manager.config
+            
+            # Load boot entries for Default Boot Entry dropdown
+            entries = self.grub_manager.get_menu_entries()
+            
+            # Create a ListStore: Col 0 is display text, Col 1 is full name
+            store = Gtk.ListStore(str, str)
+            self.default_entry_combo.set_model(store)
+            
+            self.entry_names = []
+            for i, entry in enumerate(entries):
+                full_name = entry.get('name', _('Unknown'))
+                display_name = entry.get('display_name', full_name)
+                
+                # Format for display: "0: Kernel name" or "0: Submenu » Kernel"
+                if '>' in full_name:
+                    display_text = f"{i}: {full_name.replace('>', ' » ')}"
+                else:
+                    display_text = f"{i}: {display_name}"
+                    
+                store.append([display_text, full_name])
+                self.entry_names.append(full_name)
+            
+            # Select current default
+            default = config.get('GRUB_DEFAULT', '0')
+            
+            # Identify current selection either by index or name
+            try:
+                default_idx = int(default)
+                if 0 <= default_idx < len(self.entry_names):
+                    self.default_entry_combo.set_active(default_idx)
+                else:
+                    self.default_entry_combo.set_active(0)
+            except ValueError:
+                # Value is a hierarchical name string
+                if default in self.entry_names:
+                    idx = self.entry_names.index(default)
+                    self.default_entry_combo.set_active(idx)
+                else:
+                    # Fallback for "saved" or custom entries
+                    it = store.prepend([f"[{default}]", default])
+                    self.default_entry_combo.set_active_iter(it)
+
+            # Remember what was on disk and where the combo ended up, so
+            # get_config() can tell "the user chose this entry" apart from
+            # "this is simply what was already configured".
+            self._original_default = default
+            self._initial_entry_index = self.default_entry_combo.get_active()
+
+            # Derive the boot mode from the two keys that define it.
+            # GRUB_DEFAULT=saved without GRUB_SAVEDEFAULT is not "last booted":
+            # it boots whatever grub-set-default recorded, so it stays "fixed"
+            # and the combo keeps showing it verbatim.
+            savedefault = config.get('GRUB_SAVEDEFAULT', 'false').lower() in ('true', 'y', 'yes', '1')
+            if default == 'saved' and savedefault:
+                mode = 'last_booted'
+            elif default == '0':
+                mode = 'last_installed'
+            else:
+                mode = 'fixed'
+            self._initial_mode = mode
+            self.boot_mode_combo.set_active_id(mode)
+            self._update_entry_row_state()
+
+            # Timeout
+            timeout = config.get('GRUB_TIMEOUT', '5')
+            try:
+                self.timeout_spin.set_value(int(timeout))
+            except ValueError:
+                self.timeout_spin.set_value(5)
+            
+            # Resolution
+            gfxmode = config.get('GRUB_GFXMODE', 'auto')
+            # Matched against the id (the raw value), never against the visible
+            # label, which may be translated.
+            self.resolution_combo.set_active_id(gfxmode)
+            
+            # Kernel params
+            cmdline = config.get('GRUB_CMDLINE_LINUX_DEFAULT', '')
+            self.kernel_entry.set_text(cmdline)
+            
+            # Booleans
+            timeout_style = config.get('GRUB_TIMEOUT_STYLE', 'menu')
+            self.show_menu_check.set_active(timeout_style != 'hidden')
+            
+            disable_recovery = config.get('GRUB_DISABLE_RECOVERY', 'false')
+            self.recovery_check.set_active(disable_recovery.lower() != 'true')
+            
+            disable_os_prober = config.get('GRUB_DISABLE_OS_PROBER', 'false')
+            self.detect_os_check.set_active(disable_os_prober.lower() != 'true')
+            
+            # Apply UI automation rules for initial state
+            self._update_menu_checkbox_state()
+            
+        except Exception as e:
+            print(_("Error loading GRUB config: {}").format(e))
+    
+    def _on_boot_mode_changed(self, combo):
+        """Enable the boot entry selector only when a fixed entry is chosen."""
+        self._update_entry_row_state()
+
+    def _update_entry_row_state(self):
+        """
+        Picking a specific entry only makes sense in "fixed entry" mode.
+        In the other two modes GRUB decides on its own, so the selector is
+        greyed out instead of showing a value that would be ignored.
+        """
+        is_fixed = self.boot_mode_combo.get_active_id() == 'fixed'
+        self.default_entry_combo.set_sensitive(is_fixed)
+        self.default_entry_label.set_sensitive(is_fixed)
+
+    def _on_timeout_changed(self, spin_button):
+        """Handle timeout changes to enforce logical rules."""
+        self._update_menu_checkbox_state()
+
+    def _update_menu_checkbox_state(self):
+        """
+        If timeout is 0, it makes no sense to show the menu.
+        Automatically uncheck and disable the checkbox to guide the user.
+        """
+        if int(self.timeout_spin.get_value()) == 0:
+            self.show_menu_check.set_active(False)
+            self.show_menu_check.set_sensitive(False)
+            self.show_menu_check.set_tooltip_text(_("Menu cannot be shown when timeout is 0"))
+        else:
+            self.show_menu_check.set_sensitive(True)
+            self.show_menu_check.set_tooltip_text("")
+            
+    def get_config(self):
+        """Return current configuration from UI - only changed/existing keys."""
+        original = self.grub_manager.config
+        
+        config = {}
+        
+        # Boot mode. An empty value makes save_config() drop the key, which is
+        # what the two non-fixed modes want for GRUB_SAVEDEFAULT.
+        mode = self.boot_mode_combo.get_active_id() or 'fixed'
+
+        if mode == 'last_installed':
+            # Entry 0 is always the newest kernel, so this needs no extra key.
+            config['GRUB_DEFAULT'] = '0'
+            config['GRUB_SAVEDEFAULT'] = ''
+        elif mode == 'last_booted':
+            config['GRUB_DEFAULT'] = 'saved'
+            config['GRUB_SAVEDEFAULT'] = 'true'
+        else:
+            # Fixed entry. The stored value is only kept verbatim when nothing
+            # was chosen at all: same mode as on load and same entry. That is
+            # what stops merely opening this tab and pressing Apply from
+            # pinning the boot entry to the current kernel, which would keep
+            # any later kernel install from ever being booted.
+            # Switching the mode to "fixed" is itself an explicit choice, so
+            # in that case the entry shown in the selector is written out.
+            if (mode == self._initial_mode
+                    and self.default_entry_combo.get_active() == self._initial_entry_index
+                    and self._original_default is not None):
+                config['GRUB_DEFAULT'] = self._original_default
+            else:
+                # Column 1 is the full hierarchical name
+                active_iter = self.default_entry_combo.get_active_iter()
+                if active_iter:
+                    model = self.default_entry_combo.get_model()
+                    config['GRUB_DEFAULT'] = model.get_value(active_iter, 1)
+                else:
+                    config['GRUB_DEFAULT'] = '0'
+            config['GRUB_SAVEDEFAULT'] = ''
+
+
+        config['GRUB_TIMEOUT'] = str(int(self.timeout_spin.get_value()))
+        config['GRUB_GFXMODE'] = self.resolution_combo.get_active_id() or 'auto'
+        config['GRUB_CMDLINE_LINUX_DEFAULT'] = self.kernel_entry.get_text()
+        
+        # Only include these if they differ from default OR already exist in config
+        timeout_style = 'menu' if self.show_menu_check.get_active() else 'hidden'
+        if 'GRUB_TIMEOUT_STYLE' in original or timeout_style != 'menu':
+            config['GRUB_TIMEOUT_STYLE'] = timeout_style
+        
+        disable_recovery = 'false' if self.recovery_check.get_active() else 'true'
+        if 'GRUB_DISABLE_RECOVERY' in original or disable_recovery != 'false':
+            config['GRUB_DISABLE_RECOVERY'] = disable_recovery
+        
+        disable_os_prober = 'false' if self.detect_os_check.get_active() else 'true'
+        if 'GRUB_DISABLE_OS_PROBER' in original or disable_os_prober != 'false':
+            config['GRUB_DISABLE_OS_PROBER'] = disable_os_prober
+        
+        return config
+    
+    def _on_apply(self, button):
+        """Apply changes to GRUB configuration."""
+        config = self.get_config()
+        
+        if self.grub_manager.save_config(config):
+            # Ask to run update-grub
+            dialog = Gtk.MessageDialog(
+                transient_for=self.parent_window,
+                flags=0,
+                message_type=Gtk.MessageType.QUESTION,
+                buttons=Gtk.ButtonsType.YES_NO,
+                text=_("Changes Saved")
+            )
+            dialog.format_secondary_text(_("Run update-grub now to apply changes?"))
+            response = dialog.run()
+            dialog.destroy()
+            
+            if response == Gtk.ResponseType.YES:
+                if self.grub_manager.update_grub():
+                    info = Gtk.MessageDialog(
+                        transient_for=self.parent_window,
+                        flags=0,
+                        message_type=Gtk.MessageType.INFO,
+                        buttons=Gtk.ButtonsType.OK,
+                        text=_("Success")
+                    )
+                    info.format_secondary_text(_("GRUB updated successfully!"))
+                    info.run()
+                    info.destroy()
+                else:
+                    err = Gtk.MessageDialog(
+                        transient_for=self.parent_window,
+                        flags=0,
+                        message_type=Gtk.MessageType.ERROR,
+                        buttons=Gtk.ButtonsType.OK,
+                        text=_("Error")
+                    )
+                    err.format_secondary_text(_("Failed to update GRUB"))
+                    err.run()
+                    err.destroy()
+        else:
+            err = Gtk.MessageDialog(
+                transient_for=self.parent_window,
+                flags=0,
+                message_type=Gtk.MessageType.ERROR,
+                buttons=Gtk.ButtonsType.OK,
+                text=_("Error")
+            )
+            err.format_secondary_text(_("Failed to save configuration"))
+            err.run()
+            err.destroy()

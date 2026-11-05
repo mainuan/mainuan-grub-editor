@@ -1,0 +1,368 @@
+/* Base Theme for Mainuan GRUB Editor - GTK3 CSS */
+/* Structural styles only. Colors come from dark.css or light.css variables. */
+
+/* Application Window */
+window {
+    background-color: @theme_bg_color;
+    color: @theme_fg_color;
+}
+
+.mainuan-window {
+    background-color: @theme_bg_color;
+    color: @theme_fg_color;
+}
+
+/* Main Content Area */
+.mainuan-content {
+    padding: 20px;
+    background-color: @theme_base_color;
+    border-radius: 8px;
+}
+
+/* HeaderBar */
+headerbar,
+.titlebar {
+    background-color: @mainuan_header_bg;
+    color: @theme_fg_color;
+    border-bottom: 1px solid @borders;
+    box-shadow: none;
+}
+
+headerbar button.titlebutton {
+    color: @theme_fg_color;
+    background: transparent;
+    border: none;
+    padding: 6px;
+    border-radius: 4px;
+}
+
+headerbar button.titlebutton:hover {
+    background-color: @mainuan_button_hover_bg;
+}
+
+headerbar button.titlebutton.close:hover {
+    background-color: @error_color;
+    color: white;
+}
+
+/* Notebook (Tabs) Styling */
+notebook {
+    background-color: @mainuan_header_bg;
+    border: 1px solid @borders;
+}
+
+notebook>header {
+    background-color: @mainuan_header_bg;
+    border: none;
+    box-shadow: none;
+}
+
+notebook>header tabs {
+    background-color: transparent;
+    border: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* Tab Styling */
+notebook>header tab {
+    background-color: @mainuan_tab_bg;
+    color: @mainuan_tab_fg;
+    border: 1px solid @borders;
+    border-bottom: none;
+    margin: 0 2px 0 0;
+    padding: 8px 20px;
+    border-radius: 4px 4px 0 0;
+    box-shadow: none;
+    outline: none;
+}
+
+/* Hover State */
+notebook>header tab:hover {
+    background-color: @mainuan_tab_hover_bg;
+    color: @theme_fg_color;
+    box-shadow: none;
+}
+
+/* Checked/Active State */
+notebook>header tab:checked {
+    background-color: @mainuan_tab_checked_bg;
+    color: @mainuan_blue;
+    border-top: 3px solid @mainuan_blue;
+    border-left: 1px solid @borders;
+    border-right: 1px solid @borders;
+    border-bottom: none;
+    box-shadow: none;
+}
+
+/* Remove focus rings */
+notebook>header tab:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+/* Content Area */
+notebook>stack {
+    background-color: @theme_bg_color;
+    border: 1px solid @borders;
+    border-top: none;
+}
+
+/* Buttons */
+button {
+    border-radius: 6px;
+    padding: 8px 16px;
+    border: 1px solid @borders;
+    background-color: @mainuan_button_bg;
+    color: @theme_fg_color;
+    font-weight: bold;
+    box-shadow: none;
+    text-shadow: none;
+}
+
+button:hover {
+    background-color: @mainuan_button_hover_bg;
+    border-color: @mainuan_blue;
+    color: @theme_fg_color;
+}
+
+button:active {
+    background-color: @theme_selected_bg_color;
+    color: @theme_selected_fg_color;
+}
+
+button.suggested-action {
+    background-color: @theme_selected_bg_color;
+    color: @theme_selected_fg_color;
+    border: none;
+}
+
+button.suggested-action:hover {
+    background-color: @mainuan_blue_hover;
+}
+
+button.destructive-action {
+    background-color: @error_color;
+    color: white;
+    border: none;
+}
+
+button.destructive-action:hover {
+    background-color: #ff6b6b;
+}
+
+/* Cards and Containers */
+.mainuan-card {
+    background-color: @theme_base_color;
+    border: 1px solid @borders;
+    border-radius: 8px;
+    padding: 16px;
+    margin: 8px;
+}
+
+.mainuan-card-compact {
+    background-color: @theme_base_color;
+    border: 1px solid @borders;
+    border-radius: 8px;
+    padding: 6px;
+    margin: 8px;
+}
+
+.mainuan-card:hover {
+    background-color: @theme_selected_bg_color;
+    color: @theme_selected_fg_color;
+}
+
+/* Status and Progress */
+.mainuan-status-label {
+    color: @theme_fg_color;
+    font-size: 14px;
+}
+
+progressbar {
+    border-radius: 4px;
+}
+
+progressbar trough {
+    background-color: @mainuan_progressbar_trough;
+    border: 1px solid @borders;
+    border-radius: 4px;
+}
+
+progressbar progress {
+    background-color: @mainuan_blue;
+    border-radius: 4px;
+}
+
+/* Icons */
+.mainuan-icon-large {
+    min-width: 48px;
+    min-height: 48px;
+}
+
+.mainuan-icon-medium {
+    min-width: 32px;
+    min-height: 32px;
+}
+
+.mainuan-icon-small {
+    min-width: 16px;
+    min-height: 16px;
+}
+
+/* Separators */
+separator {
+    background-color: @borders;
+    margin: 10px 0;
+}
+
+/* Text styles */
+.dim-label {
+    color: @insensitive_fg_color;
+}
+
+label {
+    color: @theme_fg_color;
+}
+
+/* Scrolled windows */
+scrolledwindow {
+    background-color: @theme_base_color;
+}
+
+scrolledwindow viewport {
+    background-color: @theme_base_color;
+}
+
+/* Frames */
+frame {
+    border: 1px solid @borders;
+    background-color: @theme_base_color;
+}
+
+frame>border {
+    border: none;
+}
+
+/* Lists and trees */
+list,
+treeview {
+    background-color: @theme_base_color;
+    color: @theme_fg_color;
+    font-size: 13px;
+}
+
+/* TreeView headers */
+treeview.view header button {
+    background-color: @mainuan_treeview_header_bg;
+    color: @theme_fg_color;
+    border: 1px solid @borders;
+    padding: 6px 8px;
+    font-weight: 500;
+    font-size: 13px;
+}
+
+treeview.view header button:hover {
+    background-color: @mainuan_tab_hover_bg;
+}
+
+/* TreeView cells */
+treeview.view {
+    background-color: @theme_bg_color;
+    color: @theme_fg_color;
+}
+
+treeview.view:selected,
+treeview.view:selected:focus,
+treeview.view cell:selected {
+    background-color: @mainuan_blue;
+    color: #000000;
+}
+
+treeview.view cell {
+    padding: 4px 8px;
+    border: none;
+}
+
+/* Row hover effect */
+list row:hover,
+treeview.view:hover {
+    background-color: @mainuan_treeview_hover_bg;
+}
+
+/* Grid lines */
+treeview.view.separator {
+    min-height: 1px;
+    background-color: @borders;
+}
+
+/* Checkbox in TreeView */
+treeview.view check,
+treeview.view radio {
+    min-width: 18px;
+    min-height: 18px;
+    margin: 2px;
+}
+
+/* Entry fields */
+entry {
+    background-color: @mainuan_entry_bg;
+    color: @theme_fg_color;
+    border: 1px solid @borders;
+    box-shadow: none;
+}
+
+entry:focus {
+    border-color: @mainuan_blue;
+}
+
+/* Custom button styles */
+.mainuan-button-primary {
+    background-color: @theme_bg_color;
+    color: @theme_fg_color;
+    border: 1px solid @borders;
+    padding: 10px 20px;
+    font-weight: bold;
+    border-radius: 4px;
+}
+
+.mainuan-button-primary:hover {
+    background-color: @theme_unfocused_bg_color;
+}
+
+.mainuan-button-secondary {
+    background-color: transparent;
+    color: @theme_fg_color;
+    border: 1px solid @borders;
+    padding: 8px 16px;
+    font-weight: normal;
+    border-radius: 4px;
+}
+
+.mainuan-button-secondary:hover {
+    background-color: @hover_overlay;
+}
+
+.mainuan-button-accent {
+    background-color: transparent;
+    color: @error_color;
+    border: 1px solid @error_color;
+    padding: 8px 16px;
+    font-weight: bold;
+    border-radius: 4px;
+}
+
+.mainuan-button-accent:hover {
+    background-color: @hover_overlay;
+}
+
+/* Dialog action area */
+.dialog-action-area {
+    background-color: @theme_bg_color;
+}
+
+/* Remove focus outlines */
+* {
+    outline-color: rgba(8, 200, 208, 0.5);
+    outline-style: none;
+}
