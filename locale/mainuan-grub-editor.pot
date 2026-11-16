@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: Mainuan GRUB Editor\n"
 "Report-Msgid-Bugs-To: https://github.com/MainuanLinux/mainuan-grub-editor/"
 "issues\n"
-"POT-Creation-Date: 2026-11-16 11:24-0300\n"
+"POT-Creation-Date: 2026-11-16 11:30-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,8 +18,17 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: core/application.py:23 ui/main_window.py:14
+#: assets/org.mainuan.grubeditor.desktop.in:4 core/application.py:23
+#: ui/main_window.py:14
 msgid "Mainuan GRUB Editor"
+msgstr ""
+
+#: assets/org.mainuan.grubeditor.desktop.in:5
+msgid "Graphical editor for GRUB configuration"
+msgstr ""
+
+#: assets/org.mainuan.grubeditor.desktop.in:10
+msgid "grub;boot;system;mainuan;"
 msgstr ""
 
 #: core/application.py:64
@@ -839,12 +848,4 @@ msgstr ""
 
 #: ui/views/general_view.py:442
 msgid "Failed to save configuration"
-msgstr ""
-
-#: assets/org.mainuan.grubeditor.desktop.in:5
-msgid "Graphical editor for GRUB configuration"
-msgstr ""
-
-#: assets/org.mainuan.grubeditor.desktop.in:10
-msgid "grub;boot;system;mainuan;"
 msgstr ""
