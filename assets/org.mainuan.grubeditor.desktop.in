@@ -1,0 +1,13 @@
+[Desktop Entry]
+Version=2.0.2
+Type=Application
+Name=Mainuan GRUB Editor
+Comment=Graphical editor for GRUB configuration
+Exec=mainuan-grub-editor
+Icon=org.mainuan.grubeditor
+Terminal=false
+Categories=GTK;Settings;System;DesktopSettings;
+Keywords=grub;boot;system;mainuan;
+StartupWMClass=org.mainuan.grubeditor
+X-GNOME-Application-ID=org.mainuan.grubeditor
+X-AppStream-Metadata=/usr/share/metainfo/org.mainuan.grubeditor.metainfo.xml

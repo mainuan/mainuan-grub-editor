@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # Builds mainuan-grub-editor_<version>_all.deb from this repository.
 # Usage: ./packaging/build-deb.sh [output-dir]      (default output: ./dist)
-# Needs: dpkg-deb, python3 with Pillow (python3-pil), gzip
+# Needs: dpkg-deb, python3 with Pillow (python3-pil), gzip, gettext (msgfmt)
 set -euo pipefail
 
 ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
@@ -21,15 +21,30 @@ install -d "$STAGE/DEBIAN" "$STAGE$APP" "$STAGE/usr/bin" \
 # Application files (everything except packaging, VCS and build leftovers)
 tar -C "$ROOT" \
     --exclude='./packaging' --exclude='./dist' --exclude='./.git' \
+    --exclude='./locale' --exclude='./po' --exclude='./tests' --exclude='*.desktop.in' \
     --exclude='.gitignore' --exclude='.gitkeep' --exclude='__pycache__' \
     --exclude='*.pyc' --exclude='*.deb' -cf - . | tar -C "$STAGE$APP" -xf -
 
 # Launcher, desktop entry, metainfo, docs
 install -m 0755 "$ROOT/debian/mainuan-grub-editor" "$STAGE/usr/bin/mainuan-grub-editor"
-install -m 0644 "$ROOT/assets/org.mainuan.grubeditor.desktop" "$STAGE/usr/share/applications/"
 install -m 0644 "$ROOT/debian/org.mainuan.grubeditor.metainfo.xml" "$STAGE/usr/share/metainfo/"
 install -m 0644 "$ROOT/debian/copyright" "$STAGE/usr/share/doc/mainuan-grub-editor/copyright"
 gzip -9n -c "$ROOT/docs/mainuan-grub-editor.1" > "$STAGE/usr/share/man/man1/mainuan-grub-editor.1.gz"
+
+# Translations: catalogs from locale/<lang>/LC_MESSAGES/*.po (listed in po/LINGUAS)
+# become /usr/share/locale/<lang>/LC_MESSAGES/mainuan-grub-editor.mo.
+"$ROOT/po/i18n.sh" compile "$STAGE/usr/share/locale"
+# Desktop entry: Name/Comment/Keywords translated from the same catalogs.
+# msgfmt --desktop wants <lang>.po + LINGUAS in one directory.
+DESKTOP_PO="$(mktemp -d)"
+trap 'rm -rf "$STAGE" "$DESKTOP_PO"' EXIT
+cp "$ROOT/po/LINGUAS" "$DESKTOP_PO/LINGUAS"
+for lang in $(grep -vE '^\s*(#|$)' "$ROOT/po/LINGUAS"); do
+    ln -s "$ROOT/locale/$lang/LC_MESSAGES/mainuan-grub-editor.po" "$DESKTOP_PO/$lang.po"
+done
+msgfmt --desktop --template="$ROOT/assets/org.mainuan.grubeditor.desktop.in" -d "$DESKTOP_PO" \
+       -o "$STAGE/usr/share/applications/org.mainuan.grubeditor.desktop"
+chmod 0644 "$STAGE/usr/share/applications/org.mainuan.grubeditor.desktop"
 
 # Icons: one correctly sized PNG per hicolor size, generated from the 1024px master
 python3 - "$ROOT/assets/icons/org.mainuan.grubeditor.png" "$STAGE" <<'PY'

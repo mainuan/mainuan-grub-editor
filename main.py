@@ -27,7 +27,7 @@ def main():
         important_vars = [
             'DISPLAY', 'XAUTHORITY', 'XDG_RUNTIME_DIR', 'DBUS_SESSION_BUS_ADDRESS',
             'WAYLAND_DISPLAY', 'XDG_CURRENT_DESKTOP', 'XDG_SESSION_TYPE',
-            'HOME', 'LANG', 'GDK_BACKEND', 'QT_QPA_PLATFORM', 'GTK_THEME'
+            'HOME', 'LANG', 'LANGUAGE', 'LC_ALL', 'LC_MESSAGES', 'GDK_BACKEND', 'QT_QPA_PLATFORM', 'GTK_THEME'
         ]
 
         env_vars = []

@@ -1,0 +1,10 @@
+# Files with user-visible strings; read by po/i18n.sh extract.
+core/application.py
+core/grub_manager.py
+core/theme_manager.py
+main.py
+ui/main_window.py
+ui/views/appearance_view.py
+ui/views/boot_entries_view.py
+ui/views/general_view.py
+assets/org.mainuan.grubeditor.desktop.in

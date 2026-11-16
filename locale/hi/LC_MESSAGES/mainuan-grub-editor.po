@@ -1,0 +1,866 @@
+# Hindi translations for Mainuan GRUB package.
+# Copyright (C) 2026 Mainuan
+# This file is distributed under the same license as the Mainuan GRUB Editor package.
+# Automatically generated, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Mainuan GRUB Editor\n"
+"Report-Msgid-Bugs-To: https://github.com/MainuanLinux/mainuan-grub-editor/"
+"issues\n"
+"POT-Creation-Date: 2026-11-16 11:30-0300\n"
+"PO-Revision-Date: 2026-11-16 11:30-0300\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: hi <https://github.com/mainuan>\n"
+"Language: hi\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: assets/org.mainuan.grubeditor.desktop.in:4 core/application.py:23
+#: ui/main_window.py:14
+msgid "Mainuan GRUB Editor"
+msgstr "Mainuan GRUB संपादक"
+
+#: assets/org.mainuan.grubeditor.desktop.in:5
+msgid "Graphical editor for GRUB configuration"
+msgstr "GRUB कॉन्फ़िगरेशन के लिए ग्राफ़िकल संपादक"
+
+#: assets/org.mainuan.grubeditor.desktop.in:10
+msgid "grub;boot;system;mainuan;"
+msgstr "grub;boot;system;mainuan;बूट;सिस्टम;स्टार्टअप;"
+
+#: core/application.py:64
+msgid "Shutting down Mainuan Grub Editor..."
+msgstr "Mainuan GRUB संपादक बंद किया जा रहा है..."
+
+#: core/application.py:82
+#, python-brace-format
+msgid "Cleanup warning: {err}"
+msgstr "सफ़ाई चेतावनी: {err}"
+
+#: core/application.py:86
+#, python-brace-format
+msgid "Starting {name} v{ver}..."
+msgstr "{name} v{ver} शुरू किया जा रहा है..."
+
+#: core/application.py:95
+msgid "Application initialization completed"
+msgstr "अनुप्रयोग आरंभीकरण पूरा हुआ"
+
+#: core/application.py:123
+#, python-brace-format
+msgid "Desktop Environment: {env}"
+msgstr "डेस्कटॉप वातावरण: {env}"
+
+#: core/application.py:126
+#, python-brace-format
+msgid "Error initializing environment detection: {err}"
+msgstr "वातावरण पहचान आरंभ करने में त्रुटि: {err}"
+
+#: core/application.py:134
+#, python-brace-format
+msgid "Language initialized: {lang}"
+msgstr "भाषा आरंभ की गई: {lang}"
+
+#: core/application.py:143
+#, python-brace-format
+msgid "Error initializing internationalization: {err}"
+msgstr "अंतर्राष्ट्रीयकरण आरंभ करने में त्रुटि: {err}"
+
+#: core/application.py:150
+#, python-brace-format
+msgid "Theme loaded: {theme}"
+msgstr "थीम लोड की गई: {theme}"
+
+#: core/application.py:152
+#, python-brace-format
+msgid "Error initializing theming: {err}"
+msgstr "थीम आरंभ करने में त्रुटि: {err}"
+
+#: core/application.py:159
+msgid "Synchronizing GRUB configuration..."
+msgstr "GRUB कॉन्फ़िगरेशन सिंक्रनाइज़ किया जा रहा है..."
+
+#: core/application.py:164
+msgid "GRUB Manager initialized"
+msgstr "GRUB प्रबंधक आरंभ किया गया"
+
+#: core/application.py:166
+#, python-brace-format
+msgid "Error initializing GRUB Manager: {err}"
+msgstr "GRUB प्रबंधक आरंभ करने में त्रुटि: {err}"
+
+#: core/application.py:183
+#, python-brace-format
+msgid "Error setting application icon: {err}"
+msgstr "अनुप्रयोग आइकन सेट करने में त्रुटि: {err}"
+
+#: core/application.py:211
+#, python-brace-format
+msgid "Error creating main window: {err}"
+msgstr "मुख्य विंडो बनाने में त्रुटि: {err}"
+
+#: core/application.py:226
+msgid "About"
+msgstr "परिचय"
+
+#: core/application.py:232
+msgid "Quit"
+msgstr "बाहर निकलें"
+
+#: core/application.py:236
+#, python-brace-format
+msgid "Error setting up application menu: {err}"
+msgstr "अनुप्रयोग मेनू सेट करने में त्रुटि: {err}"
+
+#: core/application.py:245
+#, python-brace-format
+msgid "Received signal {num}, shutting down..."
+msgstr "संकेत {num} प्राप्त हुआ, बंद किया जा रहा है..."
+
+#: core/application.py:261
+#, python-brace-format
+msgid "Application error: {err}"
+msgstr "अनुप्रयोग त्रुटि: {err}"
+
+#: core/grub_manager.py:38
+#, python-brace-format
+msgid "GRUB config not found at {}"
+msgstr "GRUB कॉन्फ़िगरेशन {} पर नहीं मिला"
+
+#: core/grub_manager.py:56
+#, python-brace-format
+msgid "Error reading GRUB config: {}"
+msgstr "GRUB कॉन्फ़िगरेशन पढ़ने में त्रुटि: {}"
+
+#: core/grub_manager.py:168
+#, python-brace-format
+msgid "Successfully saved config to {path}"
+msgstr "कॉन्फ़िगरेशन {path} में सफलतापूर्वक सहेजा गया"
+
+#: core/grub_manager.py:182
+msgid "Successfully saved config using pkexec"
+msgstr "pkexec का उपयोग करके कॉन्फ़िगरेशन सफलतापूर्वक सहेजा गया"
+
+#: core/grub_manager.py:185
+#, python-brace-format
+msgid "Failed to save config: {err}"
+msgstr "कॉन्फ़िगरेशन सहेजने में विफल: {err}"
+
+#: core/grub_manager.py:189
+#, python-brace-format
+msgid "Error saving GRUB config: {err}"
+msgstr "GRUB कॉन्फ़िगरेशन सहेजने में त्रुटि: {err}"
+
+#: core/grub_manager.py:225 core/grub_manager.py:236
+#, python-brace-format
+msgid "Removed key {key} from config"
+msgstr "कॉन्फ़िगरेशन से कुंजी {key} हटाई गई"
+
+#: core/grub_manager.py:241
+#, python-brace-format
+msgid "Error removing config key: {err}"
+msgstr "कॉन्फ़िगरेशन कुंजी हटाने में त्रुटि: {err}"
+
+#: core/grub_manager.py:267
+#, python-brace-format
+msgid "Set {script} active={active}"
+msgstr "{script} active={active} सेट किया गया"
+
+#: core/grub_manager.py:269
+#, python-brace-format
+msgid "Failed to change {script} permissions: {err}"
+msgstr "{script} की अनुमतियाँ बदलने में विफल: {err}"
+
+#: core/grub_manager.py:306
+#, python-brace-format
+msgid "Removed background cache: {path}"
+msgstr "पृष्ठभूमि कैश हटाया गया: {path}"
+
+#: core/grub_manager.py:308
+#, python-brace-format
+msgid "Failed to remove cache {path}: {err}"
+msgstr "कैश {path} हटाने में विफल: {err}"
+
+#: core/grub_manager.py:400
+#, python-brace-format
+msgid "Failed to write custom.cfg: {err}"
+msgstr "custom.cfg लिखने में विफल: {err}"
+
+#: core/grub_manager.py:403
+#, python-brace-format
+msgid "Error writing custom.cfg: {err}"
+msgstr "custom.cfg लिखने में त्रुटि: {err}"
+
+#: core/grub_manager.py:425
+msgid "update-grub not found"
+msgstr "update-grub नहीं मिला"
+
+#: core/grub_manager.py:437
+msgid "Successfully updated GRUB"
+msgstr "GRUB सफलतापूर्वक अद्यतन किया गया"
+
+#: core/grub_manager.py:440
+#, python-brace-format
+msgid "Failed to update GRUB: {err}"
+msgstr "GRUB अद्यतन करने में विफल: {err}"
+
+#: core/grub_manager.py:443
+#, python-brace-format
+msgid "Error running update-grub: {err}"
+msgstr "update-grub चलाने में त्रुटि: {err}"
+
+#: core/grub_manager.py:603 core/grub_manager.py:669
+#: ui/views/boot_entries_view.py:143
+msgid "system"
+msgstr "सिस्टम"
+
+#: core/grub_manager.py:605
+msgid "recovery"
+msgstr "रिकवरी"
+
+#: core/grub_manager.py:607 core/grub_manager.py:660
+msgid "memtest"
+msgstr "मेमोरी परीक्षण"
+
+#: core/grub_manager.py:609
+msgid "firmware"
+msgstr "फ़र्मवेयर"
+
+#: core/grub_manager.py:650
+#, python-brace-format
+msgid "Error parsing grub.cfg: {}"
+msgstr "grub.cfg पार्स करने में त्रुटि: {}"
+
+#: core/grub_manager.py:742
+#, python-brace-format
+msgid "Refusing to delete unexpected file: {}"
+msgstr "अप्रत्याशित फ़ाइल को हटाने से इनकार: {}"
+
+#: core/grub_manager.py:752
+#, python-brace-format
+msgid "Could not delete {}: {}"
+msgstr "{} को हटाया नहीं जा सका: {}"
+
+#: core/grub_manager.py:776
+#, python-brace-format
+msgid "Could not write to {}: {}"
+msgstr "{} में लिखा नहीं जा सका: {}"
+
+#: core/grub_manager.py:800 core/grub_manager.py:861
+#, python-brace-format
+msgid "Could not read {}: {}"
+msgstr "{} पढ़ा नहीं जा सका: {}"
+
+#: core/grub_manager.py:829 core/grub_manager.py:890
+#, python-brace-format
+msgid "Entry '{}' not found in {}"
+msgstr "प्रविष्टि '{}' {} में नहीं मिली"
+
+#: core/grub_manager.py:837 core/grub_manager.py:898
+#, python-brace-format
+msgid "Could not write {}: {}"
+msgstr "{} लिखा नहीं जा सका: {}"
+
+#: core/theme_manager.py:78
+msgid "[ThemeManager] WARNING: No theme found, using 'dark'"
+msgstr "[ThemeManager] चेतावनी: कोई थीम नहीं मिली, 'dark' का उपयोग किया जा रहा है"
+
+#: core/theme_manager.py:101
+#, python-brace-format
+msgid "[ThemeManager] ✗ ERROR: Theme file not found: {}"
+msgstr "[ThemeManager] ✗ त्रुटि: थीम फ़ाइल नहीं मिली: {}"
+
+#: core/theme_manager.py:115
+#, python-brace-format
+msgid "[ThemeManager] ✗ ERROR loading theme: {}"
+msgstr "[ThemeManager] ✗ थीम लोड करने में त्रुटि: {}"
+
+#: core/theme_manager.py:130
+#, python-brace-format
+msgid "[ThemeManager] ⚠ Could not set GTK theme preference: {}"
+msgstr "[ThemeManager] ⚠ GTK थीम वरीयता सेट नहीं की जा सकी: {}"
+
+#: core/theme_manager.py:186
+msgid "[ThemeManager] ✗✗✗ Failed to initialize theming ✗✗✗"
+msgstr "[ThemeManager] ✗✗✗ थीम आरंभ करने में विफल ✗✗✗"
+
+#: main.py:71
+#, python-brace-format
+msgid "Warning: Pre-elevation detection failed: {}"
+msgstr "चेतावनी: विशेषाधिकार बढ़ाने से पहले की पहचान विफल: {}"
+
+#: main.py:130
+#, python-brace-format
+msgid "Failed to elevate privileges: {}"
+msgstr "विशेषाधिकार बढ़ाने में विफल: {}"
+
+#: main.py:138
+#, python-brace-format
+msgid "Import error: {}"
+msgstr "इम्पोर्ट त्रुटि: {}"
+
+#: main.py:139
+msgid ""
+"Ensure dependencies are installed: sudo apt install python3-gi python3-gi-"
+"cairo gir1.2-gtk-3.0"
+msgstr ""
+"सुनिश्चित करें कि निर्भरताएँ स्थापित हैं: sudo apt install python3-gi python3-gi-"
+"cairo gir1.2-gtk-3.0"
+
+#: main.py:142
+#, python-brace-format
+msgid "Application error: {}"
+msgstr "अनुप्रयोग त्रुटि: {}"
+
+#: ui/main_window.py:68
+msgid "Main window created successfully"
+msgstr "मुख्य विंडो सफलतापूर्वक बनाई गई"
+
+#: ui/main_window.py:83
+#, python-brace-format
+msgid "[DEBUG] Desktop detected: {}"
+msgstr "[DEBUG] पहचाना गया डेस्कटॉप: {}"
+
+#: ui/main_window.py:87
+msgid "Using native window decorations (SSD)"
+msgstr "मूल विंडो सजावट (SSD) का उपयोग किया जा रहा है"
+
+#: ui/main_window.py:91
+msgid "Creating Client-Side Decorations (CSD)"
+msgstr "क्लाइंट-साइड सजावट (CSD) बनाई जा रही है"
+
+#: ui/main_window.py:129
+msgid "General Configuration"
+msgstr "सामान्य कॉन्फ़िगरेशन"
+
+#: ui/main_window.py:132
+msgid "Boot Entries"
+msgstr "बूट प्रविष्टियाँ"
+
+#: ui/main_window.py:135
+msgid "Appearance"
+msgstr "दिखावट"
+
+#: ui/main_window.py:150 ui/main_window.py:246
+msgid "Ready"
+msgstr "तैयार"
+
+#: ui/main_window.py:210
+msgid "GNOME"
+msgstr "GNOME"
+
+#: ui/main_window.py:211 ui/main_window.py:212
+msgid "KDE Plasma"
+msgstr "KDE Plasma"
+
+#: ui/main_window.py:213
+msgid "XFCE"
+msgstr "XFCE"
+
+# from mainuan-gestao-drivers
+#: ui/main_window.py:214 ui/main_window.py:216 ui/main_window.py:223
+#: ui/main_window.py:225 ui/views/general_view.py:218
+msgid "Unknown"
+msgstr "अज्ञात"
+
+#: ui/main_window.py:221
+msgid "X11"
+msgstr "X11"
+
+#: ui/main_window.py:222
+msgid "Wayland"
+msgstr "Wayland"
+
+#: ui/main_window.py:236
+msgid "Working..."
+msgstr "काम जारी है..."
+
+#: ui/main_window.py:256
+msgid "GRUB boot loader manager for Mainuan Linux."
+msgstr "Mainuan Linux के लिए GRUB बूट लोडर प्रबंधक।"
+
+#: ui/main_window.py:326
+msgid "Main window closing..."
+msgstr "मुख्य विंडो बंद हो रही है..."
+
+#: ui/views/appearance_view.py:41 ui/views/appearance_view.py:119
+msgid "Theme"
+msgstr "थीम"
+
+#: ui/views/appearance_view.py:46
+msgid "Preview"
+msgstr "पूर्वावलोकन"
+
+#: ui/views/appearance_view.py:78
+msgid "Themes include colors and fonts. Use 'Background' tab for custom setup."
+msgstr "थीम में रंग और फ़ॉन्ट शामिल होते हैं। कस्टम सेटअप के लिए 'पृष्ठभूमि' टैब का उपयोग करें।"
+
+#: ui/views/appearance_view.py:86
+msgid "Theme:"
+msgstr "थीम:"
+
+#: ui/views/appearance_view.py:99
+msgid "Install..."
+msgstr "स्थापित करें..."
+
+#: ui/views/appearance_view.py:103
+msgid "Apply"
+msgstr "लागू करें"
+
+#: ui/views/appearance_view.py:108
+msgid "Disable"
+msgstr "अक्षम करें"
+
+#: ui/views/appearance_view.py:112 ui/views/appearance_view.py:143
+msgid "Remove"
+msgstr "हटाएँ"
+
+#: ui/views/appearance_view.py:128
+msgid "Background image:"
+msgstr "पृष्ठभूमि छवि:"
+
+#: ui/views/appearance_view.py:134
+msgid "No image selected"
+msgstr "कोई छवि नहीं चुनी गई"
+
+#: ui/views/appearance_view.py:139 ui/views/appearance_view.py:231
+msgid "Browse..."
+msgstr "ब्राउज़ करें..."
+
+#: ui/views/appearance_view.py:155
+msgid "Colors (when not using theme):"
+msgstr "रंग (थीम का उपयोग न करने पर):"
+
+#: ui/views/appearance_view.py:162
+msgid "Text color:"
+msgstr "पाठ का रंग:"
+
+#: ui/views/appearance_view.py:173
+msgid "Background color:"
+msgstr "पृष्ठभूमि का रंग:"
+
+#: ui/views/appearance_view.py:184
+msgid "Highlight text:"
+msgstr "हाइलाइट पाठ:"
+
+#: ui/views/appearance_view.py:195
+msgid "Highlight background:"
+msgstr "हाइलाइट पृष्ठभूमि:"
+
+#: ui/views/appearance_view.py:205 ui/views/appearance_view.py:811
+msgid "Apply Appearance Settings"
+msgstr "दिखावट सेटिंग्स लागू करें"
+
+#: ui/views/appearance_view.py:210
+msgid "Background"
+msgstr "पृष्ठभूमि"
+
+# reviewed: convert = रूपांतरित (बदलें = mudar/trocar); consistência com
+# rótulos seguintes
+#: ui/views/appearance_view.py:219
+msgid "Convert TrueType fonts to GRUB format (PF2):"
+msgstr "TrueType फ़ॉन्ट को GRUB फ़ॉर्मेट (PF2) में रूपांतरित करें:"
+
+#: ui/views/appearance_view.py:227
+msgid "Select TTF/OTF font file..."
+msgstr "TTF/OTF फ़ॉन्ट फ़ाइल चुनें..."
+
+#: ui/views/appearance_view.py:238
+msgid "Font size:"
+msgstr "फ़ॉन्ट आकार:"
+
+# reviewed: "फ़ॉन्ट बदलें" = trocar a fonte; a ação é converter
+#: ui/views/appearance_view.py:248
+msgid "Convert and Install Font"
+msgstr "फ़ॉन्ट रूपांतरित करें और स्थापित करें"
+
+#: ui/views/appearance_view.py:254
+msgid "Installed GRUB fonts:"
+msgstr "स्थापित GRUB फ़ॉन्ट:"
+
+#: ui/views/appearance_view.py:266
+msgid "Apply selected font"
+msgstr "चुना गया फ़ॉन्ट लागू करें"
+
+#: ui/views/appearance_view.py:271
+msgid "Remove selected font"
+msgstr "चुना गया फ़ॉन्ट हटाएँ"
+
+#: ui/views/appearance_view.py:278
+msgid "Fonts"
+msgstr "फ़ॉन्ट्स"
+
+#: ui/views/appearance_view.py:294 ui/views/appearance_view.py:992
+msgid "Font Applied"
+msgstr "फ़ॉन्ट लागू किया गया"
+
+#: ui/views/appearance_view.py:296
+msgid "Failed to save font configuration to /etc/default/grub"
+msgstr "फ़ॉन्ट कॉन्फ़िगरेशन /etc/default/grub में सहेजने में विफल"
+
+#: ui/views/appearance_view.py:310
+msgid "Delete Font?"
+msgstr "फ़ॉन्ट मिटाएँ?"
+
+#: ui/views/appearance_view.py:313
+#, python-brace-format
+msgid "Are you sure you want to permanently delete '{}'?"
+msgstr "क्या आप वाकई '{}' को स्थायी रूप से मिटाना चाहते हैं?"
+
+#: ui/views/appearance_view.py:345
+msgid "Font deleted. GRUB configuration updated."
+msgstr "फ़ॉन्ट मिटाया गया। GRUB कॉन्फ़िगरेशन अद्यतन किया गया।"
+
+#: ui/views/appearance_view.py:347
+msgid "Font deleted successfully."
+msgstr "फ़ॉन्ट सफलतापूर्वक मिटाया गया।"
+
+#: ui/views/appearance_view.py:350
+#, python-brace-format
+msgid "Failed to delete font: {}"
+msgstr "फ़ॉन्ट मिटाने में विफल: {}"
+
+#: ui/views/appearance_view.py:494
+msgid "Select theme archive"
+msgstr "थीम आर्काइव चुनें"
+
+#: ui/views/appearance_view.py:504
+msgid "Theme archives"
+msgstr "थीम आर्काइव"
+
+#: ui/views/appearance_view.py:539
+msgid "Unsupported archive format"
+msgstr "असमर्थित आर्काइव फ़ॉर्मेट"
+
+#: ui/views/appearance_view.py:544
+#, python-brace-format
+msgid "Failed to extract archive: {}"
+msgstr "आर्काइव निकालने में विफल: {}"
+
+#: ui/views/appearance_view.py:555
+msgid "No theme.txt found in archive"
+msgstr "आर्काइव में theme.txt नहीं मिला"
+
+#: ui/views/appearance_view.py:571
+#, python-brace-format
+msgid "Theme '{}' installed successfully!"
+msgstr "थीम '{}' सफलतापूर्वक स्थापित हुई!"
+
+#: ui/views/appearance_view.py:575
+#, python-brace-format
+msgid "Failed to install theme: {}"
+msgstr "थीम स्थापित करने में विफल: {}"
+
+#: ui/views/appearance_view.py:578
+#, python-brace-format
+msgid "Error installing theme: {}"
+msgstr "थीम स्थापित करने में त्रुटि: {}"
+
+#: ui/views/appearance_view.py:592
+msgid "Apply Theme"
+msgstr "थीम लागू करें"
+
+#: ui/views/appearance_view.py:595
+#, python-brace-format
+msgid ""
+"Applying theme '{}' will disable any custom background and colors. Continue?"
+msgstr "थीम '{}' लागू करने से कोई भी कस्टम पृष्ठभूमि और रंग अक्षम हो जाएँगे। जारी रखें?"
+
+#: ui/views/appearance_view.py:608
+msgid "Theme applied successfully!"
+msgstr "थीम सफलतापूर्वक लागू की गई!"
+
+#: ui/views/appearance_view.py:617
+msgid "Disable Theme"
+msgstr "थीम अक्षम करें"
+
+#: ui/views/appearance_view.py:619
+msgid "This will remove the theme and set default colors. Continue?"
+msgstr "इससे थीम हट जाएगी और डिफ़ॉल्ट रंग सेट हो जाएँगे। जारी रखें?"
+
+#: ui/views/appearance_view.py:635
+msgid "Theme disabled."
+msgstr "थीम अक्षम की गई।"
+
+#: ui/views/appearance_view.py:646 ui/views/boot_entries_view.py:186
+#: ui/views/general_view.py:407
+msgid "Run update-grub now to apply changes?"
+msgstr "बदलाव लागू करने के लिए अभी update-grub चलाएँ?"
+
+#: ui/views/appearance_view.py:657 ui/views/appearance_view.py:952
+#: ui/views/general_view.py:418
+msgid "Success"
+msgstr "सफलता"
+
+#: ui/views/appearance_view.py:659
+msgid "GRUB configuration updated successfully!"
+msgstr "GRUB कॉन्फ़िगरेशन सफलतापूर्वक अद्यतन किया गया!"
+
+#: ui/views/appearance_view.py:668 ui/views/appearance_view.py:681
+#: ui/views/appearance_view.py:929 ui/views/appearance_view.py:966
+#: ui/views/appearance_view.py:978 ui/views/boot_entries_view.py:199
+#: ui/views/general_view.py:429 ui/views/general_view.py:440
+msgid "Error"
+msgstr "त्रुटि"
+
+#: ui/views/appearance_view.py:670
+msgid "Failed to update GRUB. Check logs for details."
+msgstr "GRUB अद्यतन करने में विफल। विवरण के लिए लॉग देखें।"
+
+#: ui/views/appearance_view.py:694
+msgid "Information"
+msgstr "जानकारी"
+
+#: ui/views/appearance_view.py:711
+msgid "Remove Theme"
+msgstr "थीम हटाएँ"
+
+#: ui/views/appearance_view.py:714
+#, python-brace-format
+msgid "This will permanently delete theme '{}'. Are you sure?"
+msgstr "इससे थीम '{}' स्थायी रूप से मिट जाएगी। क्या आप निश्चित हैं?"
+
+#: ui/views/appearance_view.py:729
+#, python-brace-format
+msgid "Theme '{}' removed successfully!"
+msgstr "थीम '{}' सफलतापूर्वक हटाई गई!"
+
+#: ui/views/appearance_view.py:738
+#, python-brace-format
+msgid "Failed to remove theme: {}"
+msgstr "थीम हटाने में विफल: {}"
+
+#: ui/views/appearance_view.py:749
+msgid "Select background image"
+msgstr "पृष्ठभूमि छवि चुनें"
+
+#: ui/views/appearance_view.py:759
+msgid "Images"
+msgstr "छवियाँ"
+
+#: ui/views/appearance_view.py:777
+msgid "Remove Background"
+msgstr "पृष्ठभूमि हटाएँ"
+
+#: ui/views/appearance_view.py:779
+msgid "This will remove the background image from GRUB. Continue?"
+msgstr "इससे GRUB से पृष्ठभूमि छवि हट जाएगी। जारी रखें?"
+
+#: ui/views/appearance_view.py:814
+msgid ""
+"This will disable any theme and use your custom background/colors. Continue?"
+msgstr ""
+"इससे कोई भी थीम अक्षम हो जाएगी और आपकी कस्टम पृष्ठभूमि/रंगों का उपयोग होगा। जारी रखें?"
+
+#: ui/views/appearance_view.py:856
+msgid "Settings applied successfully!"
+msgstr "सेटिंग्स सफलतापूर्वक लागू की गईं!"
+
+#: ui/views/appearance_view.py:895
+msgid "Select font file"
+msgstr "फ़ॉन्ट फ़ाइल चुनें"
+
+#: ui/views/appearance_view.py:906
+msgid "Font files"
+msgstr "फ़ॉन्ट फ़ाइलें"
+
+#: ui/views/appearance_view.py:931
+msgid "Please select a valid font file."
+msgstr "कृपया एक मान्य फ़ॉन्ट फ़ाइल चुनें।"
+
+# reviewed: "फ़ॉन्ट बदला गया" = fonte trocada; a ação é converter
+#: ui/views/appearance_view.py:954
+#, python-brace-format
+msgid "Font converted and installed: {}"
+msgstr "फ़ॉन्ट रूपांतरित और स्थापित किया गया: {}"
+
+# reviewed: "फ़ॉन्ट बदलने" = trocar a fonte; a ação é converter
+#: ui/views/appearance_view.py:968
+#, python-brace-format
+msgid "Failed to convert font: {}"
+msgstr "फ़ॉन्ट रूपांतरित करने में विफल: {}"
+
+#: ui/views/boot_entries_view.py:59
+msgid "Name:"
+msgstr "नाम:"
+
+#: ui/views/boot_entries_view.py:70
+msgid "Type:"
+msgstr "प्रकार:"
+
+#: ui/views/boot_entries_view.py:80
+msgid "Path"
+msgstr "पथ"
+
+#: ui/views/boot_entries_view.py:90
+msgid "Enabled"
+msgstr "सक्षम"
+
+#: ui/views/boot_entries_view.py:103
+msgid "Add entry"
+msgstr "प्रविष्टि जोड़ें"
+
+#: ui/views/boot_entries_view.py:108
+msgid "Remove entry"
+msgstr "प्रविष्टि हटाएँ"
+
+#: ui/views/boot_entries_view.py:134
+#, python-brace-format
+msgid "Entry {}"
+msgstr "प्रविष्टि {}"
+
+#: ui/views/boot_entries_view.py:212
+msgid "Not supported"
+msgstr "समर्थित नहीं"
+
+#: ui/views/boot_entries_view.py:215
+msgid ""
+"This entry belongs to an installed kernel or operating system. GRUB "
+"regenerates it automatically from what's installed on your disk, so it can't "
+"be disabled or removed individually here — you would need to uninstall the "
+"kernel or operating system itself."
+msgstr ""
+"यह प्रविष्टि किसी स्थापित कर्नेल या ऑपरेटिंग सिस्टम की है। GRUB इसे आपकी डिस्क पर "
+"स्थापित चीज़ों से स्वचालित रूप से फिर से बनाता है, इसलिए इसे यहाँ अलग से अक्षम या हटाया "
+"नहीं जा सकता — इसके लिए आपको स्वयं कर्नेल या ऑपरेटिंग सिस्टम को अनइंस्टॉल करना होगा।"
+
+#: ui/views/boot_entries_view.py:242 ui/views/boot_entries_view.py:357
+msgid "Could not update the entry"
+msgstr "प्रविष्टि अद्यतन नहीं की जा सकी"
+
+#: ui/views/boot_entries_view.py:250
+msgid "Add Entry"
+msgstr "प्रविष्टि जोड़ें"
+
+#: ui/views/boot_entries_view.py:255
+msgid "Cancel"
+msgstr "रद्द करें"
+
+#: ui/views/boot_entries_view.py:256
+msgid "Save"
+msgstr "सहेजें"
+
+#: ui/views/boot_entries_view.py:268
+msgid ""
+"Write the raw GRUB menuentry block (this is appended to /etc/grub.d/"
+"40_custom):"
+msgstr ""
+"GRUB का कच्चा menuentry ब्लॉक लिखें (इसे /etc/grub.d/40_custom के अंत में जोड़ा जाता "
+"है):"
+
+#: ui/views/boot_entries_view.py:300
+msgid "Failed to save the custom entry"
+msgstr "कस्टम प्रविष्टि सहेजने में विफल"
+
+#: ui/views/boot_entries_view.py:325 ui/views/boot_entries_view.py:344
+msgid "Remove Entry"
+msgstr "प्रविष्टि हटाएँ"
+
+#: ui/views/boot_entries_view.py:328
+#, python-brace-format
+msgid ""
+"Delete '{}' from /boot? This also removes its serial-console variant, since "
+"both share the same file."
+msgstr ""
+"'{}' को /boot से मिटाएँ? इससे इसका सीरियल-कंसोल संस्करण भी हट जाएगा, क्योंकि दोनों एक "
+"ही फ़ाइल साझा करते हैं।"
+
+#: ui/views/boot_entries_view.py:347
+#, python-brace-format
+msgid "Delete '{}' from /etc/grub.d/40_custom? This cannot be undone."
+msgstr "'{}' को /etc/grub.d/40_custom से मिटाएँ? इसे पूर्ववत नहीं किया जा सकता।"
+
+#: ui/views/general_view.py:40
+msgid "Boot Configuration"
+msgstr "बूट कॉन्फ़िगरेशन"
+
+#: ui/views/general_view.py:50
+msgid "Default Boot Mode:"
+msgstr "डिफ़ॉल्ट बूट मोड:"
+
+#: ui/views/general_view.py:57
+msgid "Fixed entry"
+msgstr "निश्चित प्रविष्टि"
+
+#: ui/views/general_view.py:58
+msgid "Last installed kernel"
+msgstr "अंतिम स्थापित कर्नेल"
+
+#: ui/views/general_view.py:59
+msgid "Last booted kernel"
+msgstr "अंतिम बार बूट किया गया कर्नेल"
+
+#: ui/views/general_view.py:68
+msgid "Default Boot Entry:"
+msgstr "डिफ़ॉल्ट बूट प्रविष्टि:"
+
+#: ui/views/general_view.py:86
+msgid "Timeout (seconds):"
+msgstr "समय-सीमा (सेकंड):"
+
+#: ui/views/general_view.py:101
+msgid "Screen Resolution:"
+msgstr "स्क्रीन रिज़ॉल्यूशन:"
+
+#: ui/views/general_view.py:121
+msgid "auto"
+msgstr "स्वचालित"
+
+#: ui/views/general_view.py:138
+msgid "Advanced Options"
+msgstr "उन्नत विकल्प"
+
+#: ui/views/general_view.py:147
+msgid "Detect other operating systems"
+msgstr "अन्य ऑपरेटिंग सिस्टम पहचानें"
+
+#: ui/views/general_view.py:151
+msgid "Show boot menu"
+msgstr "बूट मेनू दिखाएँ"
+
+#: ui/views/general_view.py:156
+msgid "Include recovery options"
+msgstr "रिकवरी विकल्प शामिल करें"
+
+#: ui/views/general_view.py:164
+msgid "Kernel Parameters"
+msgstr "कर्नेल पैरामीटर"
+
+#: ui/views/general_view.py:174
+msgid "Kernel Parameters:"
+msgstr "कर्नेल पैरामीटर:"
+
+#: ui/views/general_view.py:179
+msgid "quiet splash resume=UUID=..."
+msgstr "quiet splash resume=UUID=..."
+
+#: ui/views/general_view.py:188
+msgid "Apply Changes"
+msgstr "बदलाव लागू करें"
+
+#: ui/views/general_view.py:302
+#, python-brace-format
+msgid "Error loading GRUB config: {}"
+msgstr "GRUB कॉन्फ़िगरेशन लोड करने में त्रुटि: {}"
+
+#: ui/views/general_view.py:330
+msgid "Menu cannot be shown when timeout is 0"
+msgstr "समय-सीमा 0 होने पर मेनू नहीं दिखाया जा सकता"
+
+#: ui/views/general_view.py:405
+msgid "Changes Saved"
+msgstr "बदलाव सहेजे गए"
+
+#: ui/views/general_view.py:420
+msgid "GRUB updated successfully!"
+msgstr "GRUB सफलतापूर्वक अद्यतन किया गया!"
+
+#: ui/views/general_view.py:431
+msgid "Failed to update GRUB"
+msgstr "GRUB अद्यतन करने में विफल"
+
+#: ui/views/general_view.py:442
+msgid "Failed to save configuration"
+msgstr "कॉन्फ़िगरेशन सहेजने में विफल"

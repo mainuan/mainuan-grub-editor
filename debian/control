@@ -3,6 +3,7 @@ Section: admin
 Priority: optional
 Maintainer: David Caixinha <tugatechlab.contacto@gmail.com>
 Build-Depends: debhelper-compat (= 13),
+               gettext,
                python3,
                python3-setuptools
 
