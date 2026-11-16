@@ -84,11 +84,11 @@ class TranslationLookupTests(unittest.TestCase):
         self.assertEqual((out["save"], out["boot"], out["lang"]), ("Guardar", "Entradas de Arranque", "pt"))
 
     def test_language_list_order_is_respected(self):
-        self.assertEqual(self.probe(LANGUAGE="ja:pt_BR:en")["save"], "Salvar")
+        self.assertEqual(self.probe(LANGUAGE="kl:pt_BR:en")["save"], "Salvar")
         self.assertEqual(self.probe(LANGUAGE="es_AR:pt_BR", LANG="pt_BR.UTF-8")["lang"], "es")
 
     def test_unknown_language_falls_back_to_english_msgid(self):
-        for values in ({"LANGUAGE": "ja"}, {"LANGUAGE": "en"}, {"LC_ALL": "C"}, {"LANG": "nl_NL.UTF-8"}):
+        for values in ({"LANGUAGE": "kl"}, {"LANGUAGE": "en"}, {"LC_ALL": "C"}, {"LANG": "kl_GL.UTF-8"}):
             with self.subTest(**values):
                 out = self.probe(**values)
                 self.assertEqual((out["save"], out["name"], out["lang"]), ("Save", "Mainuan GRUB Editor", "en"))
