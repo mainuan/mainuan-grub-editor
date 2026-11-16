@@ -24,7 +24,7 @@ msgstr "Editor grafico per la configurazione di GRUB"
 
 #: assets/org.mainuan.grubeditor.desktop.in:10
 msgid "grub;boot;system;mainuan;"
-msgstr ""
+msgstr "grub;avvio;boot;sistema;mainuan;"
 
 #: core/application.py:64
 msgid "Shutting down Mainuan Grub Editor..."
@@ -76,7 +76,7 @@ msgstr "Errore inizializzazione temi: {err}"
 
 #: core/application.py:159
 msgid "Synchronizing GRUB configuration..."
-msgstr ""
+msgstr "Sincronizzazione della configurazione di GRUB..."
 
 #: core/application.py:164
 msgid "GRUB Manager initialized"
@@ -374,7 +374,7 @@ msgstr "In corso..."
 
 #: ui/main_window.py:256
 msgid "GRUB boot loader manager for Mainuan Linux."
-msgstr ""
+msgstr "Gestore del boot loader GRUB per Mainuan Linux."
 
 #: ui/main_window.py:326
 msgid "Main window closing..."
@@ -845,7 +845,7 @@ msgstr "Errore caricamento configurazione GRUB: {}"
 
 #: ui/views/general_view.py:330
 msgid "Menu cannot be shown when timeout is 0"
-msgstr ""
+msgstr "Il menu non può essere mostrato quando il tempo di attesa è 0"
 
 #: ui/views/general_view.py:405
 msgid "Changes Saved"

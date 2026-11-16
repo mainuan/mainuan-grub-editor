@@ -1,0 +1,858 @@
+# Arabic translations for Mainuan GRUB package.
+# Copyright (C) 2026 Mainuan
+# This file is distributed under the same license as the Mainuan GRUB Editor package.
+# Automatically generated, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Mainuan GRUB Editor\n"
+"Report-Msgid-Bugs-To: https://github.com/MainuanLinux/mainuan-grub-editor/"
+"issues\n"
+"POT-Creation-Date: 2026-11-16 11:30-0300\n"
+"PO-Revision-Date: 2026-11-16 11:30-0300\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: ar <https://github.com/mainuan>\n"
+"Language: ar\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: assets/org.mainuan.grubeditor.desktop.in:4 core/application.py:23
+#: ui/main_window.py:14
+msgid "Mainuan GRUB Editor"
+msgstr "محرّر GRUB من Mainuan"
+
+#: assets/org.mainuan.grubeditor.desktop.in:5
+msgid "Graphical editor for GRUB configuration"
+msgstr "محرّر رسومي لضبط GRUB"
+
+#: assets/org.mainuan.grubeditor.desktop.in:10
+msgid "grub;boot;system;mainuan;"
+msgstr "grub;إقلاع;نظام;mainuan;boot;system;"
+
+#: core/application.py:64
+msgid "Shutting down Mainuan Grub Editor..."
+msgstr "يُغلق محرّر GRUB من Mainuan..."
+
+#: core/application.py:82
+#, python-brace-format
+msgid "Cleanup warning: {err}"
+msgstr "تحذير التنظيف: {err}"
+
+#: core/application.py:86
+#, python-brace-format
+msgid "Starting {name} v{ver}..."
+msgstr "يبدأ {name} الإصدارة {ver}..."
+
+#: core/application.py:95
+msgid "Application initialization completed"
+msgstr "اكتملت تهيئة التطبيق"
+
+#: core/application.py:123
+#, python-brace-format
+msgid "Desktop Environment: {env}"
+msgstr "بيئة سطح المكتب: {env}"
+
+#: core/application.py:126
+#, python-brace-format
+msgid "Error initializing environment detection: {err}"
+msgstr "خطأ في تهيئة اكتشاف البيئة: {err}"
+
+#: core/application.py:134
+#, python-brace-format
+msgid "Language initialized: {lang}"
+msgstr "هُيّئت اللغة: {lang}"
+
+#: core/application.py:143
+#, python-brace-format
+msgid "Error initializing internationalization: {err}"
+msgstr "خطأ في تهيئة التدويل: {err}"
+
+#: core/application.py:150
+#, python-brace-format
+msgid "Theme loaded: {theme}"
+msgstr "حُمّلت السمة: {theme}"
+
+#: core/application.py:152
+#, python-brace-format
+msgid "Error initializing theming: {err}"
+msgstr "خطأ في تهيئة السمات: {err}"
+
+#: core/application.py:159
+msgid "Synchronizing GRUB configuration..."
+msgstr "يزامن ضبط GRUB..."
+
+#: core/application.py:164
+msgid "GRUB Manager initialized"
+msgstr "هُيّئ مدير GRUB"
+
+#: core/application.py:166
+#, python-brace-format
+msgid "Error initializing GRUB Manager: {err}"
+msgstr "خطأ في تهيئة مدير GRUB: {err}"
+
+#: core/application.py:183
+#, python-brace-format
+msgid "Error setting application icon: {err}"
+msgstr "خطأ في تعيين أيقونة التطبيق: {err}"
+
+#: core/application.py:211
+#, python-brace-format
+msgid "Error creating main window: {err}"
+msgstr "خطأ في إنشاء النافذة الرئيسية: {err}"
+
+#: core/application.py:226
+msgid "About"
+msgstr "عن"
+
+#: core/application.py:232
+msgid "Quit"
+msgstr "أنهِ"
+
+#: core/application.py:236
+#, python-brace-format
+msgid "Error setting up application menu: {err}"
+msgstr "خطأ في إعداد قائمة التطبيق: {err}"
+
+#: core/application.py:245
+#, python-brace-format
+msgid "Received signal {num}, shutting down..."
+msgstr "استُلمت الإشارة {num}، يُغلق..."
+
+#: core/application.py:261
+#, python-brace-format
+msgid "Application error: {err}"
+msgstr "خطأ في التطبيق: {err}"
+
+#: core/grub_manager.py:38
+#, python-brace-format
+msgid "GRUB config not found at {}"
+msgstr "لم يُعثر على ضبط GRUB في {}"
+
+#: core/grub_manager.py:56
+#, python-brace-format
+msgid "Error reading GRUB config: {}"
+msgstr "خطأ في قراءة ضبط GRUB: {}"
+
+#: core/grub_manager.py:168
+#, python-brace-format
+msgid "Successfully saved config to {path}"
+msgstr "حُفظ الضبط بنجاح في {path}"
+
+#: core/grub_manager.py:182
+msgid "Successfully saved config using pkexec"
+msgstr "حُفظ الضبط بنجاح باستخدام pkexec"
+
+#: core/grub_manager.py:185
+#, python-brace-format
+msgid "Failed to save config: {err}"
+msgstr "فشل حفظ الضبط: {err}"
+
+#: core/grub_manager.py:189
+#, python-brace-format
+msgid "Error saving GRUB config: {err}"
+msgstr "خطأ في حفظ ضبط GRUB: {err}"
+
+#: core/grub_manager.py:225 core/grub_manager.py:236
+#, python-brace-format
+msgid "Removed key {key} from config"
+msgstr "أُزيل المفتاح {key} من الضبط"
+
+#: core/grub_manager.py:241
+#, python-brace-format
+msgid "Error removing config key: {err}"
+msgstr "خطأ في إزالة مفتاح الضبط: {err}"
+
+#: core/grub_manager.py:267
+#, python-brace-format
+msgid "Set {script} active={active}"
+msgstr "عُيّن {script} active={active}"
+
+#: core/grub_manager.py:269
+#, python-brace-format
+msgid "Failed to change {script} permissions: {err}"
+msgstr "فشل تغيير أذونات {script}: {err}"
+
+#: core/grub_manager.py:306
+#, python-brace-format
+msgid "Removed background cache: {path}"
+msgstr "أُزيلت خبيئة الخلفية: {path}"
+
+#: core/grub_manager.py:308
+#, python-brace-format
+msgid "Failed to remove cache {path}: {err}"
+msgstr "فشلت إزالة الخبيئة {path}: {err}"
+
+#: core/grub_manager.py:400
+#, python-brace-format
+msgid "Failed to write custom.cfg: {err}"
+msgstr "فشلت كتابة custom.cfg: {err}"
+
+#: core/grub_manager.py:403
+#, python-brace-format
+msgid "Error writing custom.cfg: {err}"
+msgstr "خطأ في كتابة custom.cfg: {err}"
+
+#: core/grub_manager.py:425
+msgid "update-grub not found"
+msgstr "لم يُعثر على update-grub"
+
+#: core/grub_manager.py:437
+msgid "Successfully updated GRUB"
+msgstr "حُدّث GRUB بنجاح"
+
+#: core/grub_manager.py:440
+#, python-brace-format
+msgid "Failed to update GRUB: {err}"
+msgstr "فشل تحديث GRUB: {err}"
+
+#: core/grub_manager.py:443
+#, python-brace-format
+msgid "Error running update-grub: {err}"
+msgstr "خطأ في تشغيل update-grub: {err}"
+
+#: core/grub_manager.py:603 core/grub_manager.py:669
+#: ui/views/boot_entries_view.py:143
+msgid "system"
+msgstr "النظام"
+
+#: core/grub_manager.py:605
+msgid "recovery"
+msgstr "الاسترداد"
+
+#: core/grub_manager.py:607 core/grub_manager.py:660
+msgid "memtest"
+msgstr "اختبار الذاكرة"
+
+#: core/grub_manager.py:609
+msgid "firmware"
+msgstr "البرامج الثابتة"
+
+#: core/grub_manager.py:650
+#, python-brace-format
+msgid "Error parsing grub.cfg: {}"
+msgstr "خطأ في تحليل grub.cfg: {}"
+
+#: core/grub_manager.py:742
+#, python-brace-format
+msgid "Refusing to delete unexpected file: {}"
+msgstr "رفض حذف ملف غير متوقّع: {}"
+
+#: core/grub_manager.py:752
+#, python-brace-format
+msgid "Could not delete {}: {}"
+msgstr "تعذّر حذف {}: {}"
+
+#: core/grub_manager.py:776
+#, python-brace-format
+msgid "Could not write to {}: {}"
+msgstr "تعذّرت الكتابة إلى {}: {}"
+
+#: core/grub_manager.py:800 core/grub_manager.py:861
+#, python-brace-format
+msgid "Could not read {}: {}"
+msgstr "تعذّرت قراءة {}: {}"
+
+#: core/grub_manager.py:829 core/grub_manager.py:890
+#, python-brace-format
+msgid "Entry '{}' not found in {}"
+msgstr "لم يُعثر على المدخلة '{}' في {}"
+
+#: core/grub_manager.py:837 core/grub_manager.py:898
+#, python-brace-format
+msgid "Could not write {}: {}"
+msgstr "تعذّرت كتابة {}: {}"
+
+#: core/theme_manager.py:78
+msgid "[ThemeManager] WARNING: No theme found, using 'dark'"
+msgstr "[ThemeManager] تحذير: لم يُعثر على سمة، تُستخدم 'dark'"
+
+#: core/theme_manager.py:101
+#, python-brace-format
+msgid "[ThemeManager] ✗ ERROR: Theme file not found: {}"
+msgstr "[ThemeManager] ✗ خطأ: لم يُعثر على ملف السمة: {}"
+
+#: core/theme_manager.py:115
+#, python-brace-format
+msgid "[ThemeManager] ✗ ERROR loading theme: {}"
+msgstr "[ThemeManager] ✗ خطأ في تحميل السمة: {}"
+
+#: core/theme_manager.py:130
+#, python-brace-format
+msgid "[ThemeManager] ⚠ Could not set GTK theme preference: {}"
+msgstr "[ThemeManager] ⚠ تعذّر تعيين تفضيل سمة GTK: {}"
+
+#: core/theme_manager.py:186
+msgid "[ThemeManager] ✗✗✗ Failed to initialize theming ✗✗✗"
+msgstr "[ThemeManager] ✗✗✗ فشلت تهيئة السمات ✗✗✗"
+
+#: main.py:71
+#, python-brace-format
+msgid "Warning: Pre-elevation detection failed: {}"
+msgstr "تحذير: فشل الاكتشاف السابق لرفع الصلاحيات: {}"
+
+#: main.py:130
+#, python-brace-format
+msgid "Failed to elevate privileges: {}"
+msgstr "فشل رفع الصلاحيات: {}"
+
+#: main.py:138
+#, python-brace-format
+msgid "Import error: {}"
+msgstr "خطأ في الاستيراد: {}"
+
+#: main.py:139
+msgid ""
+"Ensure dependencies are installed: sudo apt install python3-gi python3-gi-"
+"cairo gir1.2-gtk-3.0"
+msgstr ""
+"تأكّد من تثبيت الاعتماديات: sudo apt install python3-gi python3-gi-cairo "
+"gir1.2-gtk-3.0"
+
+#: main.py:142
+#, python-brace-format
+msgid "Application error: {}"
+msgstr "خطأ في التطبيق: {}"
+
+#: ui/main_window.py:68
+msgid "Main window created successfully"
+msgstr "أُنشئت النافذة الرئيسية بنجاح"
+
+#: ui/main_window.py:83
+#, python-brace-format
+msgid "[DEBUG] Desktop detected: {}"
+msgstr "[DEBUG] سطح المكتب المكتشف: {}"
+
+#: ui/main_window.py:87
+msgid "Using native window decorations (SSD)"
+msgstr "يستخدم زخارف النوافذ الأصلية (SSD)"
+
+#: ui/main_window.py:91
+msgid "Creating Client-Side Decorations (CSD)"
+msgstr "ينشئ زخارف جهة العميل (CSD)"
+
+#: ui/main_window.py:129
+msgid "General Configuration"
+msgstr "الضبط العامّ"
+
+#: ui/main_window.py:132
+msgid "Boot Entries"
+msgstr "مدخلات الإقلاع"
+
+#: ui/main_window.py:135
+msgid "Appearance"
+msgstr "المظهر"
+
+#: ui/main_window.py:150 ui/main_window.py:246
+msgid "Ready"
+msgstr "جاهز"
+
+#: ui/main_window.py:210
+msgid "GNOME"
+msgstr "GNOME"
+
+#: ui/main_window.py:211 ui/main_window.py:212
+msgid "KDE Plasma"
+msgstr "KDE Plasma"
+
+#: ui/main_window.py:213
+msgid "XFCE"
+msgstr "XFCE"
+
+# from mainuan-gestao-drivers
+#: ui/main_window.py:214 ui/main_window.py:216 ui/main_window.py:223
+#: ui/main_window.py:225 ui/views/general_view.py:218
+msgid "Unknown"
+msgstr "غير معروف"
+
+#: ui/main_window.py:221
+msgid "X11"
+msgstr "X11"
+
+#: ui/main_window.py:222
+msgid "Wayland"
+msgstr "Wayland"
+
+#: ui/main_window.py:236
+msgid "Working..."
+msgstr "يعمل..."
+
+#: ui/main_window.py:256
+msgid "GRUB boot loader manager for Mainuan Linux."
+msgstr "مدير محمّل الإقلاع GRUB لنظام Mainuan Linux."
+
+#: ui/main_window.py:326
+msgid "Main window closing..."
+msgstr "تُغلق النافذة الرئيسية..."
+
+#: ui/views/appearance_view.py:41 ui/views/appearance_view.py:119
+msgid "Theme"
+msgstr "السمة"
+
+#: ui/views/appearance_view.py:46
+msgid "Preview"
+msgstr "معاينة"
+
+#: ui/views/appearance_view.py:78
+msgid "Themes include colors and fonts. Use 'Background' tab for custom setup."
+msgstr "تتضمّن السمات الألوان والخطوط. استخدم لسان «الخلفية» للإعداد المخصّص."
+
+#: ui/views/appearance_view.py:86
+msgid "Theme:"
+msgstr "السمة:"
+
+#: ui/views/appearance_view.py:99
+msgid "Install..."
+msgstr "ثبّت..."
+
+#: ui/views/appearance_view.py:103
+msgid "Apply"
+msgstr "طبّق"
+
+#: ui/views/appearance_view.py:108
+msgid "Disable"
+msgstr "عطّل"
+
+#: ui/views/appearance_view.py:112 ui/views/appearance_view.py:143
+msgid "Remove"
+msgstr "أزل"
+
+#: ui/views/appearance_view.py:128
+msgid "Background image:"
+msgstr "صورة الخلفية:"
+
+#: ui/views/appearance_view.py:134
+msgid "No image selected"
+msgstr "لم تُختر أيّ صورة"
+
+#: ui/views/appearance_view.py:139 ui/views/appearance_view.py:231
+msgid "Browse..."
+msgstr "تصفّح..."
+
+#: ui/views/appearance_view.py:155
+msgid "Colors (when not using theme):"
+msgstr "الألوان (عند عدم استخدام سمة):"
+
+#: ui/views/appearance_view.py:162
+msgid "Text color:"
+msgstr "لون النص:"
+
+#: ui/views/appearance_view.py:173
+msgid "Background color:"
+msgstr "لون الخلفية:"
+
+#: ui/views/appearance_view.py:184
+msgid "Highlight text:"
+msgstr "نصّ التمييز:"
+
+#: ui/views/appearance_view.py:195
+msgid "Highlight background:"
+msgstr "خلفية التمييز:"
+
+#: ui/views/appearance_view.py:205 ui/views/appearance_view.py:811
+msgid "Apply Appearance Settings"
+msgstr "طبّق إعدادات المظهر"
+
+#: ui/views/appearance_view.py:210
+msgid "Background"
+msgstr "الخلفية"
+
+#: ui/views/appearance_view.py:219
+msgid "Convert TrueType fonts to GRUB format (PF2):"
+msgstr "حوّل خطوط TrueType إلى صيغة GRUB (PF2):"
+
+#: ui/views/appearance_view.py:227
+msgid "Select TTF/OTF font file..."
+msgstr "اختر ملف خطّ TTF/OTF..."
+
+#: ui/views/appearance_view.py:238
+msgid "Font size:"
+msgstr "حجم الخطّ:"
+
+#: ui/views/appearance_view.py:248
+msgid "Convert and Install Font"
+msgstr "حوّل الخطّ وثبّته"
+
+#: ui/views/appearance_view.py:254
+msgid "Installed GRUB fonts:"
+msgstr "خطوط GRUB المثبّتة:"
+
+#: ui/views/appearance_view.py:266
+msgid "Apply selected font"
+msgstr "طبّق الخطّ المختار"
+
+#: ui/views/appearance_view.py:271
+msgid "Remove selected font"
+msgstr "أزل الخطّ المختار"
+
+#: ui/views/appearance_view.py:278
+msgid "Fonts"
+msgstr "الخطوط"
+
+#: ui/views/appearance_view.py:294 ui/views/appearance_view.py:992
+msgid "Font Applied"
+msgstr "طُبّق الخطّ"
+
+#: ui/views/appearance_view.py:296
+msgid "Failed to save font configuration to /etc/default/grub"
+msgstr "فشل حفظ ضبط الخطّ في /etc/default/grub"
+
+#: ui/views/appearance_view.py:310
+msgid "Delete Font?"
+msgstr "أأحذف الخطّ؟"
+
+#: ui/views/appearance_view.py:313
+#, python-brace-format
+msgid "Are you sure you want to permanently delete '{}'?"
+msgstr "أمتأكّد من حذف '{}' نهائيًّا؟"
+
+#: ui/views/appearance_view.py:345
+msgid "Font deleted. GRUB configuration updated."
+msgstr "حُذف الخطّ. حُدّث ضبط GRUB."
+
+#: ui/views/appearance_view.py:347
+msgid "Font deleted successfully."
+msgstr "حُذف الخطّ بنجاح."
+
+#: ui/views/appearance_view.py:350
+#, python-brace-format
+msgid "Failed to delete font: {}"
+msgstr "فشل حذف الخطّ: {}"
+
+#: ui/views/appearance_view.py:494
+msgid "Select theme archive"
+msgstr "اختر أرشيف السمة"
+
+#: ui/views/appearance_view.py:504
+msgid "Theme archives"
+msgstr "أرشيفات السمات"
+
+#: ui/views/appearance_view.py:539
+msgid "Unsupported archive format"
+msgstr "نسق أرشيف غير مدعوم"
+
+#: ui/views/appearance_view.py:544
+#, python-brace-format
+msgid "Failed to extract archive: {}"
+msgstr "فشل استخراج الأرشيف: {}"
+
+#: ui/views/appearance_view.py:555
+msgid "No theme.txt found in archive"
+msgstr "لم يُعثر على theme.txt في الأرشيف"
+
+#: ui/views/appearance_view.py:571
+#, python-brace-format
+msgid "Theme '{}' installed successfully!"
+msgstr "ثُبّتت السمة '{}' بنجاح!"
+
+#: ui/views/appearance_view.py:575
+#, python-brace-format
+msgid "Failed to install theme: {}"
+msgstr "فشل تثبيت السمة: {}"
+
+#: ui/views/appearance_view.py:578
+#, python-brace-format
+msgid "Error installing theme: {}"
+msgstr "خطأ في تثبيت السمة: {}"
+
+#: ui/views/appearance_view.py:592
+msgid "Apply Theme"
+msgstr "طبّق السمة"
+
+#: ui/views/appearance_view.py:595
+#, python-brace-format
+msgid ""
+"Applying theme '{}' will disable any custom background and colors. Continue?"
+msgstr "سيؤدّي تطبيق السمة '{}' إلى تعطيل أيّ خلفية وألوان مخصّصة. أأتابع؟"
+
+#: ui/views/appearance_view.py:608
+msgid "Theme applied successfully!"
+msgstr "طُبّقت السمة بنجاح!"
+
+#: ui/views/appearance_view.py:617
+msgid "Disable Theme"
+msgstr "عطّل السمة"
+
+#: ui/views/appearance_view.py:619
+msgid "This will remove the theme and set default colors. Continue?"
+msgstr "سيؤدّي هذا إلى إزالة السمة وتعيين الألوان المبدئية. أأتابع؟"
+
+#: ui/views/appearance_view.py:635
+msgid "Theme disabled."
+msgstr "عُطّلت السمة."
+
+#: ui/views/appearance_view.py:646 ui/views/boot_entries_view.py:186
+#: ui/views/general_view.py:407
+msgid "Run update-grub now to apply changes?"
+msgstr "أأشغّل update-grub الآن لتطبيق التغييرات؟"
+
+#: ui/views/appearance_view.py:657 ui/views/appearance_view.py:952
+#: ui/views/general_view.py:418
+msgid "Success"
+msgstr "نجح"
+
+#: ui/views/appearance_view.py:659
+msgid "GRUB configuration updated successfully!"
+msgstr "حُدّث ضبط GRUB بنجاح!"
+
+#: ui/views/appearance_view.py:668 ui/views/appearance_view.py:681
+#: ui/views/appearance_view.py:929 ui/views/appearance_view.py:966
+#: ui/views/appearance_view.py:978 ui/views/boot_entries_view.py:199
+#: ui/views/general_view.py:429 ui/views/general_view.py:440
+msgid "Error"
+msgstr "خطأ"
+
+#: ui/views/appearance_view.py:670
+msgid "Failed to update GRUB. Check logs for details."
+msgstr "فشل تحديث GRUB. راجع السجلّات للتفاصيل."
+
+#: ui/views/appearance_view.py:694
+msgid "Information"
+msgstr "معلومات"
+
+#: ui/views/appearance_view.py:711
+msgid "Remove Theme"
+msgstr "أزل السمة"
+
+#: ui/views/appearance_view.py:714
+#, python-brace-format
+msgid "This will permanently delete theme '{}'. Are you sure?"
+msgstr "سيؤدّي هذا إلى حذف السمة '{}' نهائيًّا. أمتأكّد؟"
+
+#: ui/views/appearance_view.py:729
+#, python-brace-format
+msgid "Theme '{}' removed successfully!"
+msgstr "أُزيلت السمة '{}' بنجاح!"
+
+#: ui/views/appearance_view.py:738
+#, python-brace-format
+msgid "Failed to remove theme: {}"
+msgstr "فشلت إزالة السمة: {}"
+
+#: ui/views/appearance_view.py:749
+msgid "Select background image"
+msgstr "اختر صورة الخلفية"
+
+#: ui/views/appearance_view.py:759
+msgid "Images"
+msgstr "الصور"
+
+#: ui/views/appearance_view.py:777
+msgid "Remove Background"
+msgstr "أزل الخلفية"
+
+#: ui/views/appearance_view.py:779
+msgid "This will remove the background image from GRUB. Continue?"
+msgstr "سيؤدّي هذا إلى إزالة صورة الخلفية من GRUB. أأتابع؟"
+
+#: ui/views/appearance_view.py:814
+msgid ""
+"This will disable any theme and use your custom background/colors. Continue?"
+msgstr "سيؤدّي هذا إلى تعطيل أيّ سمة واستخدام خلفيتك/ألوانك المخصّصة. أأتابع؟"
+
+#: ui/views/appearance_view.py:856
+msgid "Settings applied successfully!"
+msgstr "طُبّقت الإعدادات بنجاح!"
+
+#: ui/views/appearance_view.py:895
+msgid "Select font file"
+msgstr "اختر ملف الخطّ"
+
+#: ui/views/appearance_view.py:906
+msgid "Font files"
+msgstr "ملفات الخطوط"
+
+#: ui/views/appearance_view.py:931
+msgid "Please select a valid font file."
+msgstr "فضلًا اختر ملف خطّ صالحًا."
+
+#: ui/views/appearance_view.py:954
+#, python-brace-format
+msgid "Font converted and installed: {}"
+msgstr "حُوّل الخطّ وثُبّت: {}"
+
+#: ui/views/appearance_view.py:968
+#, python-brace-format
+msgid "Failed to convert font: {}"
+msgstr "فشل تحويل الخطّ: {}"
+
+#: ui/views/boot_entries_view.py:59
+msgid "Name:"
+msgstr "الاسم:"
+
+#: ui/views/boot_entries_view.py:70
+msgid "Type:"
+msgstr "النوع:"
+
+#: ui/views/boot_entries_view.py:80
+msgid "Path"
+msgstr "المسار"
+
+#: ui/views/boot_entries_view.py:90
+msgid "Enabled"
+msgstr "ممكّن"
+
+#: ui/views/boot_entries_view.py:103
+msgid "Add entry"
+msgstr "أضف مدخلة"
+
+#: ui/views/boot_entries_view.py:108
+msgid "Remove entry"
+msgstr "أزل المدخلة"
+
+#: ui/views/boot_entries_view.py:134
+#, python-brace-format
+msgid "Entry {}"
+msgstr "المدخلة {}"
+
+#: ui/views/boot_entries_view.py:212
+msgid "Not supported"
+msgstr "غير مدعوم"
+
+#: ui/views/boot_entries_view.py:215
+msgid ""
+"This entry belongs to an installed kernel or operating system. GRUB "
+"regenerates it automatically from what's installed on your disk, so it can't "
+"be disabled or removed individually here — you would need to uninstall the "
+"kernel or operating system itself."
+msgstr ""
+"تنتمي هذه المدخلة إلى نواة أو نظام تشغيل مثبّت. يعيد GRUB توليدها آليًّا ممّا هو "
+"مثبّت على قرصك، لذا لا يمكن تعطيلها أو إزالتها منفردة هنا — يلزمك إزالة تثبيت "
+"النواة أو نظام التشغيل نفسه."
+
+#: ui/views/boot_entries_view.py:242 ui/views/boot_entries_view.py:357
+msgid "Could not update the entry"
+msgstr "تعذّر تحديث المدخلة"
+
+#: ui/views/boot_entries_view.py:250
+msgid "Add Entry"
+msgstr "أضف مدخلة"
+
+#: ui/views/boot_entries_view.py:255
+msgid "Cancel"
+msgstr "ألغِ"
+
+#: ui/views/boot_entries_view.py:256
+msgid "Save"
+msgstr "احفظ"
+
+#: ui/views/boot_entries_view.py:268
+msgid ""
+"Write the raw GRUB menuentry block (this is appended to /etc/grub.d/"
+"40_custom):"
+msgstr "اكتب كتلة menuentry الخام لـ GRUB (تُلحق بالملف /etc/grub.d/40_custom):"
+
+#: ui/views/boot_entries_view.py:300
+msgid "Failed to save the custom entry"
+msgstr "فشل حفظ المدخلة المخصّصة"
+
+#: ui/views/boot_entries_view.py:325 ui/views/boot_entries_view.py:344
+msgid "Remove Entry"
+msgstr "أزل المدخلة"
+
+#: ui/views/boot_entries_view.py:328
+#, python-brace-format
+msgid ""
+"Delete '{}' from /boot? This also removes its serial-console variant, since "
+"both share the same file."
+msgstr ""
+"أأحذف '{}' من /boot؟ سيؤدّي هذا أيضًا إلى إزالة نسختها الخاصّة بالطرفية "
+"التسلسلية، لأنّهما تتشاركان الملف نفسه."
+
+#: ui/views/boot_entries_view.py:347
+#, python-brace-format
+msgid "Delete '{}' from /etc/grub.d/40_custom? This cannot be undone."
+msgstr "أأحذف '{}' من /etc/grub.d/40_custom؟ لا يمكن التراجع عن هذا."
+
+#: ui/views/general_view.py:40
+msgid "Boot Configuration"
+msgstr "ضبط الإقلاع"
+
+#: ui/views/general_view.py:50
+msgid "Default Boot Mode:"
+msgstr "وضع الإقلاع المبدئي:"
+
+#: ui/views/general_view.py:57
+msgid "Fixed entry"
+msgstr "مدخلة ثابتة"
+
+#: ui/views/general_view.py:58
+msgid "Last installed kernel"
+msgstr "آخر نواة مثبّتة"
+
+#: ui/views/general_view.py:59
+msgid "Last booted kernel"
+msgstr "آخر نواة أُقلع بها"
+
+#: ui/views/general_view.py:68
+msgid "Default Boot Entry:"
+msgstr "مدخلة الإقلاع المبدئية:"
+
+#: ui/views/general_view.py:86
+msgid "Timeout (seconds):"
+msgstr "المهلة (بالثواني):"
+
+#: ui/views/general_view.py:101
+msgid "Screen Resolution:"
+msgstr "دقّة الشاشة:"
+
+#: ui/views/general_view.py:121
+msgid "auto"
+msgstr "آليّ"
+
+#: ui/views/general_view.py:138
+msgid "Advanced Options"
+msgstr "خيارات متقدّمة"
+
+#: ui/views/general_view.py:147
+msgid "Detect other operating systems"
+msgstr "اكتشف أنظمة التشغيل الأخرى"
+
+#: ui/views/general_view.py:151
+msgid "Show boot menu"
+msgstr "أظهر قائمة الإقلاع"
+
+#: ui/views/general_view.py:156
+msgid "Include recovery options"
+msgstr "ضمّن خيارات الاسترداد"
+
+#: ui/views/general_view.py:164
+msgid "Kernel Parameters"
+msgstr "معاملات النواة"
+
+#: ui/views/general_view.py:174
+msgid "Kernel Parameters:"
+msgstr "معاملات النواة:"
+
+#: ui/views/general_view.py:179
+msgid "quiet splash resume=UUID=..."
+msgstr "quiet splash resume=UUID=..."
+
+#: ui/views/general_view.py:188
+msgid "Apply Changes"
+msgstr "طبّق التغييرات"
+
+#: ui/views/general_view.py:302
+#, python-brace-format
+msgid "Error loading GRUB config: {}"
+msgstr "خطأ في تحميل ضبط GRUB: {}"
+
+#: ui/views/general_view.py:330
+msgid "Menu cannot be shown when timeout is 0"
+msgstr "لا يمكن إظهار القائمة عندما تكون المهلة 0"
+
+#: ui/views/general_view.py:405
+msgid "Changes Saved"
+msgstr "حُفظت التغييرات"
+
+#: ui/views/general_view.py:420
+msgid "GRUB updated successfully!"
+msgstr "حُدّث GRUB بنجاح!"
+
+#: ui/views/general_view.py:431
+msgid "Failed to update GRUB"
+msgstr "فشل تحديث GRUB"
+
+#: ui/views/general_view.py:442
+msgid "Failed to save configuration"
+msgstr "فشل حفظ الضبط"
