@@ -1,8 +1,10 @@
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: Soplos GRUB Editor 2.0.0\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-01-11 18:39+0100\n"
+"Report-Msgid-Bugs-To: https://github.com/MainuanLinux/mainuan-grub-editor/"
+"issues\n"
+"POT-Creation-Date: 2026-11-16 11:24-0300\n"
 "PO-Revision-Date: 2026-01-11 00:00+0000\n"
 "Last-Translator: Sergi Perich <info@soploslinux.com>\n"
 "Language-Team: Sergi Perich <info@soploslinux.com>\n"
@@ -11,123 +13,282 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-msgid "/boot/grub/background.png"
-msgstr "/boot/grub/background.png"
+#: core/application.py:23 ui/main_window.py:14
+msgid "Mainuan GRUB Editor"
+msgstr "Editor GRUB Mainuan"
 
-msgid "About"
-msgstr "Sobre"
+#: core/application.py:64
+msgid "Shutting down Mainuan Grub Editor..."
+msgstr "A encerrar o Mainuan Grub Editor..."
 
-msgid "Add Entry"
-msgstr "Adicionar Entrada"
-
-msgid "Add entry"
-msgstr "Adicionar entrada"
-
-msgid "Advanced Options"
-msgstr "Opções Avançadas"
-
-msgid "Appearance"
-msgstr "Aparência"
-
-#, python-brace-format
-msgid "Application error: {err}"
-msgstr "Erro da aplicação: {err}"
-
-msgid "Application error: {}"
-msgstr "Erro da aplicação: {}"
-
-msgid "Application initialization completed"
-msgstr "Inicialização da aplicação concluída"
-
-msgid "Apply"
-msgstr "Aplicar"
-
-msgid "Apply Appearance Settings"
-msgstr "Aplicar Configurações de Aparência"
-
-msgid "Apply Background Settings"
-msgstr "Aplicar Configurações de Fundo"
-
-msgid "Apply Changes"
-msgstr "Aplicar Alterações"
-
-msgid "Apply Theme"
-msgstr "Aplicar Tema"
-
-msgid "Apply selected font"
-msgstr "Aplicar Tipo de Letra Selecionado"
-
-msgid ""
-"Applying theme '{}' will disable any custom background and colors. Continue?"
-msgstr ""
-"Aplicar o tema '{}' desativará qualquer fundo e cores personalizados. "
-"Continuar?"
-
-msgid "Background"
-msgstr "Fundo"
-
-msgid "Settings applied successfully!"
-msgstr "Configurações aplicadas com sucesso!"
-
-msgid "Background color:"
-msgstr "Cor de fundo:"
-
-msgid "Background image:"
-msgstr "Imagem de fundo:"
-
-msgid "Background removed successfully!"
-msgstr "Fundo removido com sucesso!"
-
-msgid "Boot Configuration"
-msgstr "Configuração de Arranque"
-
-msgid "Boot Entries"
-msgstr "Entradas de Arranque"
-
-msgid "Browse..."
-msgstr "Navegar..."
-
-msgid "Changes Saved"
-msgstr "Alterações Guardadas"
-
+#: core/application.py:82
 #, python-brace-format
 msgid "Cleanup warning: {err}"
 msgstr "Aviso de limpeza: {err}"
 
-msgid "Colors (when not using theme):"
-msgstr "Cores (quando não usar tema):"
+#: core/application.py:86
+#, python-brace-format
+msgid "Starting {name} v{ver}..."
+msgstr "A iniciar {name} v{ver}..."
 
-msgid "Convert TrueType fonts to GRUB format (PF2):"
-msgstr "Converter tipos de letra TrueType para formato GRUB (PF2):"
+#: core/application.py:95
+msgid "Application initialization completed"
+msgstr "Inicialização da aplicação concluída"
 
-msgid "Convert and Install Font"
-msgstr "Converter e Instalar Tipo de Letra"
-
-msgid "Creating Client-Side Decorations (CSD)"
-msgstr "Criando Decorações do Lado do Cliente (CSD)"
-
-msgid "Custom entry dialog - TODO"
-msgstr "Diálogo de entrada personalizada - A FAZER"
-
-msgid "Default Boot Entry:"
-msgstr "Entrada de Arranque Padrão:"
-
+#: core/application.py:123
 #, python-brace-format
 msgid "Desktop Environment: {env}"
 msgstr "Ambiente de Trabalho: {env}"
 
-msgid "Detect other operating systems"
-msgstr "Detetar outros sistemas operativos"
+#: core/application.py:126
+#, python-brace-format
+msgid "Error initializing environment detection: {err}"
+msgstr "Erro ao inicializar deteção de ambiente: {err}"
 
-msgid "Disable"
-msgstr "Desativar"
+#: core/application.py:134
+#, python-brace-format
+msgid "Language initialized: {lang}"
+msgstr "Idioma inicializado: {lang}"
 
-msgid "Disable Theme"
-msgstr "Desativar Tema"
+#: core/application.py:143
+#, python-brace-format
+msgid "Error initializing internationalization: {err}"
+msgstr "Erro ao inicializar internacionalização: {err}"
 
-msgid "Enabled"
-msgstr "Ativado"
+#: core/application.py:150
+#, python-brace-format
+msgid "Theme loaded: {theme}"
+msgstr "Tema carregado: {theme}"
 
+#: core/application.py:152
+#, python-brace-format
+msgid "Error initializing theming: {err}"
+msgstr "Erro ao inicializar temas: {err}"
+
+#: core/application.py:159
+msgid "Synchronizing GRUB configuration..."
+msgstr "A sincronizar a configuração do GRUB..."
+
+#: core/application.py:164
+msgid "GRUB Manager initialized"
+msgstr "Gestor GRUB inicializado"
+
+#: core/application.py:166
+#, python-brace-format
+msgid "Error initializing GRUB Manager: {err}"
+msgstr "Erro ao inicializar Gestor GRUB: {err}"
+
+#: core/application.py:183
+#, python-brace-format
+msgid "Error setting application icon: {err}"
+msgstr "Erro ao definir ícone da aplicação: {err}"
+
+#: core/application.py:211
+#, python-brace-format
+msgid "Error creating main window: {err}"
+msgstr "Erro ao criar janela principal: {err}"
+
+#: core/application.py:226
+msgid "About"
+msgstr "Sobre"
+
+#: core/application.py:232
+msgid "Quit"
+msgstr "Sair"
+
+#: core/application.py:236
+#, python-brace-format
+msgid "Error setting up application menu: {err}"
+msgstr "Erro ao configurar menu da aplicação: {err}"
+
+#: core/application.py:245
+#, python-brace-format
+msgid "Received signal {num}, shutting down..."
+msgstr "Sinal {num} recebido, a encerrar..."
+
+#: core/application.py:261
+#, python-brace-format
+msgid "Application error: {err}"
+msgstr "Erro da aplicação: {err}"
+
+#: core/grub_manager.py:38
+#, python-brace-format
+msgid "GRUB config not found at {}"
+msgstr "Configuração do GRUB não encontrada em {}"
+
+#: core/grub_manager.py:56
+#, python-brace-format
+msgid "Error reading GRUB config: {}"
+msgstr "Erro ao ler configuração do GRUB: {}"
+
+#: core/grub_manager.py:168
+#, python-brace-format
+msgid "Successfully saved config to {path}"
+msgstr "Configuração guardada com sucesso em {path}"
+
+#: core/grub_manager.py:182
+msgid "Successfully saved config using pkexec"
+msgstr "Configuração guardada com sucesso através do pkexec"
+
+#: core/grub_manager.py:185
+#, python-brace-format
+msgid "Failed to save config: {err}"
+msgstr "Falha ao guardar configuração: {err}"
+
+#: core/grub_manager.py:189
+#, python-brace-format
+msgid "Error saving GRUB config: {err}"
+msgstr "Erro ao guardar configuração do GRUB: {err}"
+
+#: core/grub_manager.py:225 core/grub_manager.py:236
+#, python-brace-format
+msgid "Removed key {key} from config"
+msgstr "Chave {key} removida da configuração"
+
+#: core/grub_manager.py:241
+#, python-brace-format
+msgid "Error removing config key: {err}"
+msgstr "Erro ao remover chave de configuração: {err}"
+
+#: core/grub_manager.py:267
+#, python-brace-format
+msgid "Set {script} active={active}"
+msgstr "Definido {script} ativo={active}"
+
+#: core/grub_manager.py:269
+#, python-brace-format
+msgid "Failed to change {script} permissions: {err}"
+msgstr "Falha ao alterar as permissões de {script}: {err}"
+
+#: core/grub_manager.py:306
+#, python-brace-format
+msgid "Removed background cache: {path}"
+msgstr "Cache de fundo removida: {path}"
+
+#: core/grub_manager.py:308
+#, python-brace-format
+msgid "Failed to remove cache {path}: {err}"
+msgstr "Falha ao remover a cache {path}: {err}"
+
+#: core/grub_manager.py:400
+#, python-brace-format
+msgid "Failed to write custom.cfg: {err}"
+msgstr "Falha ao escrever custom.cfg: {err}"
+
+#: core/grub_manager.py:403
+#, python-brace-format
+msgid "Error writing custom.cfg: {err}"
+msgstr "Erro ao escrever custom.cfg: {err}"
+
+#: core/grub_manager.py:425
+msgid "update-grub not found"
+msgstr "update-grub não encontrado"
+
+#: core/grub_manager.py:437
+msgid "Successfully updated GRUB"
+msgstr "GRUB atualizado com sucesso"
+
+#: core/grub_manager.py:440
+#, python-brace-format
+msgid "Failed to update GRUB: {err}"
+msgstr "Falha ao atualizar GRUB: {err}"
+
+#: core/grub_manager.py:443
+#, python-brace-format
+msgid "Error running update-grub: {err}"
+msgstr "Erro ao executar update-grub: {err}"
+
+#: core/grub_manager.py:603 core/grub_manager.py:669
+#: ui/views/boot_entries_view.py:143
+msgid "system"
+msgstr "sistema"
+
+#: core/grub_manager.py:605
+msgid "recovery"
+msgstr "recuperação"
+
+#: core/grub_manager.py:607 core/grub_manager.py:660
+msgid "memtest"
+msgstr "memtest"
+
+#: core/grub_manager.py:609
+msgid "firmware"
+msgstr "firmware"
+
+#: core/grub_manager.py:650
+#, python-brace-format
+msgid "Error parsing grub.cfg: {}"
+msgstr "Erro ao analisar grub.cfg: {}"
+
+#: core/grub_manager.py:742
+#, python-brace-format
+msgid "Refusing to delete unexpected file: {}"
+msgstr "A recusar eliminar ficheiro inesperado: {}"
+
+#: core/grub_manager.py:752
+#, python-brace-format
+msgid "Could not delete {}: {}"
+msgstr "Não foi possível eliminar {}: {}"
+
+#: core/grub_manager.py:776
+#, python-brace-format
+msgid "Could not write to {}: {}"
+msgstr "Não foi possível escrever em {}: {}"
+
+#: core/grub_manager.py:800 core/grub_manager.py:861
+#, python-brace-format
+msgid "Could not read {}: {}"
+msgstr "Não foi possível ler {}: {}"
+
+#: core/grub_manager.py:829 core/grub_manager.py:890
+#, python-brace-format
+msgid "Entry '{}' not found in {}"
+msgstr "Entrada '{}' não encontrada em {}"
+
+#: core/grub_manager.py:837 core/grub_manager.py:898
+#, python-brace-format
+msgid "Could not write {}: {}"
+msgstr "Não foi possível escrever {}: {}"
+
+#: core/theme_manager.py:78
+msgid "[ThemeManager] WARNING: No theme found, using 'dark'"
+msgstr "[ThemeManager] AVISO: Nenhum tema encontrado, a usar 'dark'"
+
+#: core/theme_manager.py:101
+#, python-brace-format
+msgid "[ThemeManager] ✗ ERROR: Theme file not found: {}"
+msgstr "[ThemeManager] ✗ ERRO: Ficheiro de tema não encontrado: {}"
+
+#: core/theme_manager.py:115
+#, python-brace-format
+msgid "[ThemeManager] ✗ ERROR loading theme: {}"
+msgstr "[ThemeManager] ✗ ERRO ao carregar tema: {}"
+
+#: core/theme_manager.py:130
+#, python-brace-format
+msgid "[ThemeManager] ⚠ Could not set GTK theme preference: {}"
+msgstr "[ThemeManager] ⚠ Não foi possível definir preferência de tema GTK: {}"
+
+#: core/theme_manager.py:186
+msgid "[ThemeManager] ✗✗✗ Failed to initialize theming ✗✗✗"
+msgstr "[ThemeManager] ✗✗✗ Falha ao inicializar temas ✗✗✗"
+
+#: main.py:71
+#, python-brace-format
+msgid "Warning: Pre-elevation detection failed: {}"
+msgstr "Aviso: Deteção de pré-elevação falhou: {}"
+
+#: main.py:130
+#, python-brace-format
+msgid "Failed to elevate privileges: {}"
+msgstr "Falha ao elevar privilégios: {}"
+
+#: main.py:138
+#, python-brace-format
+msgid "Import error: {}"
+msgstr "Erro de importação: {}"
+
+#: main.py:139
 msgid ""
 "Ensure dependencies are installed: sudo apt install python3-gi python3-gi-"
 "cairo gir1.2-gtk-3.0"
@@ -135,516 +296,621 @@ msgstr ""
 "Certifique-se de que as dependências estão instaladas: sudo apt install "
 "python3-gi python3-gi-cairo gir1.2-gtk-3.0"
 
-msgid "Entry {}"
-msgstr "Entrada {}"
-
-msgid "Error"
-msgstr "Erro"
-
+#: main.py:142
 #, python-brace-format
-msgid "Error creating main window: {err}"
-msgstr "Erro ao criar janela principal: {err}"
+msgid "Application error: {}"
+msgstr "Erro da aplicação: {}"
 
-#, python-brace-format
-msgid "Error initializing GRUB Manager: {err}"
-msgstr "Erro ao inicializar Gestor GRUB: {err}"
-
-#, python-brace-format
-msgid "Error initializing environment detection: {err}"
-msgstr "Erro ao inicializar deteção de ambiente: {err}"
-
-#, python-brace-format
-msgid "Error initializing internationalization: {err}"
-msgstr "Erro ao inicializar internacionalização: {err}"
-
-#, python-brace-format
-msgid "Error initializing theming: {err}"
-msgstr "Erro ao inicializar temas: {err}"
-
-msgid "Error installing theme: {}"
-msgstr "Erro ao instalar tema: {}"
-
-msgid "Error loading GRUB config: {}"
-msgstr "Erro ao carregar configuração do GRUB: {}"
-
-msgid "Error parsing grub.cfg: {}"
-msgstr "Erro ao analisar grub.cfg: {}"
-
-msgid "Error reading GRUB config: {}"
-msgstr "Erro ao ler configuração do GRUB: {}"
-
-#, python-brace-format
-msgid "Error removing config key: {err}"
-msgstr "Erro ao remover chave de configuração: {err}"
-
-#, python-brace-format
-msgid "Error running update-grub: {err}"
-msgstr "Erro ao executar update-grub: {err}"
-
-#, python-brace-format
-msgid "Error saving GRUB config: {err}"
-msgstr "Erro ao guardar configuração do GRUB: {err}"
-
-msgid "Error writing custom.cfg: {err}"
-msgstr "Erro ao escrever custom.cfg: {err}"
-
-#, python-brace-format
-msgid "Error setting application icon: {err}"
-msgstr "Erro ao definir ícone da aplicação: {err}"
-
-#, python-brace-format
-msgid "Error setting up application menu: {err}"
-msgstr "Erro ao configurar menu da aplicação: {err}"
-
-msgid "Failed to convert font: {}"
-msgstr "Falha ao converter tipo de letra: {}"
-
-msgid "Failed to elevate privileges: {}"
-msgstr "Falha ao elevar privilégios: {}"
-
-msgid "Failed to extract archive: {}"
-msgstr "Falha ao extrair arquivo: {}"
-
-msgid "Failed to install theme: {}"
-msgstr "Falha ao instalar tema: {}"
-
-msgid "Failed to remove theme: {}"
-msgstr "Falha ao remover tema: {}"
-
-#, python-brace-format
-msgid "Failed to save config: {err}"
-msgstr "Falha ao guardar configuração: {err}"
-
-msgid "Failed to change 05_debian_theme permissions: {err}"
-msgstr "Falha ao alterar permissões de 05_debian_theme: {err}"
-
-msgid "Failed to write custom.cfg: {err}"
-msgstr "Falha ao escrever custom.cfg: {err}"
-
-msgid "Failed to save configuration"
-msgstr "Falha ao guardar configuração"
-
-msgid "Failed to update GRUB"
-msgstr "Falha ao atualizar GRUB"
-
-msgid "Failed to update GRUB. Check logs for details."
-msgstr "Falha ao atualizar GRUB. Verifique os registos para detalhes."
-
-#, python-brace-format
-msgid "Failed to update GRUB: {err}"
-msgstr "Falha ao atualizar GRUB: {err}"
-
-msgid "Font '{}' will be used after running update-grub."
-msgstr "O tipo de letra '{}' será usado após executar update-grub."
-
-#, fuzzy
-msgid "Font Applied"
-msgstr ""
-"#-#-#-#-#  soplos-grub-editor.po (Soplos GRUB Editor 2.0.0)  #-#-#-#-#\n"
-"Tipo de Letra Aplicado\n"
-"#-#-#-#-#  soplos-grub-editor.po (Soplos GRUB Editor 2.0.0)  #-#-#-#-#\n"
-"Fonte aplicada"
-
-msgid "Font converted and installed: {}"
-msgstr "Tipo de letra convertido e instalado: {}"
-
-msgid "Font files"
-msgstr "Ficheiros de tipo de letra"
-
-msgid "Font size:"
-msgstr "Tamanho do tipo de letra:"
-
-msgid "Fonts"
-msgstr "Tipos de Letra"
-
-msgid "GNOME"
-msgstr "GNOME"
-
-msgid "GRUB Manager initialized"
-msgstr "Gestor GRUB inicializado"
-
-msgid "GRUB config not found at {}"
-msgstr "Configuração do GRUB não encontrada em {}"
-
-msgid "GRUB configuration updated successfully!"
-msgstr "Configuração do GRUB atualizada com sucesso!"
-
-msgid "GRUB updated successfully!"
-msgstr "GRUB atualizado com sucesso!"
-
-msgid "General Configuration"
-msgstr "Configuração Geral"
-
-msgid "Highlight background:"
-msgstr "Fundo de destaque:"
-
-msgid "Highlight text:"
-msgstr "Texto de destaque:"
-
-msgid "Images"
-msgstr "Imagens"
-
-msgid "Import error: {}"
-msgstr "Erro de importação: {}"
-
-msgid "Include recovery options"
-msgstr "Incluir opções de recuperação"
-
-msgid "Information"
-msgstr "Informação"
-
-msgid "Install..."
-msgstr "Instalar..."
-
-msgid "Installed GRUB fonts:"
-msgstr "Tipos de letra GRUB instalados:"
-
-msgid "KDE Plasma"
-msgstr "KDE Plasma"
-
-msgid "Kernel Parameters"
-msgstr "Parâmetros do Kernel"
-
-msgid "Kernel Parameters:"
-msgstr "Parâmetros do Kernel:"
-
-#, python-brace-format
-msgid "Language initialized: {lang}"
-msgstr "Idioma inicializado: {lang}"
-
-msgid "Main window closing..."
-msgstr "A fechar janela principal..."
-
+#: ui/main_window.py:68
 msgid "Main window created successfully"
 msgstr "Janela principal criada com sucesso"
 
-msgid "Name:"
-msgstr "Nome:"
+#: ui/main_window.py:83
+#, python-brace-format
+msgid "[DEBUG] Desktop detected: {}"
+msgstr "[DEBUG] Ambiente de trabalho detetado: {}"
 
-msgid "No Background"
-msgstr "Sem Fundo"
+#: ui/main_window.py:87
+msgid "Using native window decorations (SSD)"
+msgstr "A usar decorações de janela nativas (SSD)"
 
-msgid "No theme.txt found in archive"
-msgstr "Nenhum theme.txt encontrado no arquivo"
+#: ui/main_window.py:91
+msgid "Creating Client-Side Decorations (CSD)"
+msgstr "A criar decorações do lado do cliente (CSD)"
 
-msgid "Path"
-msgstr "Caminho"
+#: ui/main_window.py:129
+msgid "General Configuration"
+msgstr "Configuração Geral"
 
-msgid "Please select a background image first."
-msgstr "Por favor selecione uma imagem de fundo primeiro."
+#: ui/main_window.py:132
+msgid "Boot Entries"
+msgstr "Entradas de Arranque"
 
-msgid "Please select a valid font file."
-msgstr "Por favor selecione um ficheiro de tipo de letra válido."
+#: ui/main_window.py:135
+msgid "Appearance"
+msgstr "Aparência"
 
-msgid "Preview"
-msgstr "Pré-visualização"
-
-msgid "Quit"
-msgstr "Sair"
-
+#: ui/main_window.py:150 ui/main_window.py:246
 msgid "Ready"
 msgstr "Pronto"
 
-#, python-brace-format
-msgid "Received signal {num}, shutting down..."
-msgstr "Sinal {num} recebido, a encerrar..."
+#: ui/main_window.py:210
+msgid "GNOME"
+msgstr "GNOME"
 
-msgid "Remove"
-msgstr "Remover"
+#: ui/main_window.py:211 ui/main_window.py:212
+msgid "KDE Plasma"
+msgstr "KDE Plasma"
 
-msgid "Remove Background"
-msgstr "Remover Fundo"
+#: ui/main_window.py:213
+msgid "XFCE"
+msgstr "XFCE"
 
-msgid "Remove Entry"
-msgstr "Remover Entrada"
+#: ui/main_window.py:214 ui/main_window.py:216 ui/main_window.py:223
+#: ui/main_window.py:225 ui/views/general_view.py:218
+msgid "Unknown"
+msgstr "Desconhecido"
 
-msgid "Remove Theme"
-msgstr "Remover Tema"
+#: ui/main_window.py:221
+msgid "X11"
+msgstr "X11"
 
-msgid "Remove entry"
-msgstr "Remover entrada"
+#: ui/main_window.py:222
+msgid "Wayland"
+msgstr "Wayland"
 
-msgid "Remove entry '{}'?"
-msgstr "Remover entrada '{}'?"
+#: ui/main_window.py:236
+msgid "Working..."
+msgstr "A trabalhar..."
 
-#, python-brace-format
-msgid "Removed key {key} from config"
-msgstr "Chave {key} removida da configuração"
+#: ui/main_window.py:256
+msgid "GRUB boot loader manager for Mainuan Linux."
+msgstr "Gestor do carregador de arranque GRUB para o Mainuan Linux."
 
-msgid "Run update-grub now to apply changes?"
-msgstr "Executar update-grub agora para aplicar alterações?"
+#: ui/main_window.py:326
+msgid "Main window closing..."
+msgstr "A fechar janela principal..."
 
-msgid "Running on {} ({})"
-msgstr "A executar em {} ({})"
-
-msgid "Screen Resolution:"
-msgstr "Resolução de Ecrã:"
-
-msgid "Select TTF/OTF font file..."
-msgstr "Selecionar ficheiro de tipo de letra TTF/OTF..."
-
-msgid "Select background image"
-msgstr "Selecionar imagem de fundo"
-
-msgid "No image selected"
-msgstr "Nenhuma imagem selecionada"
-
-msgid "Select font file"
-msgstr "Selecionar ficheiro de tipo de letra"
-
-msgid "Select theme archive"
-msgstr "Selecionar arquivo de tema"
-
-msgid "Set 05_debian_theme active={active}"
-msgstr "Definir 05_debian_theme ativo={active}"
-
-msgid "Show boot menu"
-msgstr "Mostrar menu de arranque"
-
-msgid "Shutting down Soplos Grub Editor..."
-msgstr "A encerrar Soplos Grub Editor..."
-
-#, python-brace-format
-msgid "Starting {name} v{ver}..."
-msgstr "A iniciar {name} v{ver}..."
-
-msgid "Success"
-msgstr "Sucesso"
-
-#, python-brace-format
-msgid "Successfully saved config to {path}"
-msgstr "Configuração guardada com sucesso em {path}"
-
-msgid "Successfully saved config using pkexec"
-msgstr "Configuração guardada com sucesso usando pkexec"
-
-msgid "Successfully updated GRUB"
-msgstr "GRUB atualizado com sucesso"
-
-msgid "Text color:"
-msgstr "Cor do texto:"
-
+#: ui/views/appearance_view.py:41 ui/views/appearance_view.py:119
 msgid "Theme"
 msgstr "Tema"
 
-msgid "Theme '{}' installed successfully!"
-msgstr "Tema '{}' instalado com sucesso!"
+#: ui/views/appearance_view.py:46
+msgid "Preview"
+msgstr "Pré-visualização"
 
-msgid "Theme '{}' removed successfully!"
-msgstr "Tema '{}' removido com sucesso!"
+#: ui/views/appearance_view.py:78
+msgid "Themes include colors and fonts. Use 'Background' tab for custom setup."
+msgstr ""
+"Os temas incluem cores e tipos de letra. Use o separador 'Fundo' para uma "
+"configuração personalizada."
 
-msgid "Theme applied successfully!"
-msgstr "Tema aplicado com sucesso!"
-
-msgid "Theme archives"
-msgstr "Arquivos de tema"
-
-msgid "Theme disabled."
-msgstr "Tema desativado."
-
-#, python-brace-format
-msgid "Theme loaded: {theme}"
-msgstr "Tema carregado: {theme}"
-
+#: ui/views/appearance_view.py:86
 msgid "Theme:"
 msgstr "Tema:"
 
-msgid "Themes include colors and fonts. Use 'Background' tab for custom setup."
-msgstr ""
-"Os temas incluem cores e tipos de letra. Use a aba 'Fundo' para configuração "
-"personalizada."
+#: ui/views/appearance_view.py:99
+msgid "Install..."
+msgstr "Instalar..."
 
+#: ui/views/appearance_view.py:103
+msgid "Apply"
+msgstr "Aplicar"
+
+#: ui/views/appearance_view.py:108
+msgid "Disable"
+msgstr "Desativar"
+
+#: ui/views/appearance_view.py:112 ui/views/appearance_view.py:143
+msgid "Remove"
+msgstr "Remover"
+
+#: ui/views/appearance_view.py:128
+msgid "Background image:"
+msgstr "Imagem de fundo:"
+
+#: ui/views/appearance_view.py:134
+msgid "No image selected"
+msgstr "Nenhuma imagem selecionada"
+
+#: ui/views/appearance_view.py:139 ui/views/appearance_view.py:231
+msgid "Browse..."
+msgstr "Procurar..."
+
+#: ui/views/appearance_view.py:155
+msgid "Colors (when not using theme):"
+msgstr "Cores (quando não usar tema):"
+
+#: ui/views/appearance_view.py:162
+msgid "Text color:"
+msgstr "Cor do texto:"
+
+#: ui/views/appearance_view.py:173
+msgid "Background color:"
+msgstr "Cor de fundo:"
+
+#: ui/views/appearance_view.py:184
+msgid "Highlight text:"
+msgstr "Texto de destaque:"
+
+#: ui/views/appearance_view.py:195
+msgid "Highlight background:"
+msgstr "Fundo de destaque:"
+
+#: ui/views/appearance_view.py:205 ui/views/appearance_view.py:811
+msgid "Apply Appearance Settings"
+msgstr "Aplicar Definições de Aparência"
+
+#: ui/views/appearance_view.py:210
+msgid "Background"
+msgstr "Fundo"
+
+#: ui/views/appearance_view.py:219
+msgid "Convert TrueType fonts to GRUB format (PF2):"
+msgstr "Converter tipos de letra TrueType para formato GRUB (PF2):"
+
+#: ui/views/appearance_view.py:227
+msgid "Select TTF/OTF font file..."
+msgstr "Selecionar ficheiro de tipo de letra TTF/OTF..."
+
+#: ui/views/appearance_view.py:238
+msgid "Font size:"
+msgstr "Tamanho do tipo de letra:"
+
+#: ui/views/appearance_view.py:248
+msgid "Convert and Install Font"
+msgstr "Converter e Instalar Tipo de Letra"
+
+#: ui/views/appearance_view.py:254
+msgid "Installed GRUB fonts:"
+msgstr "Tipos de letra GRUB instalados:"
+
+#: ui/views/appearance_view.py:266
+msgid "Apply selected font"
+msgstr "Aplicar Tipo de Letra Selecionado"
+
+#: ui/views/appearance_view.py:271
+msgid "Remove selected font"
+msgstr "Remover tipo de letra selecionado"
+
+#: ui/views/appearance_view.py:278
+msgid "Fonts"
+msgstr "Tipos de Letra"
+
+#: ui/views/appearance_view.py:294 ui/views/appearance_view.py:992
+msgid "Font Applied"
+msgstr "Tipo de Letra Aplicado"
+
+#: ui/views/appearance_view.py:296
+msgid "Failed to save font configuration to /etc/default/grub"
+msgstr "Falha ao guardar a configuração do tipo de letra em /etc/default/grub"
+
+#: ui/views/appearance_view.py:310
+msgid "Delete Font?"
+msgstr "Eliminar tipo de letra?"
+
+#: ui/views/appearance_view.py:313
+#, python-brace-format
+msgid "Are you sure you want to permanently delete '{}'?"
+msgstr "Tem a certeza de que pretende eliminar permanentemente '{}'?"
+
+#: ui/views/appearance_view.py:345
+msgid "Font deleted. GRUB configuration updated."
+msgstr "Tipo de letra eliminado. Configuração do GRUB atualizada."
+
+#: ui/views/appearance_view.py:347
+msgid "Font deleted successfully."
+msgstr "Tipo de letra eliminado com sucesso."
+
+#: ui/views/appearance_view.py:350
+#, python-brace-format
+msgid "Failed to delete font: {}"
+msgstr "Falha ao eliminar o tipo de letra: {}"
+
+#: ui/views/appearance_view.py:494
+msgid "Select theme archive"
+msgstr "Selecionar arquivo de tema"
+
+#: ui/views/appearance_view.py:504
+msgid "Theme archives"
+msgstr "Arquivos de tema"
+
+#: ui/views/appearance_view.py:539
+msgid "Unsupported archive format"
+msgstr "Formato de arquivo não suportado"
+
+#: ui/views/appearance_view.py:544
+#, python-brace-format
+msgid "Failed to extract archive: {}"
+msgstr "Falha ao extrair arquivo: {}"
+
+#: ui/views/appearance_view.py:555
+msgid "No theme.txt found in archive"
+msgstr "Nenhum theme.txt encontrado no arquivo"
+
+#: ui/views/appearance_view.py:571
+#, python-brace-format
+msgid "Theme '{}' installed successfully!"
+msgstr "Tema '{}' instalado com sucesso!"
+
+#: ui/views/appearance_view.py:575
+#, python-brace-format
+msgid "Failed to install theme: {}"
+msgstr "Falha ao instalar tema: {}"
+
+#: ui/views/appearance_view.py:578
+#, python-brace-format
+msgid "Error installing theme: {}"
+msgstr "Erro ao instalar tema: {}"
+
+#: ui/views/appearance_view.py:592
+msgid "Apply Theme"
+msgstr "Aplicar Tema"
+
+#: ui/views/appearance_view.py:595
+#, python-brace-format
+msgid ""
+"Applying theme '{}' will disable any custom background and colors. Continue?"
+msgstr ""
+"Aplicar o tema '{}' desativará qualquer fundo e cores personalizados. "
+"Continuar?"
+
+#: ui/views/appearance_view.py:608
+msgid "Theme applied successfully!"
+msgstr "Tema aplicado com sucesso!"
+
+#: ui/views/appearance_view.py:617
+msgid "Disable Theme"
+msgstr "Desativar Tema"
+
+#: ui/views/appearance_view.py:619
+msgid "This will remove the theme and set default colors. Continue?"
+msgstr "Isto removerá o tema e definirá as cores padrão. Continuar?"
+
+#: ui/views/appearance_view.py:635
+msgid "Theme disabled."
+msgstr "Tema desativado."
+
+#: ui/views/appearance_view.py:646 ui/views/boot_entries_view.py:186
+#: ui/views/general_view.py:407
+msgid "Run update-grub now to apply changes?"
+msgstr "Executar update-grub agora para aplicar alterações?"
+
+#: ui/views/appearance_view.py:657 ui/views/appearance_view.py:952
+#: ui/views/general_view.py:418
+msgid "Success"
+msgstr "Sucesso"
+
+#: ui/views/appearance_view.py:659
+msgid "GRUB configuration updated successfully!"
+msgstr "Configuração do GRUB atualizada com sucesso!"
+
+#: ui/views/appearance_view.py:668 ui/views/appearance_view.py:681
+#: ui/views/appearance_view.py:929 ui/views/appearance_view.py:966
+#: ui/views/appearance_view.py:978 ui/views/boot_entries_view.py:199
+#: ui/views/general_view.py:429 ui/views/general_view.py:440
+msgid "Error"
+msgstr "Erro"
+
+#: ui/views/appearance_view.py:670
+msgid "Failed to update GRUB. Check logs for details."
+msgstr "Falha ao atualizar GRUB. Verifique os registos para detalhes."
+
+#: ui/views/appearance_view.py:694
+msgid "Information"
+msgstr "Informação"
+
+#: ui/views/appearance_view.py:711
+msgid "Remove Theme"
+msgstr "Remover Tema"
+
+#: ui/views/appearance_view.py:714
+#, python-brace-format
+msgid "This will permanently delete theme '{}'. Are you sure?"
+msgstr "Isto eliminará permanentemente o tema '{}'. Tem a certeza?"
+
+#: ui/views/appearance_view.py:729
+#, python-brace-format
+msgid "Theme '{}' removed successfully!"
+msgstr "Tema '{}' removido com sucesso!"
+
+#: ui/views/appearance_view.py:738
+#, python-brace-format
+msgid "Failed to remove theme: {}"
+msgstr "Falha ao remover tema: {}"
+
+#: ui/views/appearance_view.py:749
+msgid "Select background image"
+msgstr "Selecionar imagem de fundo"
+
+#: ui/views/appearance_view.py:759
+msgid "Images"
+msgstr "Imagens"
+
+#: ui/views/appearance_view.py:777
+msgid "Remove Background"
+msgstr "Remover Fundo"
+
+#: ui/views/appearance_view.py:779
+msgid "This will remove the background image from GRUB. Continue?"
+msgstr "Isto removerá a imagem de fundo do GRUB. Continuar?"
+
+#: ui/views/appearance_view.py:814
 msgid ""
 "This will disable any theme and use your custom background/colors. Continue?"
 msgstr ""
 "Isto irá desativar qualquer tema e usar o fundo/cores personalizados. "
 "Continuar?"
 
-msgid "This will permanently delete theme '{}'. Are you sure?"
-msgstr "Isto eliminará permanentemente o tema '{}'. Tem a certeza?"
+#: ui/views/appearance_view.py:856
+msgid "Settings applied successfully!"
+msgstr "Definições aplicadas com sucesso!"
 
-msgid "This will remove the background image from GRUB. Continue?"
-msgstr "Isto removerá a imagem de fundo do GRUB. Continuar?"
+#: ui/views/appearance_view.py:895
+msgid "Select font file"
+msgstr "Selecionar ficheiro de tipo de letra"
 
-msgid "This will remove the theme and set default colors. Continue?"
-msgstr "Isto removerá o tema e definirá as cores padrão. Continuar?"
+#: ui/views/appearance_view.py:906
+msgid "Font files"
+msgstr "Ficheiros de tipo de letra"
 
-msgid "Timeout (seconds):"
-msgstr "Tempo limite (segundos):"
+#: ui/views/appearance_view.py:931
+msgid "Please select a valid font file."
+msgstr "Por favor selecione um ficheiro de tipo de letra válido."
 
+#: ui/views/appearance_view.py:954
+#, python-brace-format
+msgid "Font converted and installed: {}"
+msgstr "Tipo de letra convertido e instalado: {}"
+
+#: ui/views/appearance_view.py:968
+#, python-brace-format
+msgid "Failed to convert font: {}"
+msgstr "Falha ao converter tipo de letra: {}"
+
+#: ui/views/boot_entries_view.py:59
+msgid "Name:"
+msgstr "Nome:"
+
+#: ui/views/boot_entries_view.py:70
 msgid "Type:"
 msgstr "Tipo:"
 
-msgid "Unknown"
-msgstr "Desconhecido"
+#: ui/views/boot_entries_view.py:80
+msgid "Path"
+msgstr "Caminho"
 
-msgid "Unsupported archive format"
-msgstr "Formato de arquivo não suportado"
+#: ui/views/boot_entries_view.py:90
+msgid "Enabled"
+msgstr "Ativado"
 
-msgid "Use UUID for root partition"
-msgstr "Usar UUID para partição root"
+#: ui/views/boot_entries_view.py:103
+msgid "Add entry"
+msgstr "Adicionar entrada"
 
-msgid "Using native window decorations (SSD)"
-msgstr "A usar decorações de janela nativas (SSD)"
+#: ui/views/boot_entries_view.py:108
+msgid "Remove entry"
+msgstr "Remover entrada"
 
-msgid "Warning: Pre-elevation detection failed: {}"
-msgstr "Aviso: Deteção de pré-elevação falhou: {}"
+#: ui/views/boot_entries_view.py:134
+#, python-brace-format
+msgid "Entry {}"
+msgstr "Entrada {}"
 
-msgid "Wayland"
-msgstr "Wayland"
-
-msgid "Working..."
-msgstr "A trabalhar..."
-
-msgid "Would set GRUB_FONT={}"
-msgstr "Definiria GRUB_FONT={}"
-
-msgid "X11"
-msgstr "X11"
-
-msgid "XFCE"
-msgstr "XFCE"
-
-msgid "[DEBUG] Desktop detected: {}"
-msgstr "[DEBUG] Ambiente de trabalho detetado: {}"
-
-msgid "[ThemeManager] WARNING: No theme found, using 'dark'"
-msgstr "[ThemeManager] AVISO: Nenhum tema encontrado, a usar 'dark'"
-
-msgid "[ThemeManager] ⚠ Could not set GTK theme preference: {}"
-msgstr "[ThemeManager] ⚠ Não foi possível definir preferência de tema GTK: {}"
-
-msgid "[ThemeManager] ✗ ERROR loading theme: {}"
-msgstr "[ThemeManager] ✗ ERRO ao carregar tema: {}"
-
-msgid "[ThemeManager] ✗ ERROR: Theme file not found: {}"
-msgstr "[ThemeManager] ✗ ERRO: Ficheiro de tema não encontrado: {}"
-
-msgid "[ThemeManager] ✗✗✗ Failed to initialize theming ✗✗✗"
-msgstr "[ThemeManager] ✗✗✗ Falha ao inicializar temas ✗✗✗"
-
-msgid "auto"
-msgstr "auto"
-
-msgid "firmware"
-msgstr "firmware"
-
-msgid "memtest"
-msgstr "memtest"
-
-msgid "quiet splash resume=UUID=..."
-msgstr "quiet splash resume=UUID=..."
-
-msgid "recovery"
-msgstr "recuperação"
-
-msgid "system"
-msgstr "sistema"
-
-msgid "update-grub not found"
-msgstr "update-grub não encontrado"
-
-msgid "Remove selected font"
-msgstr "Remover fonte selecionada"
-
-msgid "Delete Font?"
-msgstr "Eliminar fonte?"
-
-msgid "Are you sure you want to permanently delete '{}'?"
-msgstr "Tem a certeza que deseja eliminar permanentemente '{}'?"
-
-msgid "Font deleted and removed from configuration."
-msgstr "Fonte eliminada e removida da configuração."
-
-msgid "Font deleted successfully."
-msgstr "Fonte eliminada com sucesso."
-
-msgid "Failed to delete font: {}"
-msgstr "Falha ao eliminar a fonte: {}"
-
-msgid "Failed to save font configuration to /etc/default/grub"
-msgstr "Falha ao guardar a configuração da fonte em /etc/default/grub"
-
-msgid "Font deleted. GRUB configuration updated."
-msgstr "Fonte eliminada. Configuração do GRUB atualizada."
-
-msgid "0: Submenu » Entry"
-msgstr "0: Submenu » Entrada"
-
-msgid "Silent update"
-msgstr "Atualização silenciosa"
-
-msgid "Updating GRUB on startup..."
-msgstr "A atualizar o GRUB no arranque..."
-
-msgid "Disable submenus"
-msgstr "Desativar submenus"
-
-msgid "Cancel"
-msgstr "Cancelar"
-
-msgid "Save"
-msgstr "Salvar"
-
+#: ui/views/boot_entries_view.py:212
 msgid "Not supported"
 msgstr "Não suportado"
 
+#: ui/views/boot_entries_view.py:215
+msgid ""
+"This entry belongs to an installed kernel or operating system. GRUB "
+"regenerates it automatically from what's installed on your disk, so it can't "
+"be disabled or removed individually here — you would need to uninstall the "
+"kernel or operating system itself."
+msgstr ""
+"Esta entrada pertence a um kernel ou sistema operativo instalado. O GRUB "
+"regenera-a automaticamente a partir do que está instalado no disco, pelo que "
+"não pode ser desativada nem removida individualmente aqui — seria necessário "
+"desinstalar o próprio kernel ou sistema operativo."
+
+#: ui/views/boot_entries_view.py:242 ui/views/boot_entries_view.py:357
 msgid "Could not update the entry"
 msgstr "Não foi possível atualizar a entrada"
 
+#: ui/views/boot_entries_view.py:250
+msgid "Add Entry"
+msgstr "Adicionar Entrada"
+
+#: ui/views/boot_entries_view.py:255
+msgid "Cancel"
+msgstr "Cancelar"
+
+#: ui/views/boot_entries_view.py:256
+msgid "Save"
+msgstr "Guardar"
+
+#: ui/views/boot_entries_view.py:268
+msgid ""
+"Write the raw GRUB menuentry block (this is appended to /etc/grub.d/"
+"40_custom):"
+msgstr ""
+"Escreva o bloco menuentry do GRUB em bruto (será acrescentado a /etc/grub.d/"
+"40_custom):"
+
+#: ui/views/boot_entries_view.py:300
 msgid "Failed to save the custom entry"
-msgstr "Falha ao salvar a entrada personalizada"
+msgstr "Falha ao guardar a entrada personalizada"
 
-msgid "Delete '{}' from /boot? This also removes its serial-console variant, since both share the same file."
-msgstr "Excluir '{}' de /boot? Isso também remove sua variante de console serial, já que ambas compartilham o mesmo arquivo."
+#: ui/views/boot_entries_view.py:325 ui/views/boot_entries_view.py:344
+msgid "Remove Entry"
+msgstr "Remover Entrada"
 
+#: ui/views/boot_entries_view.py:328
+#, python-brace-format
+msgid ""
+"Delete '{}' from /boot? This also removes its serial-console variant, since "
+"both share the same file."
+msgstr ""
+"Eliminar '{}' de /boot? Isto também remove a respetiva variante para consola "
+"série, pois ambas partilham o mesmo ficheiro."
+
+#: ui/views/boot_entries_view.py:347
+#, python-brace-format
 msgid "Delete '{}' from /etc/grub.d/40_custom? This cannot be undone."
-msgstr "Excluir '{}' de /etc/grub.d/40_custom? Esta ação não pode ser desfeita."
+msgstr ""
+"Eliminar '{}' de /etc/grub.d/40_custom? Esta ação não pode ser anulada."
 
-msgid "This entry belongs to an installed kernel or operating system. GRUB regenerates it automatically from what's installed on your disk, so it can't be disabled or removed individually here — you would need to uninstall the kernel or operating system itself."
-msgstr "Esta entrada pertence a um kernel ou sistema operacional instalado. O GRUB a regenera automaticamente com base no que está instalado no disco, portanto não pode ser desativada ou removida individualmente aqui — seria necessário desinstalar o kernel ou o próprio sistema operacional."
+#: ui/views/general_view.py:40
+msgid "Boot Configuration"
+msgstr "Configuração de Arranque"
 
-msgid "Write the raw GRUB menuentry block (this is appended to /etc/grub.d/40_custom):"
-msgstr "Escreva o bloco menuentry bruto do GRUB (será anexado a /etc/grub.d/40_custom):"
-
-msgid "Refusing to delete unexpected file: {}"
-msgstr "Recusando excluir arquivo inesperado: {}"
-
-msgid "Could not delete {}: {}"
-msgstr "Não foi possível excluir {}: {}"
-
-msgid "Could not read {}: {}"
-msgstr "Não foi possível ler {}: {}"
-
-msgid "Entry '{}' not found in {}"
-msgstr "Entrada '{}' não encontrada em {}"
-
-msgid "Could not write {}: {}"
-msgstr "Não foi possível escrever {}: {}"
-
-msgid "Could not write to {}: {}"
-msgstr "Não foi possível escrever em {}: {}"
-
-msgid "Set {script} active={active}"
-msgstr "Definido {script} ativo={active}"
-
-msgid "Failed to change {script} permissions: {err}"
-msgstr "Falha ao alterar as permissões de {script}: {err}"
-
-msgid "Removed background cache: {path}"
-msgstr "Cache de fundo removido: {path}"
-
-msgid "Failed to remove cache {path}: {err}"
-msgstr "Falha ao remover o cache {path}: {err}"
-
+#: ui/views/general_view.py:50
 msgid "Default Boot Mode:"
 msgstr "Modo de Arranque Padrão:"
 
+#: ui/views/general_view.py:57
 msgid "Fixed entry"
 msgstr "Entrada fixa"
 
+#: ui/views/general_view.py:58
 msgid "Last installed kernel"
 msgstr "Último kernel instalado"
 
+#: ui/views/general_view.py:59
 msgid "Last booted kernel"
 msgstr "Último kernel arrancado"
+
+#: ui/views/general_view.py:68
+msgid "Default Boot Entry:"
+msgstr "Entrada de Arranque Padrão:"
+
+#: ui/views/general_view.py:86
+msgid "Timeout (seconds):"
+msgstr "Tempo limite (segundos):"
+
+#: ui/views/general_view.py:101
+msgid "Screen Resolution:"
+msgstr "Resolução de Ecrã:"
+
+#: ui/views/general_view.py:121
+msgid "auto"
+msgstr "auto"
+
+#: ui/views/general_view.py:138
+msgid "Advanced Options"
+msgstr "Opções Avançadas"
+
+#: ui/views/general_view.py:147
+msgid "Detect other operating systems"
+msgstr "Detetar outros sistemas operativos"
+
+#: ui/views/general_view.py:151
+msgid "Show boot menu"
+msgstr "Mostrar menu de arranque"
+
+#: ui/views/general_view.py:156
+msgid "Include recovery options"
+msgstr "Incluir opções de recuperação"
+
+#: ui/views/general_view.py:164
+msgid "Kernel Parameters"
+msgstr "Parâmetros do Kernel"
+
+#: ui/views/general_view.py:174
+msgid "Kernel Parameters:"
+msgstr "Parâmetros do Kernel:"
+
+#: ui/views/general_view.py:179
+msgid "quiet splash resume=UUID=..."
+msgstr "quiet splash resume=UUID=..."
+
+#: ui/views/general_view.py:188
+msgid "Apply Changes"
+msgstr "Aplicar Alterações"
+
+#: ui/views/general_view.py:302
+#, python-brace-format
+msgid "Error loading GRUB config: {}"
+msgstr "Erro ao carregar configuração do GRUB: {}"
+
+#: ui/views/general_view.py:330
+msgid "Menu cannot be shown when timeout is 0"
+msgstr "O menu não pode ser mostrado quando o tempo limite é 0"
+
+#: ui/views/general_view.py:405
+msgid "Changes Saved"
+msgstr "Alterações Guardadas"
+
+#: ui/views/general_view.py:420
+msgid "GRUB updated successfully!"
+msgstr "GRUB atualizado com sucesso!"
+
+#: ui/views/general_view.py:431
+msgid "Failed to update GRUB"
+msgstr "Falha ao atualizar GRUB"
+
+#: ui/views/general_view.py:442
+msgid "Failed to save configuration"
+msgstr "Falha ao guardar configuração"
+
+#: assets/org.mainuan.grubeditor.desktop.in:5
+msgid "Graphical editor for GRUB configuration"
+msgstr "Editor gráfico para configuração do GRUB"
+
+#: assets/org.mainuan.grubeditor.desktop.in:10
+msgid "grub;boot;system;mainuan;"
+msgstr "grub;arranque;boot;sistema;mainuan;"
+
+#~ msgid "/boot/grub/background.png"
+#~ msgstr "/boot/grub/background.png"
+
+#~ msgid "Apply Background Settings"
+#~ msgstr "Aplicar Configurações de Fundo"
+
+#~ msgid "Background removed successfully!"
+#~ msgstr "Fundo removido com sucesso!"
+
+#~ msgid "Custom entry dialog - TODO"
+#~ msgstr "Diálogo de entrada personalizada - A FAZER"
+
+#~ msgid "Failed to change 05_debian_theme permissions: {err}"
+#~ msgstr "Falha ao alterar permissões de 05_debian_theme: {err}"
+
+#~ msgid "Font '{}' will be used after running update-grub."
+#~ msgstr "O tipo de letra '{}' será usado após executar update-grub."
+
+#~ msgid "No Background"
+#~ msgstr "Sem Fundo"
+
+#~ msgid "Please select a background image first."
+#~ msgstr "Por favor selecione uma imagem de fundo primeiro."
+
+#~ msgid "Remove entry '{}'?"
+#~ msgstr "Remover entrada '{}'?"
+
+#~ msgid "Running on {} ({})"
+#~ msgstr "A executar em {} ({})"
+
+#~ msgid "Set 05_debian_theme active={active}"
+#~ msgstr "Definir 05_debian_theme ativo={active}"
+
+#~ msgid "Use UUID for root partition"
+#~ msgstr "Usar UUID para partição root"
+
+#~ msgid "Would set GRUB_FONT={}"
+#~ msgstr "Definiria GRUB_FONT={}"
+
+#~ msgid "Font deleted and removed from configuration."
+#~ msgstr "Fonte eliminada e removida da configuração."
+
+#~ msgid "0: Submenu » Entry"
+#~ msgstr "0: Submenu » Entrada"
+
+#~ msgid "Silent update"
+#~ msgstr "Atualização silenciosa"
+
+#~ msgid "Updating GRUB on startup..."
+#~ msgstr "A atualizar o GRUB no arranque..."
+
+#~ msgid "Disable submenus"
+#~ msgstr "Desativar submenus"
