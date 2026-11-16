@@ -14,13 +14,13 @@ from gi.repository import Gtk, Gdk, GLib, Gio
 
 from .environment import get_environment_detector
 from .theme_manager import get_theme_manager, initialize_theming
-from .i18n_manager import get_i18n_manager, initialize_i18n, _
+from .i18n_manager import get_i18n_manager, initialize_i18n, _, N_
 from .grub_manager import get_grub_manager
 from utils.logger import log_info, log_error, log_warning
 
 # Constants (Move to a config file ideally, but here for now)
 APP_ID = "org.mainuan.grubeditor"
-APP_NAME = "Mainuan GRUB Editor"
+APP_NAME = N_("Mainuan GRUB Editor")
 APP_VERSION = "2.0.2"
 
 
@@ -128,13 +128,15 @@ class MainuanGrubEditorApplication(Gtk.Application):
     def _initialize_internationalization(self):
         """Initialize the internationalization system."""
         try:
-            current_lang = initialize_i18n(str(self.locale_path))
+            # Catalogs: /usr/share/locale when installed, ./locale in a built checkout.
+            current_lang = initialize_i18n()
             self.i18n_manager = get_i18n_manager()
             log_info(_("Language initialized: {lang}").format(lang=current_lang))
             
             # Set up gettext
             import gettext
-            gettext.bindtextdomain('mainuan-grub-editor', str(self.locale_path))
+            if self.i18n_manager.locale_dir:
+                gettext.bindtextdomain('mainuan-grub-editor', str(self.i18n_manager.locale_dir))
             gettext.textdomain('mainuan-grub-editor')
             
         except Exception as e:
