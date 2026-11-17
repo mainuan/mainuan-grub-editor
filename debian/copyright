@@ -1,8 +1,14 @@
 Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
-Upstream-Name: Mainuan-grub-editor
+Upstream-Name: mainuan-grub-editor
+Upstream-Contact: David Caixinha <tugatechlab.contacto@gmail.com>
+Source: https://github.com/mainuan/mainuan-grub-editor
 
 Files: *
-Copyright: 2026 David Caixinha <tugatechlab.contacto@gmail.com>
+Copyright: 2025-2026 David Caixinha <tugatechlab.contacto@gmail.com>
+License: GPL-3.0+
+
+Files: locale/* po/* tests/* packaging/build-data.sh debian/*
+Copyright: 2026 Mainuan contributors
 License: GPL-3.0+
 
 License: GPL-3.0+

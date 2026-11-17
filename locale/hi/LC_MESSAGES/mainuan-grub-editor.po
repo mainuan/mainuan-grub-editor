@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: Mainuan GRUB Editor\n"
 "Report-Msgid-Bugs-To: https://github.com/MainuanLinux/mainuan-grub-editor/"
 "issues\n"
-"POT-Creation-Date: 2026-11-17 04:08-0300\n"
+"POT-Creation-Date: 2026-11-17 11:07-0300\n"
 "PO-Revision-Date: 2026-11-16 11:30-0300\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: hi <https://github.com/mainuan>\n"
@@ -485,299 +485,299 @@ msgstr "Mainuan Linux के लिए GRUB बूट लोडर प्रब�
 msgid "Main window closing..."
 msgstr "मुख्य विंडो बंद हो रही है..."
 
-#: ui/views/appearance_view.py:41 ui/views/appearance_view.py:119
+#: ui/views/appearance_view.py:42 ui/views/appearance_view.py:120
 msgid "Theme"
 msgstr "थीम"
 
-#: ui/views/appearance_view.py:46
+#: ui/views/appearance_view.py:47
 msgid "Preview"
 msgstr "पूर्वावलोकन"
 
-#: ui/views/appearance_view.py:78
+#: ui/views/appearance_view.py:79
 msgid "Themes include colors and fonts. Use 'Background' tab for custom setup."
 msgstr "थीम में रंग और फ़ॉन्ट शामिल होते हैं। कस्टम सेटअप के लिए 'पृष्ठभूमि' टैब का उपयोग करें।"
 
-#: ui/views/appearance_view.py:86
+#: ui/views/appearance_view.py:87
 msgid "Theme:"
 msgstr "थीम:"
 
-#: ui/views/appearance_view.py:99
+#: ui/views/appearance_view.py:100
 msgid "Install..."
 msgstr "स्थापित करें..."
 
-#: ui/views/appearance_view.py:103
+#: ui/views/appearance_view.py:104
 msgid "Apply"
 msgstr "लागू करें"
 
-#: ui/views/appearance_view.py:108
+#: ui/views/appearance_view.py:109
 msgid "Disable"
 msgstr "अक्षम करें"
 
-#: ui/views/appearance_view.py:112 ui/views/appearance_view.py:143
+#: ui/views/appearance_view.py:113 ui/views/appearance_view.py:144
 msgid "Remove"
 msgstr "हटाएँ"
 
-#: ui/views/appearance_view.py:128
+#: ui/views/appearance_view.py:129
 msgid "Background image:"
 msgstr "पृष्ठभूमि छवि:"
 
-#: ui/views/appearance_view.py:134
+#: ui/views/appearance_view.py:135
 msgid "No image selected"
 msgstr "कोई छवि नहीं चुनी गई"
 
-#: ui/views/appearance_view.py:139 ui/views/appearance_view.py:231
+#: ui/views/appearance_view.py:140 ui/views/appearance_view.py:232
 msgid "Browse..."
 msgstr "ब्राउज़ करें..."
 
-#: ui/views/appearance_view.py:155
+#: ui/views/appearance_view.py:156
 msgid "Colors (when not using theme):"
 msgstr "रंग (थीम का उपयोग न करने पर):"
 
-#: ui/views/appearance_view.py:162
+#: ui/views/appearance_view.py:163
 msgid "Text color:"
 msgstr "पाठ का रंग:"
 
-#: ui/views/appearance_view.py:173
+#: ui/views/appearance_view.py:174
 msgid "Background color:"
 msgstr "पृष्ठभूमि का रंग:"
 
-#: ui/views/appearance_view.py:184
+#: ui/views/appearance_view.py:185
 msgid "Highlight text:"
 msgstr "हाइलाइट पाठ:"
 
-#: ui/views/appearance_view.py:195
+#: ui/views/appearance_view.py:196
 msgid "Highlight background:"
 msgstr "हाइलाइट पृष्ठभूमि:"
 
-#: ui/views/appearance_view.py:205 ui/views/appearance_view.py:811
+#: ui/views/appearance_view.py:206 ui/views/appearance_view.py:812
 msgid "Apply Appearance Settings"
 msgstr "दिखावट सेटिंग्स लागू करें"
 
-#: ui/views/appearance_view.py:210
+#: ui/views/appearance_view.py:211
 msgid "Background"
 msgstr "पृष्ठभूमि"
 
 # reviewed: convert = रूपांतरित (बदलें = mudar/trocar); consistência com
 # rótulos seguintes
-#: ui/views/appearance_view.py:219
+#: ui/views/appearance_view.py:220
 msgid "Convert TrueType fonts to GRUB format (PF2):"
 msgstr "TrueType फ़ॉन्ट को GRUB फ़ॉर्मेट (PF2) में रूपांतरित करें:"
 
-#: ui/views/appearance_view.py:227
+#: ui/views/appearance_view.py:228
 msgid "Select TTF/OTF font file..."
 msgstr "TTF/OTF फ़ॉन्ट फ़ाइल चुनें..."
 
-#: ui/views/appearance_view.py:238
+#: ui/views/appearance_view.py:239
 msgid "Font size:"
 msgstr "फ़ॉन्ट आकार:"
 
 # reviewed: "फ़ॉन्ट बदलें" = trocar a fonte; a ação é converter
-#: ui/views/appearance_view.py:248
+#: ui/views/appearance_view.py:249
 msgid "Convert and Install Font"
 msgstr "फ़ॉन्ट रूपांतरित करें और स्थापित करें"
 
-#: ui/views/appearance_view.py:254
+#: ui/views/appearance_view.py:255
 msgid "Installed GRUB fonts:"
 msgstr "स्थापित GRUB फ़ॉन्ट:"
 
-#: ui/views/appearance_view.py:266
+#: ui/views/appearance_view.py:267
 msgid "Apply selected font"
 msgstr "चुना गया फ़ॉन्ट लागू करें"
 
-#: ui/views/appearance_view.py:271
+#: ui/views/appearance_view.py:272
 msgid "Remove selected font"
 msgstr "चुना गया फ़ॉन्ट हटाएँ"
 
-#: ui/views/appearance_view.py:278
+#: ui/views/appearance_view.py:279
 msgid "Fonts"
 msgstr "फ़ॉन्ट्स"
 
-#: ui/views/appearance_view.py:294 ui/views/appearance_view.py:992
+#: ui/views/appearance_view.py:295 ui/views/appearance_view.py:993
 msgid "Font Applied"
 msgstr "फ़ॉन्ट लागू किया गया"
 
-#: ui/views/appearance_view.py:296
+#: ui/views/appearance_view.py:297
 msgid "Failed to save font configuration to /etc/default/grub"
 msgstr "फ़ॉन्ट कॉन्फ़िगरेशन /etc/default/grub में सहेजने में विफल"
 
-#: ui/views/appearance_view.py:310
+#: ui/views/appearance_view.py:311
 msgid "Delete Font?"
 msgstr "फ़ॉन्ट मिटाएँ?"
 
-#: ui/views/appearance_view.py:313
+#: ui/views/appearance_view.py:314
 #, python-brace-format
 msgid "Are you sure you want to permanently delete '{}'?"
 msgstr "क्या आप वाकई '{}' को स्थायी रूप से मिटाना चाहते हैं?"
 
-#: ui/views/appearance_view.py:345
+#: ui/views/appearance_view.py:346
 msgid "Font deleted. GRUB configuration updated."
 msgstr "फ़ॉन्ट मिटाया गया। GRUB कॉन्फ़िगरेशन अद्यतन किया गया।"
 
-#: ui/views/appearance_view.py:347
+#: ui/views/appearance_view.py:348
 msgid "Font deleted successfully."
 msgstr "फ़ॉन्ट सफलतापूर्वक मिटाया गया।"
 
-#: ui/views/appearance_view.py:350
+#: ui/views/appearance_view.py:351
 #, python-brace-format
 msgid "Failed to delete font: {}"
 msgstr "फ़ॉन्ट मिटाने में विफल: {}"
 
-#: ui/views/appearance_view.py:494
+#: ui/views/appearance_view.py:495
 msgid "Select theme archive"
 msgstr "थीम आर्काइव चुनें"
 
-#: ui/views/appearance_view.py:504
+#: ui/views/appearance_view.py:505
 msgid "Theme archives"
 msgstr "थीम आर्काइव"
 
-#: ui/views/appearance_view.py:539
+#: ui/views/appearance_view.py:540
 msgid "Unsupported archive format"
 msgstr "असमर्थित आर्काइव फ़ॉर्मेट"
 
-#: ui/views/appearance_view.py:544
+#: ui/views/appearance_view.py:545
 #, python-brace-format
 msgid "Failed to extract archive: {}"
 msgstr "आर्काइव निकालने में विफल: {}"
 
-#: ui/views/appearance_view.py:555
+#: ui/views/appearance_view.py:556
 msgid "No theme.txt found in archive"
 msgstr "आर्काइव में theme.txt नहीं मिला"
 
-#: ui/views/appearance_view.py:571
+#: ui/views/appearance_view.py:572
 #, python-brace-format
 msgid "Theme '{}' installed successfully!"
 msgstr "थीम '{}' सफलतापूर्वक स्थापित हुई!"
 
-#: ui/views/appearance_view.py:575
+#: ui/views/appearance_view.py:576
 #, python-brace-format
 msgid "Failed to install theme: {}"
 msgstr "थीम स्थापित करने में विफल: {}"
 
-#: ui/views/appearance_view.py:578
+#: ui/views/appearance_view.py:579
 #, python-brace-format
 msgid "Error installing theme: {}"
 msgstr "थीम स्थापित करने में त्रुटि: {}"
 
-#: ui/views/appearance_view.py:592
+#: ui/views/appearance_view.py:593
 msgid "Apply Theme"
 msgstr "थीम लागू करें"
 
-#: ui/views/appearance_view.py:595
+#: ui/views/appearance_view.py:596
 #, python-brace-format
 msgid ""
 "Applying theme '{}' will disable any custom background and colors. Continue?"
 msgstr "थीम '{}' लागू करने से कोई भी कस्टम पृष्ठभूमि और रंग अक्षम हो जाएँगे। जारी रखें?"
 
-#: ui/views/appearance_view.py:608
+#: ui/views/appearance_view.py:609
 msgid "Theme applied successfully!"
 msgstr "थीम सफलतापूर्वक लागू की गई!"
 
-#: ui/views/appearance_view.py:617
+#: ui/views/appearance_view.py:618
 msgid "Disable Theme"
 msgstr "थीम अक्षम करें"
 
-#: ui/views/appearance_view.py:619
+#: ui/views/appearance_view.py:620
 msgid "This will remove the theme and set default colors. Continue?"
 msgstr "इससे थीम हट जाएगी और डिफ़ॉल्ट रंग सेट हो जाएँगे। जारी रखें?"
 
-#: ui/views/appearance_view.py:635
+#: ui/views/appearance_view.py:636
 msgid "Theme disabled."
 msgstr "थीम अक्षम की गई।"
 
-#: ui/views/appearance_view.py:646 ui/views/boot_entries_view.py:186
+#: ui/views/appearance_view.py:647 ui/views/boot_entries_view.py:186
 #: ui/views/general_view.py:407
 msgid "Run update-grub now to apply changes?"
 msgstr "बदलाव लागू करने के लिए अभी update-grub चलाएँ?"
 
-#: ui/views/appearance_view.py:657 ui/views/appearance_view.py:952
+#: ui/views/appearance_view.py:658 ui/views/appearance_view.py:953
 #: ui/views/general_view.py:418
 msgid "Success"
 msgstr "सफलता"
 
-#: ui/views/appearance_view.py:659
+#: ui/views/appearance_view.py:660
 msgid "GRUB configuration updated successfully!"
 msgstr "GRUB कॉन्फ़िगरेशन सफलतापूर्वक अद्यतन किया गया!"
 
-#: ui/views/appearance_view.py:668 ui/views/appearance_view.py:681
-#: ui/views/appearance_view.py:929 ui/views/appearance_view.py:966
-#: ui/views/appearance_view.py:978 ui/views/boot_entries_view.py:199
+#: ui/views/appearance_view.py:669 ui/views/appearance_view.py:682
+#: ui/views/appearance_view.py:930 ui/views/appearance_view.py:967
+#: ui/views/appearance_view.py:979 ui/views/boot_entries_view.py:199
 #: ui/views/general_view.py:429 ui/views/general_view.py:440
 msgid "Error"
 msgstr "त्रुटि"
 
-#: ui/views/appearance_view.py:670
+#: ui/views/appearance_view.py:671
 msgid "Failed to update GRUB. Check logs for details."
 msgstr "GRUB अद्यतन करने में विफल। विवरण के लिए लॉग देखें।"
 
-#: ui/views/appearance_view.py:694
+#: ui/views/appearance_view.py:695
 msgid "Information"
 msgstr "जानकारी"
 
-#: ui/views/appearance_view.py:711
+#: ui/views/appearance_view.py:712
 msgid "Remove Theme"
 msgstr "थीम हटाएँ"
 
-#: ui/views/appearance_view.py:714
+#: ui/views/appearance_view.py:715
 #, python-brace-format
 msgid "This will permanently delete theme '{}'. Are you sure?"
 msgstr "इससे थीम '{}' स्थायी रूप से मिट जाएगी। क्या आप निश्चित हैं?"
 
-#: ui/views/appearance_view.py:729
+#: ui/views/appearance_view.py:730
 #, python-brace-format
 msgid "Theme '{}' removed successfully!"
 msgstr "थीम '{}' सफलतापूर्वक हटाई गई!"
 
-#: ui/views/appearance_view.py:738
+#: ui/views/appearance_view.py:739
 #, python-brace-format
 msgid "Failed to remove theme: {}"
 msgstr "थीम हटाने में विफल: {}"
 
-#: ui/views/appearance_view.py:749
+#: ui/views/appearance_view.py:750
 msgid "Select background image"
 msgstr "पृष्ठभूमि छवि चुनें"
 
-#: ui/views/appearance_view.py:759
+#: ui/views/appearance_view.py:760
 msgid "Images"
 msgstr "छवियाँ"
 
-#: ui/views/appearance_view.py:777
+#: ui/views/appearance_view.py:778
 msgid "Remove Background"
 msgstr "पृष्ठभूमि हटाएँ"
 
-#: ui/views/appearance_view.py:779
+#: ui/views/appearance_view.py:780
 msgid "This will remove the background image from GRUB. Continue?"
 msgstr "इससे GRUB से पृष्ठभूमि छवि हट जाएगी। जारी रखें?"
 
-#: ui/views/appearance_view.py:814
+#: ui/views/appearance_view.py:815
 msgid ""
 "This will disable any theme and use your custom background/colors. Continue?"
 msgstr ""
 "इससे कोई भी थीम अक्षम हो जाएगी और आपकी कस्टम पृष्ठभूमि/रंगों का उपयोग होगा। जारी रखें?"
 
-#: ui/views/appearance_view.py:856
+#: ui/views/appearance_view.py:857
 msgid "Settings applied successfully!"
 msgstr "सेटिंग्स सफलतापूर्वक लागू की गईं!"
 
-#: ui/views/appearance_view.py:895
+#: ui/views/appearance_view.py:896
 msgid "Select font file"
 msgstr "फ़ॉन्ट फ़ाइल चुनें"
 
-#: ui/views/appearance_view.py:906
+#: ui/views/appearance_view.py:907
 msgid "Font files"
 msgstr "फ़ॉन्ट फ़ाइलें"
 
-#: ui/views/appearance_view.py:931
+#: ui/views/appearance_view.py:932
 msgid "Please select a valid font file."
 msgstr "कृपया एक मान्य फ़ॉन्ट फ़ाइल चुनें।"
 
 # reviewed: "फ़ॉन्ट बदला गया" = fonte trocada; a ação é converter
-#: ui/views/appearance_view.py:954
+#: ui/views/appearance_view.py:955
 #, python-brace-format
 msgid "Font converted and installed: {}"
 msgstr "फ़ॉन्ट रूपांतरित और स्थापित किया गया: {}"
 
 # reviewed: "फ़ॉन्ट बदलने" = trocar a fonte; a ação é converter
-#: ui/views/appearance_view.py:968
+#: ui/views/appearance_view.py:969
 #, python-brace-format
 msgid "Failed to convert font: {}"
 msgstr "फ़ॉन्ट रूपांतरित करने में विफल: {}"

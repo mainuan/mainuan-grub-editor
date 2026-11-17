@@ -8,7 +8,7 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 
 def generate_translated_metadata():
     """Desktop entry and AppStream metainfo are templates (*.in) translated
-    from the gettext catalogs, as in packaging/build-deb.sh."""
+    from the gettext catalogs, as in packaging/build-data.sh."""
     import re
     import subprocess
     import tempfile
@@ -66,7 +66,7 @@ def read_requirements():
 
 setup(
     name='mainuan-grub-editor',
-    version='2.0.2-8',
+    version='2.1.0',
     description='Official GRUB graphical editor for Mainuan Linux',
     long_description=read_readme(),
     long_description_content_type='text/markdown',

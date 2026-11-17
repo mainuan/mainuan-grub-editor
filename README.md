@@ -31,13 +31,13 @@ A GTK3 graphical interface to configure and customize the GRUB2 bootloader: entr
 - Python 3.8+
 - GTK 3.0
 - GRUB 2.x installed
-- Dependencies: PyGObject, pycairo, python-xlib, polib, python-dbus, Pillow
+- Dependencies: PyGObject (GTK 3), pkexec, unzip
 
 ## 📥 Installation
 
 ```bash
 # System dependencies
-sudo apt install python3-gi gir1.2-gtk-3.0 python3-gi-cairo grub2-common pkexec imagemagick python3-cairo python3-xlib python3-polib python3-dbus python3-pil
+sudo apt install python3-gi gir1.2-gtk-3.0 grub2-common pkexec unzip
 
 # Python installation
 pip3 install -r requirements.txt
@@ -65,13 +65,19 @@ The application will automatically request administrator privileges using `pkexe
 
 ## 📦 Building the .deb package
 
+The package is built from the standard `debian/` directory (debhelper) on
+Kubuntu/Ubuntu 26.04:
+
 ```bash
-# Needs dpkg-deb and python3-pil
-./packaging/build-deb.sh          # writes dist/mainuan-grub-editor_<version>_all.deb
-sudo apt install ./dist/mainuan-grub-editor_*_all.deb
+sudo apt build-dep ./
+dpkg-buildpackage -us -uc -b      # writes ../mainuan-grub-editor_<version>_all.deb
+sudo apt install ../mainuan-grub-editor_*_all.deb
 ```
 
-The package version comes from `packaging/control`.
+The package version comes from `debian/changelog`. The GitHub Actions
+workflow (`.github/workflows/ci.yml`) builds and tests the package on every
+pull request and push, checks it with lintian, installs and removes it in a
+clean Ubuntu 26.04 container, and publishes a release only for a `v*` tag.
 
 ## 🌊 Wayland Compatibility
 

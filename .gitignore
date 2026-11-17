@@ -1,4 +1,4 @@
-# Compiled catalogs are built by packaging/build-deb.sh or po/i18n.sh compile
+# Compiled catalogs are built by packaging/build-data.sh or po/i18n.sh compile
 /locale/*/LC_MESSAGES/*.mo
 __pycache__/
 /dist/

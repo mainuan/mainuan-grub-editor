@@ -16,7 +16,7 @@ Contrato comum: `docs/03-arquitetura-i18n-kde.md` do repositório `mainuan`.
 | `.desktop` | modelo `assets/org.mainuan.grubeditor.desktop.in`, gerado no build |
 | Instalação | `/usr/share/locale/<lang>/LC_MESSAGES/mainuan-grub-editor.mo` |
 
-Os `.mo` não são mais versionados: são gerados por `packaging/build-deb.sh`
+Os `.mo` não são mais versionados: são gerados por `packaging/build-data.sh` (chamado por `debian/rules`)
 (ou por `po/i18n.sh compile locale` para executar a partir do código-fonte).
 
 ## Execução
@@ -68,7 +68,7 @@ mostrar janela; sem display o teste é pulado.
 
 * O metainfo AppStream é o modelo `debian/org.mainuan.grubeditor.metainfo.xml.in`
   (só inglês). Nome, resumo, descrição, legendas e palavras-chave entram no POT;
-  `packaging/build-deb.sh` e `setup.py` geram o arquivo traduzido com
+  `packaging/build-data.sh` e `setup.py` geram o arquivo traduzido com
   `msgfmt --xml` e convertem `xml:lang` para POSIX (`pt_BR`). As notas de versão
   ficam em inglês (`translate="no"`), como nos apps KDE; `grub`, `mainuan` e o
   nome do desenvolvedor também são `translate="no"`.

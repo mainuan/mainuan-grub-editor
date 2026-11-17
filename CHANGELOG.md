@@ -4,7 +4,19 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
-## [Unreleased]
+## [2.1.0] - 2026-11-17
+
+### 🌍 Added
+- Interface and AppStream metadata translated with gettext into 33 languages, following the language chosen in KDE Plasma.
+- Standard `debian/` packaging (debhelper, `3.0 (native)`) and a GitHub Actions pipeline that tests, lints, installs and removes the package in Ubuntu 26.04.
+
+### 🐛 Fixed
+- Installing a theme archive with `theme.txt` at its top installed it under the temporary extraction folder name (`/boot/grub/themes/tmpXXXXXXXX`); the archive name is used now.
+- Reinstalling a theme copied it into a nested folder (`/boot/grub/themes/<theme>/<theme>`) instead of updating it.
+- The desktop entry used the program version as `Version=` (the Desktop Entry specification version), which made it invalid.
+
+### 📦 Packaging
+- `packaging/build-deb.sh` and `packaging/control` replaced by `debian/`; the launcher moved to `packaging/mainuan-grub-editor`. Runtime dependencies reduced to those actually used (python3-gi, gir1.2-gtk-3.0, grub2-common, pkexec, unzip).
 
 ### 🎨 Changed
 - Accent colour changed from orange (`#ff8800`) to the blue-turquoise of the Mainuan logo (`#08c8d0`, hover `#2ad8e0`) in the dark and light themes, the About dialog and the focus outline. The theme variable `mainuan_orange` is now `mainuan_blue`.

@@ -83,6 +83,11 @@
     <size type="installed">1631961</size>
   </provides>
   <releases>
+    <release version="2.1.0" date="2026-11-17">
+      <description translate="no">
+        <p>Interface and AppStream metadata translated into 33 languages, following the language chosen in KDE Plasma. Accent colour changed to the blue of the Mainuan logo. A theme archive with theme.txt at its top is installed under its own name, and reinstalling a theme updates it instead of nesting a second copy. Debian packaging built and tested in continuous integration.</p>
+      </description>
+    </release>
     <release version="2.0.2-8" date="2026-08-01">
       <description translate="no">
         <p>New "Default Boot Mode" selector lets you choose between a fixed entry, the last installed kernel or the last booted kernel. Applying changes in General settings no longer pins the boot entry to the current kernel, which prevented newly installed kernels from ever being booted.</p>

@@ -1,0 +1,20 @@
+mainuan-grub-editor (2.1.0) resolute; urgency=medium
+
+  * Interface e metadados AppStream traduzidos (gettext) em 33 idiomas,
+    seguindo o idioma escolhido no KDE Plasma.
+  * Cor de destaque passa ao azul do logotipo do Mainuan; ícone redesenhado
+    na mesma cor e gerado em cada tamanho a partir da imagem-mestre.
+  * Removidas as opções "Usar UUID para a partição raiz" e "Desativar
+    submenus"; linhas existentes em /etc/default/grub são mantidas.
+  * Instalação de temas: um arquivo com theme.txt na raiz era instalado com o
+    nome do diretório temporário (/boot/grub/themes/tmpXXXX); agora usa o
+    nome do arquivo. Reinstalar um tema atualiza a pasta em vez de criar uma
+    cópia aninhada (/boot/grub/themes/<tema>/<tema>).
+  * Arquivo .desktop: chave Version corrigida para a versão da especificação
+    (1.5); a versão do programa invalidava a entrada.
+  * Empacotamento Debian completo (debhelper) no lugar de
+    packaging/build-deb.sh; dependências reduzidas às realmente usadas
+    (python3-gi, gir1.2-gtk-3.0, grub2-common, pkexec, unzip).
+  * Pipeline de CI com testes, lintian e teste de instalação e remoção.
+
+ -- David Caixinha <tugatechlab.contacto@gmail.com>  Tue, 17 Nov 2026 11:10:00 -0300

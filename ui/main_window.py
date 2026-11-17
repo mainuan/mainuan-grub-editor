@@ -12,7 +12,7 @@ from core.i18n_manager import _, N_
 
 # App constants
 APP_NAME = N_("Mainuan GRUB Editor")
-APP_VERSION = "2.0.2"
+APP_VERSION = "2.1.0"
 DEFAULT_WINDOW_WIDTH = 900
 DEFAULT_WINDOW_HEIGHT = 500
 

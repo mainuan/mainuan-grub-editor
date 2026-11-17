@@ -1,0 +1,78 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+    tags: ['v[0-9]*']
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: ${{ github.ref_type != 'tag' }}
+
+jobs:
+  package:
+    permissions:
+      contents: write # only the release job uses it, and only for v* tags
+    uses: mainuan/.github/.github/workflows/debian-package.yml@2409a50535befe90ac3bbfc4db6eed7d65eac4e5
+    with:
+      package: mainuan-grub-editor
+      release-title: Mainuan GRUB Editor
+      test-command: |
+        po/i18n.sh check-pot
+        po/i18n.sh validate
+        bash -n packaging/mainuan-grub-editor packaging/build-data.sh po/i18n.sh
+        find . -name '*.py' -not -path './.git/*' -print0 \
+          | xargs -0 python3 -c 'import ast, sys; [ast.parse(open(f, encoding="utf-8").read(), f) for f in sys.argv[1:]]'
+      extra-install-packages: xvfb xauth appstream desktop-file-utils
+      smoke-command: |
+        test -x /usr/bin/mainuan-grub-editor
+        test -f /usr/share/man/man1/mainuan-grub-editor.1.gz
+        test -f /usr/share/locale/pt_BR/LC_MESSAGES/mainuan-grub-editor.mo
+        test -f /usr/share/icons/hicolor/48x48/apps/org.mainuan.grubeditor.png
+        desktop=/usr/share/applications/org.mainuan.grubeditor.desktop
+        metainfo=/usr/share/metainfo/org.mainuan.grubeditor.metainfo.xml
+        desktop-file-validate "$desktop"
+        grep -q '^Name\[pt_BR\]=' "$desktop"
+        appstreamcli validate --no-net "$metainfo"
+        grep -q 'xml:lang="pt_BR"' "$metainfo"
+        # Start the installed application (without root, so without the
+        # update-grub run done at start-up) and read the translated tabs.
+        cat > "$HOME/probe.py" <<'PY'
+        import sys
+        sys.path.insert(0, "/usr/share/mainuan-grub-editor")
+        import gi
+        gi.require_version("Gtk", "3.0")
+        from gi.repository import GLib, Gtk
+        from core import application, grub_manager
+        grub_manager.GrubManager.silent_update_grub = lambda self: False
+        app = application.MainuanGrubEditorApplication()
+        result = {}
+        def check():
+            win = app.main_window
+            if win is not None:
+                labels = []
+                def walk(w):
+                    if isinstance(w, Gtk.Label):
+                        labels.append(w.get_text())
+                    if isinstance(w, Gtk.Container):
+                        w.foreach(walk)
+                for i in range(win.notebook.get_n_pages()):
+                    walk(win.notebook.get_tab_label(win.notebook.get_nth_page(i)))
+                result["title"] = win.get_title()
+                result["tabs"] = [text for text in labels if text]
+            app.quit()
+            return False
+        GLib.timeout_add_seconds(5, check)
+        app.run(["mainuan-grub-editor"])
+        print(result)
+        sys.exit(0 if result.get("tabs") else 1)
+        PY
+        LANGUAGE=pt_BR LANG=C.UTF-8 xvfb-run -a timeout 60 python3 "$HOME/probe.py" | tee "$HOME/pt.txt"
+        grep -q "'Configuração geral', 'Entradas de inicialização', 'Aparência'" "$HOME/pt.txt"
+        LANGUAGE=en LANG=C.UTF-8 xvfb-run -a timeout 60 python3 "$HOME/probe.py" | tee "$HOME/en.txt"
+        grep -q "'title': 'Mainuan GRUB Editor'" "$HOME/en.txt"
