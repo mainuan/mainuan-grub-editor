@@ -2,3 +2,4 @@
 /locale/*/LC_MESSAGES/*.mo
 __pycache__/
 /dist/
+/build/

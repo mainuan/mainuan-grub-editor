@@ -66,9 +66,11 @@ mostrar janela; sem display o teste é pulado.
 
 ## Pendências
 
-* `debian/org.mainuan.grubeditor.metainfo.xml` ainda tem traduções escritas à
-  mão (`xml:lang`), sem `pt_BR`. Convertê-lo para `msgfmt --xml` exige
-  reestruturar as notas de versão (hoje com `<p xml:lang="en">` sem texto
-  base); ficou fora desta etapa.
+* O metainfo AppStream é o modelo `debian/org.mainuan.grubeditor.metainfo.xml.in`
+  (só inglês). Nome, resumo, descrição, legendas e palavras-chave entram no POT;
+  `packaging/build-deb.sh` e `setup.py` geram o arquivo traduzido com
+  `msgfmt --xml` e convertem `xml:lang` para POSIX (`pt_BR`). As notas de versão
+  ficam em inglês (`translate="no"`), como nos apps KDE; `grub`, `mainuan` e o
+  nome do desenvolvedor também são `translate="no"`.
 * Cabeçalhos dos catálogos herdados citam "Soplos GRUB Editor" (origem do
   projeto); mantidos como crédito.
