@@ -59,7 +59,7 @@ confira e instale:
 
 ```bash
 sha256sum --check --ignore-missing SHA256SUMS
-sudo apt install ./mainuan-grub-editor_2.1.0_all.deb
+sudo apt install ./mainuan-grub-editor_2.0.2.deb
 ```
 
 O `apt` instala as dependências (`python3-gi`, `gir1.2-gtk-3.0`,
