@@ -157,8 +157,7 @@ que precisa estar verde. Registre mudanças visíveis no
 - Daigo ([@daigoasuka](https://github.com/daigoasuka)): versão original publicada neste repositório.
 - Rafael Ruscher ([@ruscher](https://github.com/ruscher)): internacionalização, empacotamento Debian, CI e correções.
 
-Origem: derivado do **Soplos GRUB Editor**, de Sergi Perich, citado na página
-de manual e nos cabeçalhos dos catálogos de tradução.
+Origem: derivado do **Soplos GRUB Editor**, de Sergi Perich, Conceito e tradução.
 
 ## Licença
 
