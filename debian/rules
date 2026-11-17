@@ -7,6 +7,9 @@ APP := $(PKG)/usr/share/mainuan-grub-editor
 %:
 	dh $@
 
+# setup.py is for manual installs: no python-distutils build system here.
+override_dh_auto_configure:
+
 override_dh_auto_build:
 	packaging/build-data.sh debian/build/data
 
