@@ -1,0 +1,872 @@
+# Swahili translations for Mainuan GRUB package.
+# Copyright (C) 2026 Mainuan
+# This file is distributed under the same license as the Mainuan GRUB Editor package.
+# Automatically generated, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Mainuan GRUB Editor\n"
+"Report-Msgid-Bugs-To: https://github.com/MainuanLinux/mainuan-grub-editor/"
+"issues\n"
+"POT-Creation-Date: 2026-11-16 11:30-0300\n"
+"PO-Revision-Date: 2026-11-16 11:30-0300\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: sw <https://github.com/mainuan>\n"
+"Language: sw\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: assets/org.mainuan.grubeditor.desktop.in:4 core/application.py:23
+#: ui/main_window.py:14
+msgid "Mainuan GRUB Editor"
+msgstr "Kihariri cha GRUB cha Mainuan"
+
+#: assets/org.mainuan.grubeditor.desktop.in:5
+msgid "Graphical editor for GRUB configuration"
+msgstr "Kihariri cha kielelezo cha usanidi wa GRUB"
+
+#: assets/org.mainuan.grubeditor.desktop.in:10
+msgid "grub;boot;system;mainuan;"
+msgstr "grub;boot;kuwasha;mfumo;system;mainuan;"
+
+#: core/application.py:64
+msgid "Shutting down Mainuan Grub Editor..."
+msgstr "Inazima Kihariri cha GRUB cha Mainuan..."
+
+#: core/application.py:82
+#, python-brace-format
+msgid "Cleanup warning: {err}"
+msgstr "Onyo la usafishaji: {err}"
+
+#: core/application.py:86
+#, python-brace-format
+msgid "Starting {name} v{ver}..."
+msgstr "Inaanzisha {name} v{ver}..."
+
+#: core/application.py:95
+msgid "Application initialization completed"
+msgstr "Uanzishaji wa programu umekamilika"
+
+#: core/application.py:123
+#, python-brace-format
+msgid "Desktop Environment: {env}"
+msgstr "Mazingira ya eneo-kazi: {env}"
+
+#: core/application.py:126
+#, python-brace-format
+msgid "Error initializing environment detection: {err}"
+msgstr "Hitilafu wakati wa kuanzisha utambuzi wa mazingira: {err}"
+
+#: core/application.py:134
+#, python-brace-format
+msgid "Language initialized: {lang}"
+msgstr "Lugha imeanzishwa: {lang}"
+
+#: core/application.py:143
+#, python-brace-format
+msgid "Error initializing internationalization: {err}"
+msgstr "Hitilafu wakati wa kuanzisha utandawazi wa lugha: {err}"
+
+#: core/application.py:150
+#, python-brace-format
+msgid "Theme loaded: {theme}"
+msgstr "Mandhari imepakiwa: {theme}"
+
+#: core/application.py:152
+#, python-brace-format
+msgid "Error initializing theming: {err}"
+msgstr "Hitilafu wakati wa kuanzisha mandhari: {err}"
+
+#: core/application.py:159
+msgid "Synchronizing GRUB configuration..."
+msgstr "Inasawazisha usanidi wa GRUB..."
+
+#: core/application.py:164
+msgid "GRUB Manager initialized"
+msgstr "Kidhibiti cha GRUB kimeanzishwa"
+
+#: core/application.py:166
+#, python-brace-format
+msgid "Error initializing GRUB Manager: {err}"
+msgstr "Hitilafu wakati wa kuanzisha Kidhibiti cha GRUB: {err}"
+
+#: core/application.py:183
+#, python-brace-format
+msgid "Error setting application icon: {err}"
+msgstr "Hitilafu wakati wa kuweka aikoni ya programu: {err}"
+
+#: core/application.py:211
+#, python-brace-format
+msgid "Error creating main window: {err}"
+msgstr "Hitilafu wakati wa kuunda dirisha kuu: {err}"
+
+#: core/application.py:226
+msgid "About"
+msgstr "Kuhusu"
+
+#: core/application.py:232
+msgid "Quit"
+msgstr "Ondoka"
+
+#: core/application.py:236
+#, python-brace-format
+msgid "Error setting up application menu: {err}"
+msgstr "Hitilafu wakati wa kuweka menyu ya programu: {err}"
+
+#: core/application.py:245
+#, python-brace-format
+msgid "Received signal {num}, shutting down..."
+msgstr "Imepokea ishara {num}, inazima..."
+
+#: core/application.py:261
+#, python-brace-format
+msgid "Application error: {err}"
+msgstr "Hitilafu ya programu: {err}"
+
+#: core/grub_manager.py:38
+#, python-brace-format
+msgid "GRUB config not found at {}"
+msgstr "Usanidi wa GRUB haukupatikana katika {}"
+
+#: core/grub_manager.py:56
+#, python-brace-format
+msgid "Error reading GRUB config: {}"
+msgstr "Hitilafu wakati wa kusoma usanidi wa GRUB: {}"
+
+#: core/grub_manager.py:168
+#, python-brace-format
+msgid "Successfully saved config to {path}"
+msgstr "Usanidi umehifadhiwa kwa mafanikio katika {path}"
+
+#: core/grub_manager.py:182
+msgid "Successfully saved config using pkexec"
+msgstr "Usanidi umehifadhiwa kwa mafanikio kwa kutumia pkexec"
+
+#: core/grub_manager.py:185
+#, python-brace-format
+msgid "Failed to save config: {err}"
+msgstr "Imeshindwa kuhifadhi usanidi: {err}"
+
+#: core/grub_manager.py:189
+#, python-brace-format
+msgid "Error saving GRUB config: {err}"
+msgstr "Hitilafu wakati wa kuhifadhi usanidi wa GRUB: {err}"
+
+#: core/grub_manager.py:225 core/grub_manager.py:236
+#, python-brace-format
+msgid "Removed key {key} from config"
+msgstr "Ufunguo {key} umeondolewa kwenye usanidi"
+
+#: core/grub_manager.py:241
+#, python-brace-format
+msgid "Error removing config key: {err}"
+msgstr "Hitilafu wakati wa kuondoa ufunguo wa usanidi: {err}"
+
+#: core/grub_manager.py:267
+#, python-brace-format
+msgid "Set {script} active={active}"
+msgstr "Imeweka {script} active={active}"
+
+#: core/grub_manager.py:269
+#, python-brace-format
+msgid "Failed to change {script} permissions: {err}"
+msgstr "Imeshindwa kubadilisha ruhusa za {script}: {err}"
+
+#: core/grub_manager.py:306
+#, python-brace-format
+msgid "Removed background cache: {path}"
+msgstr "Akiba ya mandharinyuma imeondolewa: {path}"
+
+#: core/grub_manager.py:308
+#, python-brace-format
+msgid "Failed to remove cache {path}: {err}"
+msgstr "Imeshindwa kuondoa akiba {path}: {err}"
+
+#: core/grub_manager.py:400
+#, python-brace-format
+msgid "Failed to write custom.cfg: {err}"
+msgstr "Imeshindwa kuandika custom.cfg: {err}"
+
+#: core/grub_manager.py:403
+#, python-brace-format
+msgid "Error writing custom.cfg: {err}"
+msgstr "Hitilafu wakati wa kuandika custom.cfg: {err}"
+
+#: core/grub_manager.py:425
+msgid "update-grub not found"
+msgstr "update-grub haikupatikana"
+
+#: core/grub_manager.py:437
+msgid "Successfully updated GRUB"
+msgstr "GRUB imesasishwa kwa mafanikio"
+
+#: core/grub_manager.py:440
+#, python-brace-format
+msgid "Failed to update GRUB: {err}"
+msgstr "Imeshindwa kusasisha GRUB: {err}"
+
+#: core/grub_manager.py:443
+#, python-brace-format
+msgid "Error running update-grub: {err}"
+msgstr "Hitilafu wakati wa kuendesha update-grub: {err}"
+
+#: core/grub_manager.py:603 core/grub_manager.py:669
+#: ui/views/boot_entries_view.py:143
+msgid "system"
+msgstr "mfumo"
+
+#: core/grub_manager.py:605
+msgid "recovery"
+msgstr "urejeshaji"
+
+#: core/grub_manager.py:607 core/grub_manager.py:660
+msgid "memtest"
+msgstr "memtest"
+
+#: core/grub_manager.py:609
+msgid "firmware"
+msgstr "programu dhibiti"
+
+#: core/grub_manager.py:650
+#, python-brace-format
+msgid "Error parsing grub.cfg: {}"
+msgstr "Hitilafu wakati wa kuchanganua grub.cfg: {}"
+
+#: core/grub_manager.py:742
+#, python-brace-format
+msgid "Refusing to delete unexpected file: {}"
+msgstr "Inakataa kufuta faili lisilotarajiwa: {}"
+
+#: core/grub_manager.py:752
+#, python-brace-format
+msgid "Could not delete {}: {}"
+msgstr "Haikuweza kufuta {}: {}"
+
+#: core/grub_manager.py:776
+#, python-brace-format
+msgid "Could not write to {}: {}"
+msgstr "Haikuweza kuandika kwenye {}: {}"
+
+#: core/grub_manager.py:800 core/grub_manager.py:861
+#, python-brace-format
+msgid "Could not read {}: {}"
+msgstr "Haikuweza kusoma {}: {}"
+
+#: core/grub_manager.py:829 core/grub_manager.py:890
+#, python-brace-format
+msgid "Entry '{}' not found in {}"
+msgstr "Kipengee '{}' hakikupatikana katika {}"
+
+#: core/grub_manager.py:837 core/grub_manager.py:898
+#, python-brace-format
+msgid "Could not write {}: {}"
+msgstr "Haikuweza kuandika {}: {}"
+
+#: core/theme_manager.py:78
+msgid "[ThemeManager] WARNING: No theme found, using 'dark'"
+msgstr "[ThemeManager] ONYO: Hakuna mandhari iliyopatikana, inatumia 'dark'"
+
+#: core/theme_manager.py:101
+#, python-brace-format
+msgid "[ThemeManager] ✗ ERROR: Theme file not found: {}"
+msgstr "[ThemeManager] ✗ HITILAFU: Faili la mandhari halikupatikana: {}"
+
+#: core/theme_manager.py:115
+#, python-brace-format
+msgid "[ThemeManager] ✗ ERROR loading theme: {}"
+msgstr "[ThemeManager] ✗ HITILAFU wakati wa kupakia mandhari: {}"
+
+#: core/theme_manager.py:130
+#, python-brace-format
+msgid "[ThemeManager] ⚠ Could not set GTK theme preference: {}"
+msgstr "[ThemeManager] ⚠ Haikuweza kuweka mapendeleo ya mandhari ya GTK: {}"
+
+#: core/theme_manager.py:186
+msgid "[ThemeManager] ✗✗✗ Failed to initialize theming ✗✗✗"
+msgstr "[ThemeManager] ✗✗✗ Imeshindwa kuanzisha mandhari ✗✗✗"
+
+#: main.py:71
+#, python-brace-format
+msgid "Warning: Pre-elevation detection failed: {}"
+msgstr "Onyo: Utambuzi kabla ya kuinua mamlaka umeshindwa: {}"
+
+#: main.py:130
+#, python-brace-format
+msgid "Failed to elevate privileges: {}"
+msgstr "Imeshindwa kuinua mamlaka: {}"
+
+#: main.py:138
+#, python-brace-format
+msgid "Import error: {}"
+msgstr "Hitilafu ya kuingiza: {}"
+
+#: main.py:139
+msgid ""
+"Ensure dependencies are installed: sudo apt install python3-gi python3-gi-"
+"cairo gir1.2-gtk-3.0"
+msgstr ""
+"Hakikisha vitegemezi vimesakinishwa: sudo apt install python3-gi python3-gi-"
+"cairo gir1.2-gtk-3.0"
+
+#: main.py:142
+#, python-brace-format
+msgid "Application error: {}"
+msgstr "Hitilafu ya programu: {}"
+
+#: ui/main_window.py:68
+msgid "Main window created successfully"
+msgstr "Dirisha kuu limeundwa kwa mafanikio"
+
+#: ui/main_window.py:83
+#, python-brace-format
+msgid "[DEBUG] Desktop detected: {}"
+msgstr "[DEBUG] Eneo-kazi limetambuliwa: {}"
+
+#: ui/main_window.py:87
+msgid "Using native window decorations (SSD)"
+msgstr "Inatumia mapambo asilia ya dirisha (SSD)"
+
+#: ui/main_window.py:91
+msgid "Creating Client-Side Decorations (CSD)"
+msgstr "Inaunda mapambo ya upande wa mteja (CSD)"
+
+#: ui/main_window.py:129
+msgid "General Configuration"
+msgstr "Usanidi wa Jumla"
+
+#: ui/main_window.py:132
+msgid "Boot Entries"
+msgstr "Vipengee vya Kuwasha"
+
+#: ui/main_window.py:135
+msgid "Appearance"
+msgstr "Mwonekano"
+
+#: ui/main_window.py:150 ui/main_window.py:246
+msgid "Ready"
+msgstr "Tayari"
+
+#: ui/main_window.py:210
+msgid "GNOME"
+msgstr "GNOME"
+
+#: ui/main_window.py:211 ui/main_window.py:212
+msgid "KDE Plasma"
+msgstr "KDE Plasma"
+
+#: ui/main_window.py:213
+msgid "XFCE"
+msgstr "XFCE"
+
+#: ui/main_window.py:214 ui/main_window.py:216 ui/main_window.py:223
+#: ui/main_window.py:225 ui/views/general_view.py:218
+msgid "Unknown"
+msgstr "Haijulikani"
+
+#: ui/main_window.py:221
+msgid "X11"
+msgstr "X11"
+
+#: ui/main_window.py:222
+msgid "Wayland"
+msgstr "Wayland"
+
+#: ui/main_window.py:236
+msgid "Working..."
+msgstr "Inafanya kazi..."
+
+#: ui/main_window.py:256
+msgid "GRUB boot loader manager for Mainuan Linux."
+msgstr "Kidhibiti cha kipakiaji cha kuwasha GRUB kwa Mainuan Linux."
+
+#: ui/main_window.py:326
+msgid "Main window closing..."
+msgstr "Dirisha kuu linafungwa..."
+
+#: ui/views/appearance_view.py:41 ui/views/appearance_view.py:119
+msgid "Theme"
+msgstr "Mandhari"
+
+# reviewed: 'Hakikisho' means guarantee/assurance, not preview
+#: ui/views/appearance_view.py:46
+msgid "Preview"
+msgstr "Onyesho la awali"
+
+#: ui/views/appearance_view.py:78
+msgid "Themes include colors and fonts. Use 'Background' tab for custom setup."
+msgstr ""
+"Mandhari hujumuisha rangi na fonti. Tumia kichupo cha 'Mandharinyuma' kwa "
+"usanidi maalum."
+
+#: ui/views/appearance_view.py:86
+msgid "Theme:"
+msgstr "Mandhari:"
+
+#: ui/views/appearance_view.py:99
+msgid "Install..."
+msgstr "Sakinisha..."
+
+#: ui/views/appearance_view.py:103
+msgid "Apply"
+msgstr "Tumia"
+
+#: ui/views/appearance_view.py:108
+msgid "Disable"
+msgstr "Zima"
+
+#: ui/views/appearance_view.py:112 ui/views/appearance_view.py:143
+msgid "Remove"
+msgstr "Ondoa"
+
+#: ui/views/appearance_view.py:128
+msgid "Background image:"
+msgstr "Picha ya mandharinyuma:"
+
+#: ui/views/appearance_view.py:134
+msgid "No image selected"
+msgstr "Hakuna picha iliyochaguliwa"
+
+#: ui/views/appearance_view.py:139 ui/views/appearance_view.py:231
+msgid "Browse..."
+msgstr "Vinjari..."
+
+#: ui/views/appearance_view.py:155
+msgid "Colors (when not using theme):"
+msgstr "Rangi (wakati mandhari haitumiki):"
+
+#: ui/views/appearance_view.py:162
+msgid "Text color:"
+msgstr "Rangi ya maandishi:"
+
+#: ui/views/appearance_view.py:173
+msgid "Background color:"
+msgstr "Rangi ya mandharinyuma:"
+
+#: ui/views/appearance_view.py:184
+msgid "Highlight text:"
+msgstr "Maandishi yaliyoangaziwa:"
+
+#: ui/views/appearance_view.py:195
+msgid "Highlight background:"
+msgstr "Mandharinyuma ya uangaziaji:"
+
+#: ui/views/appearance_view.py:205 ui/views/appearance_view.py:811
+msgid "Apply Appearance Settings"
+msgstr "Tumia Mipangilio ya Mwonekano"
+
+#: ui/views/appearance_view.py:210
+msgid "Background"
+msgstr "Mandharinyuma"
+
+#: ui/views/appearance_view.py:219
+msgid "Convert TrueType fonts to GRUB format (PF2):"
+msgstr "Badilisha fonti za TrueType kuwa umbizo la GRUB (PF2):"
+
+#: ui/views/appearance_view.py:227
+msgid "Select TTF/OTF font file..."
+msgstr "Chagua faili la fonti la TTF/OTF..."
+
+#: ui/views/appearance_view.py:238
+msgid "Font size:"
+msgstr "Ukubwa wa fonti:"
+
+#: ui/views/appearance_view.py:248
+msgid "Convert and Install Font"
+msgstr "Badilisha na Usakinishe Fonti"
+
+#: ui/views/appearance_view.py:254
+msgid "Installed GRUB fonts:"
+msgstr "Fonti za GRUB zilizosakinishwa:"
+
+#: ui/views/appearance_view.py:266
+msgid "Apply selected font"
+msgstr "Tumia fonti iliyochaguliwa"
+
+#: ui/views/appearance_view.py:271
+msgid "Remove selected font"
+msgstr "Ondoa fonti iliyochaguliwa"
+
+#: ui/views/appearance_view.py:278
+msgid "Fonts"
+msgstr "Fonti"
+
+#: ui/views/appearance_view.py:294 ui/views/appearance_view.py:992
+msgid "Font Applied"
+msgstr "Fonti Imetumika"
+
+#: ui/views/appearance_view.py:296
+msgid "Failed to save font configuration to /etc/default/grub"
+msgstr "Imeshindwa kuhifadhi usanidi wa fonti katika /etc/default/grub"
+
+#: ui/views/appearance_view.py:310
+msgid "Delete Font?"
+msgstr "Ungependa Kufuta Fonti?"
+
+#: ui/views/appearance_view.py:313
+#, python-brace-format
+msgid "Are you sure you want to permanently delete '{}'?"
+msgstr "Una uhakika unataka kufuta '{}' kabisa?"
+
+#: ui/views/appearance_view.py:345
+msgid "Font deleted. GRUB configuration updated."
+msgstr "Fonti imefutwa. Usanidi wa GRUB umesasishwa."
+
+#: ui/views/appearance_view.py:347
+msgid "Font deleted successfully."
+msgstr "Fonti imefutwa kwa mafanikio."
+
+#: ui/views/appearance_view.py:350
+#, python-brace-format
+msgid "Failed to delete font: {}"
+msgstr "Imeshindwa kufuta fonti: {}"
+
+#: ui/views/appearance_view.py:494
+msgid "Select theme archive"
+msgstr "Chagua faili lililobanwa la mandhari"
+
+#: ui/views/appearance_view.py:504
+msgid "Theme archives"
+msgstr "Faili zilizobanwa za mandhari"
+
+#: ui/views/appearance_view.py:539
+msgid "Unsupported archive format"
+msgstr "Umbizo la faili lililobanwa halitumiki"
+
+#: ui/views/appearance_view.py:544
+#, python-brace-format
+msgid "Failed to extract archive: {}"
+msgstr "Imeshindwa kufungua faili lililobanwa: {}"
+
+#: ui/views/appearance_view.py:555
+msgid "No theme.txt found in archive"
+msgstr "Hakuna theme.txt iliyopatikana katika faili lililobanwa"
+
+#: ui/views/appearance_view.py:571
+#, python-brace-format
+msgid "Theme '{}' installed successfully!"
+msgstr "Mandhari '{}' imesakinishwa kwa mafanikio!"
+
+#: ui/views/appearance_view.py:575
+#, python-brace-format
+msgid "Failed to install theme: {}"
+msgstr "Imeshindwa kusakinisha mandhari: {}"
+
+#: ui/views/appearance_view.py:578
+#, python-brace-format
+msgid "Error installing theme: {}"
+msgstr "Hitilafu wakati wa kusakinisha mandhari: {}"
+
+#: ui/views/appearance_view.py:592
+msgid "Apply Theme"
+msgstr "Tumia Mandhari"
+
+#: ui/views/appearance_view.py:595
+#, python-brace-format
+msgid ""
+"Applying theme '{}' will disable any custom background and colors. Continue?"
+msgstr ""
+"Kutumia mandhari '{}' kutazima mandharinyuma na rangi zozote maalum. "
+"Ungependa kuendelea?"
+
+#: ui/views/appearance_view.py:608
+msgid "Theme applied successfully!"
+msgstr "Mandhari imetumika kwa mafanikio!"
+
+#: ui/views/appearance_view.py:617
+msgid "Disable Theme"
+msgstr "Zima Mandhari"
+
+#: ui/views/appearance_view.py:619
+msgid "This will remove the theme and set default colors. Continue?"
+msgstr ""
+"Hii itaondoa mandhari na kuweka rangi chaguo-msingi. Ungependa kuendelea?"
+
+#: ui/views/appearance_view.py:635
+msgid "Theme disabled."
+msgstr "Mandhari imezimwa."
+
+#: ui/views/appearance_view.py:646 ui/views/boot_entries_view.py:186
+#: ui/views/general_view.py:407
+msgid "Run update-grub now to apply changes?"
+msgstr "Ungependa kuendesha update-grub sasa ili kutumia mabadiliko?"
+
+#: ui/views/appearance_view.py:657 ui/views/appearance_view.py:952
+#: ui/views/general_view.py:418
+msgid "Success"
+msgstr "Imefanikiwa"
+
+#: ui/views/appearance_view.py:659
+msgid "GRUB configuration updated successfully!"
+msgstr "Usanidi wa GRUB umesasishwa kwa mafanikio!"
+
+#: ui/views/appearance_view.py:668 ui/views/appearance_view.py:681
+#: ui/views/appearance_view.py:929 ui/views/appearance_view.py:966
+#: ui/views/appearance_view.py:978 ui/views/boot_entries_view.py:199
+#: ui/views/general_view.py:429 ui/views/general_view.py:440
+msgid "Error"
+msgstr "Hitilafu"
+
+#: ui/views/appearance_view.py:670
+msgid "Failed to update GRUB. Check logs for details."
+msgstr "Imeshindwa kusasisha GRUB. Kagua kumbukumbu kwa maelezo."
+
+#: ui/views/appearance_view.py:694
+msgid "Information"
+msgstr "Taarifa"
+
+#: ui/views/appearance_view.py:711
+msgid "Remove Theme"
+msgstr "Ondoa Mandhari"
+
+#: ui/views/appearance_view.py:714
+#, python-brace-format
+msgid "This will permanently delete theme '{}'. Are you sure?"
+msgstr "Hii itafuta mandhari '{}' kabisa. Una uhakika?"
+
+#: ui/views/appearance_view.py:729
+#, python-brace-format
+msgid "Theme '{}' removed successfully!"
+msgstr "Mandhari '{}' imeondolewa kwa mafanikio!"
+
+#: ui/views/appearance_view.py:738
+#, python-brace-format
+msgid "Failed to remove theme: {}"
+msgstr "Imeshindwa kuondoa mandhari: {}"
+
+#: ui/views/appearance_view.py:749
+msgid "Select background image"
+msgstr "Chagua picha ya mandharinyuma"
+
+#: ui/views/appearance_view.py:759
+msgid "Images"
+msgstr "Picha"
+
+#: ui/views/appearance_view.py:777
+msgid "Remove Background"
+msgstr "Ondoa Mandharinyuma"
+
+#: ui/views/appearance_view.py:779
+msgid "This will remove the background image from GRUB. Continue?"
+msgstr "Hii itaondoa picha ya mandharinyuma kutoka GRUB. Ungependa kuendelea?"
+
+#: ui/views/appearance_view.py:814
+msgid ""
+"This will disable any theme and use your custom background/colors. Continue?"
+msgstr ""
+"Hii itazima mandhari yoyote na kutumia mandharinyuma/rangi zako maalum. "
+"Ungependa kuendelea?"
+
+#: ui/views/appearance_view.py:856
+msgid "Settings applied successfully!"
+msgstr "Mipangilio imetumika kwa mafanikio!"
+
+#: ui/views/appearance_view.py:895
+msgid "Select font file"
+msgstr "Chagua faili la fonti"
+
+#: ui/views/appearance_view.py:906
+msgid "Font files"
+msgstr "Faili za fonti"
+
+#: ui/views/appearance_view.py:931
+msgid "Please select a valid font file."
+msgstr "Tafadhali chagua faili sahihi la fonti."
+
+#: ui/views/appearance_view.py:954
+#, python-brace-format
+msgid "Font converted and installed: {}"
+msgstr "Fonti imebadilishwa na kusakinishwa: {}"
+
+#: ui/views/appearance_view.py:968
+#, python-brace-format
+msgid "Failed to convert font: {}"
+msgstr "Imeshindwa kubadilisha fonti: {}"
+
+#: ui/views/boot_entries_view.py:59
+msgid "Name:"
+msgstr "Jina:"
+
+#: ui/views/boot_entries_view.py:70
+msgid "Type:"
+msgstr "Aina:"
+
+#: ui/views/boot_entries_view.py:80
+msgid "Path"
+msgstr "Njia"
+
+#: ui/views/boot_entries_view.py:90
+msgid "Enabled"
+msgstr "Imewezeshwa"
+
+#: ui/views/boot_entries_view.py:103
+msgid "Add entry"
+msgstr "Ongeza kipengee"
+
+#: ui/views/boot_entries_view.py:108
+msgid "Remove entry"
+msgstr "Ondoa kipengee"
+
+#: ui/views/boot_entries_view.py:134
+#, python-brace-format
+msgid "Entry {}"
+msgstr "Kipengee {}"
+
+#: ui/views/boot_entries_view.py:212
+msgid "Not supported"
+msgstr "Haitumiki"
+
+#: ui/views/boot_entries_view.py:215
+msgid ""
+"This entry belongs to an installed kernel or operating system. GRUB "
+"regenerates it automatically from what's installed on your disk, so it can't "
+"be disabled or removed individually here — you would need to uninstall the "
+"kernel or operating system itself."
+msgstr ""
+"Kipengee hiki ni cha kerneli au mfumo wa uendeshaji uliosakinishwa. GRUB "
+"hukiunda upya kiotomatiki kutokana na kilichosakinishwa kwenye diski yako, "
+"kwa hivyo hakiwezi kuzimwa au kuondolewa kivyake hapa — utahitaji kuondoa "
+"kerneli au mfumo wa uendeshaji wenyewe."
+
+#: ui/views/boot_entries_view.py:242 ui/views/boot_entries_view.py:357
+msgid "Could not update the entry"
+msgstr "Haikuweza kusasisha kipengee"
+
+#: ui/views/boot_entries_view.py:250
+msgid "Add Entry"
+msgstr "Ongeza Kipengee"
+
+#: ui/views/boot_entries_view.py:255
+msgid "Cancel"
+msgstr "Ghairi"
+
+#: ui/views/boot_entries_view.py:256
+msgid "Save"
+msgstr "Hifadhi"
+
+#: ui/views/boot_entries_view.py:268
+msgid ""
+"Write the raw GRUB menuentry block (this is appended to /etc/grub.d/"
+"40_custom):"
+msgstr ""
+"Andika kizuizi ghafi cha menuentry cha GRUB (kinaongezwa mwishoni mwa /etc/"
+"grub.d/40_custom):"
+
+#: ui/views/boot_entries_view.py:300
+msgid "Failed to save the custom entry"
+msgstr "Imeshindwa kuhifadhi kipengee maalum"
+
+#: ui/views/boot_entries_view.py:325 ui/views/boot_entries_view.py:344
+msgid "Remove Entry"
+msgstr "Ondoa Kipengee"
+
+#: ui/views/boot_entries_view.py:328
+#, python-brace-format
+msgid ""
+"Delete '{}' from /boot? This also removes its serial-console variant, since "
+"both share the same file."
+msgstr ""
+"Ungependa kufuta '{}' kutoka /boot? Hii pia huondoa toleo lake la kiweko cha "
+"mfululizo (serial console), kwa kuwa yote mawili yanatumia faili moja."
+
+#: ui/views/boot_entries_view.py:347
+#, python-brace-format
+msgid "Delete '{}' from /etc/grub.d/40_custom? This cannot be undone."
+msgstr ""
+"Ungependa kufuta '{}' kutoka /etc/grub.d/40_custom? Kitendo hiki hakiwezi "
+"kutenduliwa."
+
+#: ui/views/general_view.py:40
+msgid "Boot Configuration"
+msgstr "Usanidi wa Kuwasha"
+
+#: ui/views/general_view.py:50
+msgid "Default Boot Mode:"
+msgstr "Hali Chaguo-msingi ya Kuwasha:"
+
+#: ui/views/general_view.py:57
+msgid "Fixed entry"
+msgstr "Kipengee kisichobadilika"
+
+#: ui/views/general_view.py:58
+msgid "Last installed kernel"
+msgstr "Kerneli iliyosakinishwa mwisho"
+
+#: ui/views/general_view.py:59
+msgid "Last booted kernel"
+msgstr "Kerneli iliyowashwa mwisho"
+
+#: ui/views/general_view.py:68
+msgid "Default Boot Entry:"
+msgstr "Kipengee Chaguo-msingi cha Kuwasha:"
+
+#: ui/views/general_view.py:86
+msgid "Timeout (seconds):"
+msgstr "Muda wa kusubiri (sekunde):"
+
+# reviewed: 'Mwonekano' is the established term for Appearance; resolution =
+# 'ubora wa skrini'
+#: ui/views/general_view.py:101
+msgid "Screen Resolution:"
+msgstr "Ubora wa Skrini:"
+
+#: ui/views/general_view.py:121
+msgid "auto"
+msgstr "otomatiki"
+
+#: ui/views/general_view.py:138
+msgid "Advanced Options"
+msgstr "Chaguo za Kina"
+
+#: ui/views/general_view.py:147
+msgid "Detect other operating systems"
+msgstr "Tambua mifumo mingine ya uendeshaji"
+
+#: ui/views/general_view.py:151
+msgid "Show boot menu"
+msgstr "Onyesha menyu ya kuwasha"
+
+#: ui/views/general_view.py:156
+msgid "Include recovery options"
+msgstr "Jumuisha chaguo za urejeshaji"
+
+#: ui/views/general_view.py:164
+msgid "Kernel Parameters"
+msgstr "Vigezo vya Kerneli"
+
+#: ui/views/general_view.py:174
+msgid "Kernel Parameters:"
+msgstr "Vigezo vya Kerneli:"
+
+#: ui/views/general_view.py:179
+msgid "quiet splash resume=UUID=..."
+msgstr "quiet splash resume=UUID=..."
+
+#: ui/views/general_view.py:188
+msgid "Apply Changes"
+msgstr "Tumia Mabadiliko"
+
+#: ui/views/general_view.py:302
+#, python-brace-format
+msgid "Error loading GRUB config: {}"
+msgstr "Hitilafu wakati wa kupakia usanidi wa GRUB: {}"
+
+#: ui/views/general_view.py:330
+msgid "Menu cannot be shown when timeout is 0"
+msgstr "Menyu haiwezi kuonyeshwa wakati muda wa kusubiri ni 0"
+
+#: ui/views/general_view.py:405
+msgid "Changes Saved"
+msgstr "Mabadiliko Yamehifadhiwa"
+
+#: ui/views/general_view.py:420
+msgid "GRUB updated successfully!"
+msgstr "GRUB imesasishwa kwa mafanikio!"
+
+#: ui/views/general_view.py:431
+msgid "Failed to update GRUB"
+msgstr "Imeshindwa kusasisha GRUB"
+
+#: ui/views/general_view.py:442
+msgid "Failed to save configuration"
+msgstr "Imeshindwa kuhifadhi usanidi"
