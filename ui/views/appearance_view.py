@@ -9,6 +9,7 @@ gi.require_version('Gtk', '3.0')
 from gi.repository import Gtk, Gdk, GdkPixbuf, GLib
 
 from core.i18n_manager import _
+from core.grub_manager import theme_install_name
 
 
 class AppearanceView(Gtk.ScrolledWindow):
@@ -555,16 +556,16 @@ class AppearanceView(Gtk.ScrolledWindow):
                     self._show_error(_("No theme.txt found in archive"))
                     return
                 
-                # Get theme name from folder
-                theme_name = os.path.basename(theme_folder)
-                if theme_name == '': # theme.txt is in root of extraction
-                    theme_name = os.path.splitext(os.path.basename(archive_path))[0]
-                    theme_name = theme_name.replace('.tar', '')
+                # Theme folder name, or the archive name when theme.txt is
+                # at the top of the archive (not the temporary directory name)
+                theme_name = theme_install_name(theme_folder, tmpdir, archive_path)
                 
                 dest_path = f"{themes_dir}/{theme_name}"
                 
-                # Copy to themes directory using pkexec
-                copy_cmd = ['pkexec', 'cp', '-r', theme_folder, dest_path]
+                # Copy to themes directory using pkexec. -T copies the folder
+                # contents onto dest_path, so reinstalling a theme updates it
+                # instead of nesting a second copy in dest_path/<name>.
+                copy_cmd = ['pkexec', 'cp', '-rT', theme_folder, dest_path]
                 result = subprocess.run(copy_cmd, capture_output=True, text=True)
                 
                 if result.returncode == 0:

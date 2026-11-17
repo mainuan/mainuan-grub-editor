@@ -927,6 +927,25 @@ class GrubManager:
             return False
 
 
+THEME_ARCHIVE_SUFFIXES = ('.tar.gz', '.tgz', '.tar.xz', '.tar.bz2', '.zip')
+
+
+def theme_install_name(theme_folder: str, extract_root: str, archive_path: str) -> str:
+    """Name of the /boot/grub/themes/<name> folder for an extracted theme.
+
+    theme.txt inside a folder: that folder's name. theme.txt at the top of
+    the archive (theme_folder is the extraction directory itself): the
+    archive name without its extension, never the temporary directory name.
+    """
+    if os.path.normpath(theme_folder) != os.path.normpath(extract_root):
+        return os.path.basename(os.path.normpath(theme_folder))
+    name = os.path.basename(archive_path)
+    for suffix in THEME_ARCHIVE_SUFFIXES:
+        if name.endswith(suffix):
+            return name[:-len(suffix)]
+    return os.path.splitext(name)[0]
+
+
 # Global instance
 _grub_manager = None
 

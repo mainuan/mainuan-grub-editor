@@ -1,0 +1,36 @@
+#!/usr/bin/make -f
+export PYTHONDONTWRITEBYTECODE = 1
+
+PKG := debian/mainuan-grub-editor
+APP := $(PKG)/usr/share/mainuan-grub-editor
+
+%:
+	dh $@
+
+# setup.py is for manual installs: no python-distutils build system here.
+override_dh_auto_configure:
+
+override_dh_auto_build:
+	packaging/build-data.sh debian/build/data
+
+override_dh_auto_test:
+ifeq (,$(filter nocheck,$(DEB_BUILD_OPTIONS)))
+	python3 -m unittest discover -s tests -v
+endif
+
+override_dh_auto_install:
+	install -d $(APP)
+	cp -r main.py core ui utils assets $(APP)/
+	rm -f $(APP)/assets/*.desktop.in $(APP)/assets/screenshots/.gitkeep
+	rmdir --ignore-fail-on-non-empty $(APP)/assets/screenshots
+	find $(APP) -name __pycache__ -prune -exec rm -rf {} +
+	find $(APP) -type d -exec chmod 0755 {} +
+	find $(APP) -type f -exec chmod 0644 {} +
+	sed -i '1s|^#!.*python3.*|#!/usr/bin/python3|' $(APP)/main.py
+	chmod 0755 $(APP)/main.py
+	install -D -m 0755 packaging/mainuan-grub-editor $(PKG)/usr/bin/mainuan-grub-editor
+	cp -r debian/build/data/usr $(PKG)/
+
+override_dh_auto_clean:
+	rm -rf debian/build build
+	find . -name __pycache__ -prune -exec rm -rf {} +

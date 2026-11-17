@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: Mainuan GRUB Editor\n"
 "Report-Msgid-Bugs-To: https://github.com/MainuanLinux/mainuan-grub-editor/"
 "issues\n"
-"POT-Creation-Date: 2026-11-17 04:08-0300\n"
+"POT-Creation-Date: 2026-11-17 11:07-0300\n"
 "PO-Revision-Date: 2026-11-16 11:30-0300\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: vi <https://github.com/mainuan>\n"
@@ -487,296 +487,296 @@ msgstr "Trình quản lý bộ nạp khởi động GRUB cho Mainuan Linux."
 msgid "Main window closing..."
 msgstr "Đang đóng cửa sổ chính..."
 
-#: ui/views/appearance_view.py:41 ui/views/appearance_view.py:119
+#: ui/views/appearance_view.py:42 ui/views/appearance_view.py:120
 msgid "Theme"
 msgstr "Chủ đề"
 
-#: ui/views/appearance_view.py:46
+#: ui/views/appearance_view.py:47
 msgid "Preview"
 msgstr "Xem thử"
 
-#: ui/views/appearance_view.py:78
+#: ui/views/appearance_view.py:79
 msgid "Themes include colors and fonts. Use 'Background' tab for custom setup."
 msgstr ""
 "Chủ đề bao gồm màu sắc và phông chữ. Dùng thẻ 'Nền' để thiết lập tuỳ chỉnh."
 
-#: ui/views/appearance_view.py:86
+#: ui/views/appearance_view.py:87
 msgid "Theme:"
 msgstr "Chủ đề:"
 
-#: ui/views/appearance_view.py:99
+#: ui/views/appearance_view.py:100
 msgid "Install..."
 msgstr "Cài đặt..."
 
-#: ui/views/appearance_view.py:103
+#: ui/views/appearance_view.py:104
 msgid "Apply"
 msgstr "Áp dụng"
 
-#: ui/views/appearance_view.py:108
+#: ui/views/appearance_view.py:109
 msgid "Disable"
 msgstr "Tắt"
 
-#: ui/views/appearance_view.py:112 ui/views/appearance_view.py:143
+#: ui/views/appearance_view.py:113 ui/views/appearance_view.py:144
 msgid "Remove"
 msgstr "Gỡ bỏ"
 
-#: ui/views/appearance_view.py:128
+#: ui/views/appearance_view.py:129
 msgid "Background image:"
 msgstr "Ảnh nền:"
 
-#: ui/views/appearance_view.py:134
+#: ui/views/appearance_view.py:135
 msgid "No image selected"
 msgstr "Chưa chọn ảnh"
 
-#: ui/views/appearance_view.py:139 ui/views/appearance_view.py:231
+#: ui/views/appearance_view.py:140 ui/views/appearance_view.py:232
 msgid "Browse..."
 msgstr "Duyệt..."
 
-#: ui/views/appearance_view.py:155
+#: ui/views/appearance_view.py:156
 msgid "Colors (when not using theme):"
 msgstr "Màu (khi không dùng chủ đề):"
 
-#: ui/views/appearance_view.py:162
+#: ui/views/appearance_view.py:163
 msgid "Text color:"
 msgstr "Màu chữ:"
 
-#: ui/views/appearance_view.py:173
+#: ui/views/appearance_view.py:174
 msgid "Background color:"
 msgstr "Màu nền:"
 
-#: ui/views/appearance_view.py:184
+#: ui/views/appearance_view.py:185
 msgid "Highlight text:"
 msgstr "Chữ tô sáng:"
 
-#: ui/views/appearance_view.py:195
+#: ui/views/appearance_view.py:196
 msgid "Highlight background:"
 msgstr "Nền tô sáng:"
 
-#: ui/views/appearance_view.py:205 ui/views/appearance_view.py:811
+#: ui/views/appearance_view.py:206 ui/views/appearance_view.py:812
 msgid "Apply Appearance Settings"
 msgstr "Áp dụng thiết lập diện mạo"
 
-#: ui/views/appearance_view.py:210
+#: ui/views/appearance_view.py:211
 msgid "Background"
 msgstr "Nền"
 
-#: ui/views/appearance_view.py:219
+#: ui/views/appearance_view.py:220
 msgid "Convert TrueType fonts to GRUB format (PF2):"
 msgstr "Chuyển đổi phông chữ TrueType sang định dạng GRUB (PF2):"
 
-#: ui/views/appearance_view.py:227
+#: ui/views/appearance_view.py:228
 msgid "Select TTF/OTF font file..."
 msgstr "Chọn tệp phông chữ TTF/OTF..."
 
-#: ui/views/appearance_view.py:238
+#: ui/views/appearance_view.py:239
 msgid "Font size:"
 msgstr "Cỡ phông chữ:"
 
-#: ui/views/appearance_view.py:248
+#: ui/views/appearance_view.py:249
 msgid "Convert and Install Font"
 msgstr "Chuyển đổi và cài đặt phông chữ"
 
-#: ui/views/appearance_view.py:254
+#: ui/views/appearance_view.py:255
 msgid "Installed GRUB fonts:"
 msgstr "Phông chữ GRUB đã cài:"
 
-#: ui/views/appearance_view.py:266
+#: ui/views/appearance_view.py:267
 msgid "Apply selected font"
 msgstr "Áp dụng phông chữ đã chọn"
 
-#: ui/views/appearance_view.py:271
+#: ui/views/appearance_view.py:272
 msgid "Remove selected font"
 msgstr "Gỡ bỏ phông chữ đã chọn"
 
-#: ui/views/appearance_view.py:278
+#: ui/views/appearance_view.py:279
 msgid "Fonts"
 msgstr "Phông chữ"
 
-#: ui/views/appearance_view.py:294 ui/views/appearance_view.py:992
+#: ui/views/appearance_view.py:295 ui/views/appearance_view.py:993
 msgid "Font Applied"
 msgstr "Đã áp dụng phông chữ"
 
-#: ui/views/appearance_view.py:296
+#: ui/views/appearance_view.py:297
 msgid "Failed to save font configuration to /etc/default/grub"
 msgstr "Không lưu được cấu hình phông chữ vào /etc/default/grub"
 
-#: ui/views/appearance_view.py:310
+#: ui/views/appearance_view.py:311
 msgid "Delete Font?"
 msgstr "Xoá phông chữ?"
 
-#: ui/views/appearance_view.py:313
+#: ui/views/appearance_view.py:314
 #, python-brace-format
 msgid "Are you sure you want to permanently delete '{}'?"
 msgstr "Bạn có chắc muốn xoá vĩnh viễn '{}' không?"
 
-#: ui/views/appearance_view.py:345
+#: ui/views/appearance_view.py:346
 msgid "Font deleted. GRUB configuration updated."
 msgstr "Đã xoá phông chữ. Đã cập nhật cấu hình GRUB."
 
-#: ui/views/appearance_view.py:347
+#: ui/views/appearance_view.py:348
 msgid "Font deleted successfully."
 msgstr "Đã xoá phông chữ thành công."
 
-#: ui/views/appearance_view.py:350
+#: ui/views/appearance_view.py:351
 #, python-brace-format
 msgid "Failed to delete font: {}"
 msgstr "Không xoá được phông chữ: {}"
 
-#: ui/views/appearance_view.py:494
+#: ui/views/appearance_view.py:495
 msgid "Select theme archive"
 msgstr "Chọn tệp nén chủ đề"
 
-#: ui/views/appearance_view.py:504
+#: ui/views/appearance_view.py:505
 msgid "Theme archives"
 msgstr "Tệp nén chủ đề"
 
-#: ui/views/appearance_view.py:539
+#: ui/views/appearance_view.py:540
 msgid "Unsupported archive format"
 msgstr "Định dạng tệp nén không được hỗ trợ"
 
-#: ui/views/appearance_view.py:544
+#: ui/views/appearance_view.py:545
 #, python-brace-format
 msgid "Failed to extract archive: {}"
 msgstr "Không giải nén được tệp: {}"
 
-#: ui/views/appearance_view.py:555
+#: ui/views/appearance_view.py:556
 msgid "No theme.txt found in archive"
 msgstr "Không tìm thấy theme.txt trong tệp nén"
 
-#: ui/views/appearance_view.py:571
+#: ui/views/appearance_view.py:572
 #, python-brace-format
 msgid "Theme '{}' installed successfully!"
 msgstr "Đã cài đặt chủ đề '{}' thành công!"
 
-#: ui/views/appearance_view.py:575
+#: ui/views/appearance_view.py:576
 #, python-brace-format
 msgid "Failed to install theme: {}"
 msgstr "Không cài đặt được chủ đề: {}"
 
-#: ui/views/appearance_view.py:578
+#: ui/views/appearance_view.py:579
 #, python-brace-format
 msgid "Error installing theme: {}"
 msgstr "Lỗi khi cài đặt chủ đề: {}"
 
-#: ui/views/appearance_view.py:592
+#: ui/views/appearance_view.py:593
 msgid "Apply Theme"
 msgstr "Áp dụng chủ đề"
 
-#: ui/views/appearance_view.py:595
+#: ui/views/appearance_view.py:596
 #, python-brace-format
 msgid ""
 "Applying theme '{}' will disable any custom background and colors. Continue?"
 msgstr "Áp dụng chủ đề '{}' sẽ tắt mọi hình nền và màu tuỳ chỉnh. Tiếp tục?"
 
-#: ui/views/appearance_view.py:608
+#: ui/views/appearance_view.py:609
 msgid "Theme applied successfully!"
 msgstr "Đã áp dụng chủ đề thành công!"
 
-#: ui/views/appearance_view.py:617
+#: ui/views/appearance_view.py:618
 msgid "Disable Theme"
 msgstr "Tắt chủ đề"
 
-#: ui/views/appearance_view.py:619
+#: ui/views/appearance_view.py:620
 msgid "This will remove the theme and set default colors. Continue?"
 msgstr "Thao tác này sẽ gỡ bỏ chủ đề và đặt màu mặc định. Tiếp tục?"
 
-#: ui/views/appearance_view.py:635
+#: ui/views/appearance_view.py:636
 msgid "Theme disabled."
 msgstr "Đã tắt chủ đề."
 
-#: ui/views/appearance_view.py:646 ui/views/boot_entries_view.py:186
+#: ui/views/appearance_view.py:647 ui/views/boot_entries_view.py:186
 #: ui/views/general_view.py:407
 msgid "Run update-grub now to apply changes?"
 msgstr "Chạy update-grub ngay để áp dụng thay đổi?"
 
-#: ui/views/appearance_view.py:657 ui/views/appearance_view.py:952
+#: ui/views/appearance_view.py:658 ui/views/appearance_view.py:953
 #: ui/views/general_view.py:418
 msgid "Success"
 msgstr "Thành công"
 
-#: ui/views/appearance_view.py:659
+#: ui/views/appearance_view.py:660
 msgid "GRUB configuration updated successfully!"
 msgstr "Đã cập nhật cấu hình GRUB thành công!"
 
-#: ui/views/appearance_view.py:668 ui/views/appearance_view.py:681
-#: ui/views/appearance_view.py:929 ui/views/appearance_view.py:966
-#: ui/views/appearance_view.py:978 ui/views/boot_entries_view.py:199
+#: ui/views/appearance_view.py:669 ui/views/appearance_view.py:682
+#: ui/views/appearance_view.py:930 ui/views/appearance_view.py:967
+#: ui/views/appearance_view.py:979 ui/views/boot_entries_view.py:199
 #: ui/views/general_view.py:429 ui/views/general_view.py:440
 msgid "Error"
 msgstr "Lỗi"
 
-#: ui/views/appearance_view.py:670
+#: ui/views/appearance_view.py:671
 msgid "Failed to update GRUB. Check logs for details."
 msgstr "Không cập nhật được GRUB. Xem nhật ký để biết chi tiết."
 
-#: ui/views/appearance_view.py:694
+#: ui/views/appearance_view.py:695
 msgid "Information"
 msgstr "Thông tin"
 
-#: ui/views/appearance_view.py:711
+#: ui/views/appearance_view.py:712
 msgid "Remove Theme"
 msgstr "Gỡ bỏ chủ đề"
 
-#: ui/views/appearance_view.py:714
+#: ui/views/appearance_view.py:715
 #, python-brace-format
 msgid "This will permanently delete theme '{}'. Are you sure?"
 msgstr "Thao tác này sẽ xoá vĩnh viễn chủ đề '{}'. Bạn có chắc không?"
 
-#: ui/views/appearance_view.py:729
+#: ui/views/appearance_view.py:730
 #, python-brace-format
 msgid "Theme '{}' removed successfully!"
 msgstr "Đã gỡ bỏ chủ đề '{}' thành công!"
 
-#: ui/views/appearance_view.py:738
+#: ui/views/appearance_view.py:739
 #, python-brace-format
 msgid "Failed to remove theme: {}"
 msgstr "Không gỡ bỏ được chủ đề: {}"
 
-#: ui/views/appearance_view.py:749
+#: ui/views/appearance_view.py:750
 msgid "Select background image"
 msgstr "Chọn ảnh nền"
 
-#: ui/views/appearance_view.py:759
+#: ui/views/appearance_view.py:760
 msgid "Images"
 msgstr "Ảnh"
 
-#: ui/views/appearance_view.py:777
+#: ui/views/appearance_view.py:778
 msgid "Remove Background"
 msgstr "Gỡ bỏ hình nền"
 
-#: ui/views/appearance_view.py:779
+#: ui/views/appearance_view.py:780
 msgid "This will remove the background image from GRUB. Continue?"
 msgstr "Thao tác này sẽ gỡ bỏ ảnh nền khỏi GRUB. Tiếp tục?"
 
-#: ui/views/appearance_view.py:814
+#: ui/views/appearance_view.py:815
 msgid ""
 "This will disable any theme and use your custom background/colors. Continue?"
 msgstr ""
 "Thao tác này sẽ tắt mọi chủ đề và dùng hình nền/màu tuỳ chỉnh của bạn. Tiếp "
 "tục?"
 
-#: ui/views/appearance_view.py:856
+#: ui/views/appearance_view.py:857
 msgid "Settings applied successfully!"
 msgstr "Đã áp dụng thiết lập thành công!"
 
-#: ui/views/appearance_view.py:895
+#: ui/views/appearance_view.py:896
 msgid "Select font file"
 msgstr "Chọn tệp phông chữ"
 
-#: ui/views/appearance_view.py:906
+#: ui/views/appearance_view.py:907
 msgid "Font files"
 msgstr "Tệp phông chữ"
 
-#: ui/views/appearance_view.py:931
+#: ui/views/appearance_view.py:932
 msgid "Please select a valid font file."
 msgstr "Hãy chọn một tệp phông chữ hợp lệ."
 
-#: ui/views/appearance_view.py:954
+#: ui/views/appearance_view.py:955
 #, python-brace-format
 msgid "Font converted and installed: {}"
 msgstr "Đã chuyển đổi và cài đặt phông chữ: {}"
 
-#: ui/views/appearance_view.py:968
+#: ui/views/appearance_view.py:969
 #, python-brace-format
 msgid "Failed to convert font: {}"
 msgstr "Không chuyển đổi được phông chữ: {}"

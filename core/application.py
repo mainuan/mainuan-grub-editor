@@ -21,7 +21,7 @@ from utils.logger import log_info, log_error, log_warning
 # Constants (Move to a config file ideally, but here for now)
 APP_ID = "org.mainuan.grubeditor"
 APP_NAME = N_("Mainuan GRUB Editor")
-APP_VERSION = "2.0.2"
+APP_VERSION = "2.1.0"
 
 
 class MainuanGrubEditorApplication(Gtk.Application):

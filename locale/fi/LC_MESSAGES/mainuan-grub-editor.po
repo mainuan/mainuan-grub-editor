@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: Mainuan GRUB Editor\n"
 "Report-Msgid-Bugs-To: https://github.com/MainuanLinux/mainuan-grub-editor/"
 "issues\n"
-"POT-Creation-Date: 2026-11-17 04:08-0300\n"
+"POT-Creation-Date: 2026-11-17 11:07-0300\n"
 "PO-Revision-Date: 2026-11-16 11:30-0300\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: fi <https://github.com/mainuan>\n"
@@ -487,182 +487,182 @@ msgstr "Mainuan Linuxin GRUB-käynnistyslataimen hallinta."
 msgid "Main window closing..."
 msgstr "Pääikkuna suljetaan..."
 
-#: ui/views/appearance_view.py:41 ui/views/appearance_view.py:119
+#: ui/views/appearance_view.py:42 ui/views/appearance_view.py:120
 msgid "Theme"
 msgstr "Teema"
 
-#: ui/views/appearance_view.py:46
+#: ui/views/appearance_view.py:47
 msgid "Preview"
 msgstr "Esikatselu"
 
-#: ui/views/appearance_view.py:78
+#: ui/views/appearance_view.py:79
 msgid "Themes include colors and fonts. Use 'Background' tab for custom setup."
 msgstr ""
 "Teemat sisältävät värit ja fontit. Käytä Tausta-välilehteä omiin asetuksiin."
 
-#: ui/views/appearance_view.py:86
+#: ui/views/appearance_view.py:87
 msgid "Theme:"
 msgstr "Teema:"
 
-#: ui/views/appearance_view.py:99
+#: ui/views/appearance_view.py:100
 msgid "Install..."
 msgstr "Asenna..."
 
-#: ui/views/appearance_view.py:103
+#: ui/views/appearance_view.py:104
 msgid "Apply"
 msgstr "Käytä"
 
-#: ui/views/appearance_view.py:108
+#: ui/views/appearance_view.py:109
 msgid "Disable"
 msgstr "Poista käytöstä"
 
-#: ui/views/appearance_view.py:112 ui/views/appearance_view.py:143
+#: ui/views/appearance_view.py:113 ui/views/appearance_view.py:144
 msgid "Remove"
 msgstr "Poista"
 
-#: ui/views/appearance_view.py:128
+#: ui/views/appearance_view.py:129
 msgid "Background image:"
 msgstr "Taustakuva:"
 
-#: ui/views/appearance_view.py:134
+#: ui/views/appearance_view.py:135
 msgid "No image selected"
 msgstr "Kuvaa ei ole valittu"
 
-#: ui/views/appearance_view.py:139 ui/views/appearance_view.py:231
+#: ui/views/appearance_view.py:140 ui/views/appearance_view.py:232
 msgid "Browse..."
 msgstr "Selaa..."
 
-#: ui/views/appearance_view.py:155
+#: ui/views/appearance_view.py:156
 msgid "Colors (when not using theme):"
 msgstr "Värit (kun teemaa ei käytetä):"
 
-#: ui/views/appearance_view.py:162
+#: ui/views/appearance_view.py:163
 msgid "Text color:"
 msgstr "Tekstin väri:"
 
-#: ui/views/appearance_view.py:173
+#: ui/views/appearance_view.py:174
 msgid "Background color:"
 msgstr "Taustaväri:"
 
-#: ui/views/appearance_view.py:184
+#: ui/views/appearance_view.py:185
 msgid "Highlight text:"
 msgstr "Korostettu teksti:"
 
-#: ui/views/appearance_view.py:195
+#: ui/views/appearance_view.py:196
 msgid "Highlight background:"
 msgstr "Korostuksen tausta:"
 
-#: ui/views/appearance_view.py:205 ui/views/appearance_view.py:811
+#: ui/views/appearance_view.py:206 ui/views/appearance_view.py:812
 msgid "Apply Appearance Settings"
 msgstr "Ota ulkoasuasetukset käyttöön"
 
-#: ui/views/appearance_view.py:210
+#: ui/views/appearance_view.py:211
 msgid "Background"
 msgstr "Tausta"
 
-#: ui/views/appearance_view.py:219
+#: ui/views/appearance_view.py:220
 msgid "Convert TrueType fonts to GRUB format (PF2):"
 msgstr "Muunna TrueType-fontit GRUB-muotoon (PF2):"
 
-#: ui/views/appearance_view.py:227
+#: ui/views/appearance_view.py:228
 msgid "Select TTF/OTF font file..."
 msgstr "Valitse TTF/OTF-fonttitiedosto..."
 
-#: ui/views/appearance_view.py:238
+#: ui/views/appearance_view.py:239
 msgid "Font size:"
 msgstr "Fonttikoko:"
 
-#: ui/views/appearance_view.py:248
+#: ui/views/appearance_view.py:249
 msgid "Convert and Install Font"
 msgstr "Muunna ja asenna fontti"
 
-#: ui/views/appearance_view.py:254
+#: ui/views/appearance_view.py:255
 msgid "Installed GRUB fonts:"
 msgstr "Asennetut GRUB-fontit:"
 
-#: ui/views/appearance_view.py:266
+#: ui/views/appearance_view.py:267
 msgid "Apply selected font"
 msgstr "Käytä valittua fonttia"
 
-#: ui/views/appearance_view.py:271
+#: ui/views/appearance_view.py:272
 msgid "Remove selected font"
 msgstr "Poista valittu fontti"
 
-#: ui/views/appearance_view.py:278
+#: ui/views/appearance_view.py:279
 msgid "Fonts"
 msgstr "Fontit"
 
-#: ui/views/appearance_view.py:294 ui/views/appearance_view.py:992
+#: ui/views/appearance_view.py:295 ui/views/appearance_view.py:993
 msgid "Font Applied"
 msgstr "Fontti otettu käyttöön"
 
-#: ui/views/appearance_view.py:296
+#: ui/views/appearance_view.py:297
 msgid "Failed to save font configuration to /etc/default/grub"
 msgstr "Fonttiasetusten tallennus tiedostoon /etc/default/grub epäonnistui"
 
-#: ui/views/appearance_view.py:310
+#: ui/views/appearance_view.py:311
 msgid "Delete Font?"
 msgstr "Poistetaanko fontti?"
 
-#: ui/views/appearance_view.py:313
+#: ui/views/appearance_view.py:314
 #, python-brace-format
 msgid "Are you sure you want to permanently delete '{}'?"
 msgstr "Haluatko varmasti poistaa kohteen '{}' pysyvästi?"
 
-#: ui/views/appearance_view.py:345
+#: ui/views/appearance_view.py:346
 msgid "Font deleted. GRUB configuration updated."
 msgstr "Fontti poistettiin. GRUB-asetukset päivitettiin."
 
-#: ui/views/appearance_view.py:347
+#: ui/views/appearance_view.py:348
 msgid "Font deleted successfully."
 msgstr "Fontti poistettiin onnistuneesti."
 
-#: ui/views/appearance_view.py:350
+#: ui/views/appearance_view.py:351
 #, python-brace-format
 msgid "Failed to delete font: {}"
 msgstr "Fontin poisto epäonnistui: {}"
 
-#: ui/views/appearance_view.py:494
+#: ui/views/appearance_view.py:495
 msgid "Select theme archive"
 msgstr "Valitse teema-arkisto"
 
-#: ui/views/appearance_view.py:504
+#: ui/views/appearance_view.py:505
 msgid "Theme archives"
 msgstr "Teema-arkistot"
 
-#: ui/views/appearance_view.py:539
+#: ui/views/appearance_view.py:540
 msgid "Unsupported archive format"
 msgstr "Arkistomuotoa ei tueta"
 
-#: ui/views/appearance_view.py:544
+#: ui/views/appearance_view.py:545
 #, python-brace-format
 msgid "Failed to extract archive: {}"
 msgstr "Arkiston purku epäonnistui: {}"
 
-#: ui/views/appearance_view.py:555
+#: ui/views/appearance_view.py:556
 msgid "No theme.txt found in archive"
 msgstr "Arkistosta ei löytynyt tiedostoa theme.txt"
 
-#: ui/views/appearance_view.py:571
+#: ui/views/appearance_view.py:572
 #, python-brace-format
 msgid "Theme '{}' installed successfully!"
 msgstr "Teema '{}' asennettiin onnistuneesti!"
 
-#: ui/views/appearance_view.py:575
+#: ui/views/appearance_view.py:576
 #, python-brace-format
 msgid "Failed to install theme: {}"
 msgstr "Teeman asennus epäonnistui: {}"
 
-#: ui/views/appearance_view.py:578
+#: ui/views/appearance_view.py:579
 #, python-brace-format
 msgid "Error installing theme: {}"
 msgstr "Virhe teeman asennuksessa: {}"
 
-#: ui/views/appearance_view.py:592
+#: ui/views/appearance_view.py:593
 msgid "Apply Theme"
 msgstr "Ota teema käyttöön"
 
-#: ui/views/appearance_view.py:595
+#: ui/views/appearance_view.py:596
 #, python-brace-format
 msgid ""
 "Applying theme '{}' will disable any custom background and colors. Continue?"
@@ -670,115 +670,115 @@ msgstr ""
 "Teeman '{}' käyttöönotto poistaa käytöstä mukautetun taustan ja värit. "
 "Jatketaanko?"
 
-#: ui/views/appearance_view.py:608
+#: ui/views/appearance_view.py:609
 msgid "Theme applied successfully!"
 msgstr "Teema otettiin käyttöön onnistuneesti!"
 
-#: ui/views/appearance_view.py:617
+#: ui/views/appearance_view.py:618
 msgid "Disable Theme"
 msgstr "Poista teema käytöstä"
 
-#: ui/views/appearance_view.py:619
+#: ui/views/appearance_view.py:620
 msgid "This will remove the theme and set default colors. Continue?"
 msgstr "Tämä poistaa teeman ja asettaa oletusvärit. Jatketaanko?"
 
-#: ui/views/appearance_view.py:635
+#: ui/views/appearance_view.py:636
 msgid "Theme disabled."
 msgstr "Teema poistettiin käytöstä."
 
-#: ui/views/appearance_view.py:646 ui/views/boot_entries_view.py:186
+#: ui/views/appearance_view.py:647 ui/views/boot_entries_view.py:186
 #: ui/views/general_view.py:407
 msgid "Run update-grub now to apply changes?"
 msgstr "Suoritetaanko update-grub nyt muutosten käyttöön ottamiseksi?"
 
-#: ui/views/appearance_view.py:657 ui/views/appearance_view.py:952
+#: ui/views/appearance_view.py:658 ui/views/appearance_view.py:953
 #: ui/views/general_view.py:418
 msgid "Success"
 msgstr "Onnistui"
 
-#: ui/views/appearance_view.py:659
+#: ui/views/appearance_view.py:660
 msgid "GRUB configuration updated successfully!"
 msgstr "GRUB-asetukset päivitettiin onnistuneesti!"
 
-#: ui/views/appearance_view.py:668 ui/views/appearance_view.py:681
-#: ui/views/appearance_view.py:929 ui/views/appearance_view.py:966
-#: ui/views/appearance_view.py:978 ui/views/boot_entries_view.py:199
+#: ui/views/appearance_view.py:669 ui/views/appearance_view.py:682
+#: ui/views/appearance_view.py:930 ui/views/appearance_view.py:967
+#: ui/views/appearance_view.py:979 ui/views/boot_entries_view.py:199
 #: ui/views/general_view.py:429 ui/views/general_view.py:440
 msgid "Error"
 msgstr "Virhe"
 
-#: ui/views/appearance_view.py:670
+#: ui/views/appearance_view.py:671
 msgid "Failed to update GRUB. Check logs for details."
 msgstr "GRUBin päivitys epäonnistui. Katso lisätietoja lokeista."
 
-#: ui/views/appearance_view.py:694
+#: ui/views/appearance_view.py:695
 msgid "Information"
 msgstr "Tiedot"
 
-#: ui/views/appearance_view.py:711
+#: ui/views/appearance_view.py:712
 msgid "Remove Theme"
 msgstr "Poista teema"
 
-#: ui/views/appearance_view.py:714
+#: ui/views/appearance_view.py:715
 #, python-brace-format
 msgid "This will permanently delete theme '{}'. Are you sure?"
 msgstr "Tämä poistaa teeman '{}' pysyvästi. Oletko varma?"
 
-#: ui/views/appearance_view.py:729
+#: ui/views/appearance_view.py:730
 #, python-brace-format
 msgid "Theme '{}' removed successfully!"
 msgstr "Teema '{}' poistettiin onnistuneesti!"
 
-#: ui/views/appearance_view.py:738
+#: ui/views/appearance_view.py:739
 #, python-brace-format
 msgid "Failed to remove theme: {}"
 msgstr "Teeman poisto epäonnistui: {}"
 
-#: ui/views/appearance_view.py:749
+#: ui/views/appearance_view.py:750
 msgid "Select background image"
 msgstr "Valitse taustakuva"
 
-#: ui/views/appearance_view.py:759
+#: ui/views/appearance_view.py:760
 msgid "Images"
 msgstr "Kuvat"
 
-#: ui/views/appearance_view.py:777
+#: ui/views/appearance_view.py:778
 msgid "Remove Background"
 msgstr "Poista tausta"
 
-#: ui/views/appearance_view.py:779
+#: ui/views/appearance_view.py:780
 msgid "This will remove the background image from GRUB. Continue?"
 msgstr "Tämä poistaa taustakuvan GRUBista. Jatketaanko?"
 
-#: ui/views/appearance_view.py:814
+#: ui/views/appearance_view.py:815
 msgid ""
 "This will disable any theme and use your custom background/colors. Continue?"
 msgstr ""
 "Tämä poistaa käytöstä mahdollisen teeman ja käyttää omaa taustaasi ja "
 "värejäsi. Jatketaanko?"
 
-#: ui/views/appearance_view.py:856
+#: ui/views/appearance_view.py:857
 msgid "Settings applied successfully!"
 msgstr "Asetukset otettiin käyttöön onnistuneesti!"
 
-#: ui/views/appearance_view.py:895
+#: ui/views/appearance_view.py:896
 msgid "Select font file"
 msgstr "Valitse fonttitiedosto"
 
-#: ui/views/appearance_view.py:906
+#: ui/views/appearance_view.py:907
 msgid "Font files"
 msgstr "Fonttitiedostot"
 
-#: ui/views/appearance_view.py:931
+#: ui/views/appearance_view.py:932
 msgid "Please select a valid font file."
 msgstr "Valitse kelvollinen fonttitiedosto."
 
-#: ui/views/appearance_view.py:954
+#: ui/views/appearance_view.py:955
 #, python-brace-format
 msgid "Font converted and installed: {}"
 msgstr "Fontti muunnettiin ja asennettiin: {}"
 
-#: ui/views/appearance_view.py:968
+#: ui/views/appearance_view.py:969
 #, python-brace-format
 msgid "Failed to convert font: {}"
 msgstr "Fontin muunnos epäonnistui: {}"

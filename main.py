@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Mainuan Grub Editor 2.0.2-8 - GRUB Configuration Editor
+Mainuan Grub Editor 2.1.0 - GRUB Configuration Editor
 Main application entry point.
 """
 

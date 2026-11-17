@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: Mainuan GRUB Editor\n"
 "Report-Msgid-Bugs-To: https://github.com/MainuanLinux/mainuan-grub-editor/"
 "issues\n"
-"POT-Creation-Date: 2026-11-17 04:08-0300\n"
+"POT-Creation-Date: 2026-11-17 11:07-0300\n"
 "PO-Revision-Date: 2026-11-16 11:30-0300\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: zh_CN <https://github.com/mainuan>\n"
@@ -486,293 +486,293 @@ msgstr "Mainuan Linux 的 GRUB 引导程序管理器。"
 msgid "Main window closing..."
 msgstr "主窗口正在关闭..."
 
-#: ui/views/appearance_view.py:41 ui/views/appearance_view.py:119
+#: ui/views/appearance_view.py:42 ui/views/appearance_view.py:120
 msgid "Theme"
 msgstr "主题"
 
-#: ui/views/appearance_view.py:46
+#: ui/views/appearance_view.py:47
 msgid "Preview"
 msgstr "预览"
 
-#: ui/views/appearance_view.py:78
+#: ui/views/appearance_view.py:79
 msgid "Themes include colors and fonts. Use 'Background' tab for custom setup."
 msgstr "主题包含颜色和字体。如需自定义设置，请使用“背景”选项卡。"
 
-#: ui/views/appearance_view.py:86
+#: ui/views/appearance_view.py:87
 msgid "Theme:"
 msgstr "主题："
 
-#: ui/views/appearance_view.py:99
+#: ui/views/appearance_view.py:100
 msgid "Install..."
 msgstr "安装..."
 
-#: ui/views/appearance_view.py:103
+#: ui/views/appearance_view.py:104
 msgid "Apply"
 msgstr "应用"
 
-#: ui/views/appearance_view.py:108
+#: ui/views/appearance_view.py:109
 msgid "Disable"
 msgstr "禁用"
 
-#: ui/views/appearance_view.py:112 ui/views/appearance_view.py:143
+#: ui/views/appearance_view.py:113 ui/views/appearance_view.py:144
 msgid "Remove"
 msgstr "移除"
 
-#: ui/views/appearance_view.py:128
+#: ui/views/appearance_view.py:129
 msgid "Background image:"
 msgstr "背景图像："
 
-#: ui/views/appearance_view.py:134
+#: ui/views/appearance_view.py:135
 msgid "No image selected"
 msgstr "未选择图像"
 
-#: ui/views/appearance_view.py:139 ui/views/appearance_view.py:231
+#: ui/views/appearance_view.py:140 ui/views/appearance_view.py:232
 msgid "Browse..."
 msgstr "浏览..."
 
-#: ui/views/appearance_view.py:155
+#: ui/views/appearance_view.py:156
 msgid "Colors (when not using theme):"
 msgstr "颜色（不使用主题时）："
 
-#: ui/views/appearance_view.py:162
+#: ui/views/appearance_view.py:163
 msgid "Text color:"
 msgstr "文本颜色："
 
-#: ui/views/appearance_view.py:173
+#: ui/views/appearance_view.py:174
 msgid "Background color:"
 msgstr "背景颜色："
 
-#: ui/views/appearance_view.py:184
+#: ui/views/appearance_view.py:185
 msgid "Highlight text:"
 msgstr "高亮文本："
 
-#: ui/views/appearance_view.py:195
+#: ui/views/appearance_view.py:196
 msgid "Highlight background:"
 msgstr "高亮背景："
 
-#: ui/views/appearance_view.py:205 ui/views/appearance_view.py:811
+#: ui/views/appearance_view.py:206 ui/views/appearance_view.py:812
 msgid "Apply Appearance Settings"
 msgstr "应用外观设置"
 
-#: ui/views/appearance_view.py:210
+#: ui/views/appearance_view.py:211
 msgid "Background"
 msgstr "背景"
 
-#: ui/views/appearance_view.py:219
+#: ui/views/appearance_view.py:220
 msgid "Convert TrueType fonts to GRUB format (PF2):"
 msgstr "将 TrueType 字体转换为 GRUB 格式（PF2）："
 
-#: ui/views/appearance_view.py:227
+#: ui/views/appearance_view.py:228
 msgid "Select TTF/OTF font file..."
 msgstr "选择 TTF/OTF 字体文件..."
 
-#: ui/views/appearance_view.py:238
+#: ui/views/appearance_view.py:239
 msgid "Font size:"
 msgstr "字体大小："
 
-#: ui/views/appearance_view.py:248
+#: ui/views/appearance_view.py:249
 msgid "Convert and Install Font"
 msgstr "转换并安装字体"
 
-#: ui/views/appearance_view.py:254
+#: ui/views/appearance_view.py:255
 msgid "Installed GRUB fonts:"
 msgstr "已安装的 GRUB 字体："
 
-#: ui/views/appearance_view.py:266
+#: ui/views/appearance_view.py:267
 msgid "Apply selected font"
 msgstr "应用所选字体"
 
-#: ui/views/appearance_view.py:271
+#: ui/views/appearance_view.py:272
 msgid "Remove selected font"
 msgstr "移除所选字体"
 
-#: ui/views/appearance_view.py:278
+#: ui/views/appearance_view.py:279
 msgid "Fonts"
 msgstr "字体"
 
-#: ui/views/appearance_view.py:294 ui/views/appearance_view.py:992
+#: ui/views/appearance_view.py:295 ui/views/appearance_view.py:993
 msgid "Font Applied"
 msgstr "已应用字体"
 
-#: ui/views/appearance_view.py:296
+#: ui/views/appearance_view.py:297
 msgid "Failed to save font configuration to /etc/default/grub"
 msgstr "无法将字体配置保存到 /etc/default/grub"
 
-#: ui/views/appearance_view.py:310
+#: ui/views/appearance_view.py:311
 msgid "Delete Font?"
 msgstr "删除字体？"
 
-#: ui/views/appearance_view.py:313
+#: ui/views/appearance_view.py:314
 #, python-brace-format
 msgid "Are you sure you want to permanently delete '{}'?"
 msgstr "确定要永久删除“{}”吗？"
 
-#: ui/views/appearance_view.py:345
+#: ui/views/appearance_view.py:346
 msgid "Font deleted. GRUB configuration updated."
 msgstr "字体已删除。GRUB 配置已更新。"
 
-#: ui/views/appearance_view.py:347
+#: ui/views/appearance_view.py:348
 msgid "Font deleted successfully."
 msgstr "字体已成功删除。"
 
-#: ui/views/appearance_view.py:350
+#: ui/views/appearance_view.py:351
 #, python-brace-format
 msgid "Failed to delete font: {}"
 msgstr "删除字体失败：{}"
 
-#: ui/views/appearance_view.py:494
+#: ui/views/appearance_view.py:495
 msgid "Select theme archive"
 msgstr "选择主题归档文件"
 
-#: ui/views/appearance_view.py:504
+#: ui/views/appearance_view.py:505
 msgid "Theme archives"
 msgstr "主题归档文件"
 
-#: ui/views/appearance_view.py:539
+#: ui/views/appearance_view.py:540
 msgid "Unsupported archive format"
 msgstr "不支持的归档格式"
 
-#: ui/views/appearance_view.py:544
+#: ui/views/appearance_view.py:545
 #, python-brace-format
 msgid "Failed to extract archive: {}"
 msgstr "解压归档文件失败：{}"
 
-#: ui/views/appearance_view.py:555
+#: ui/views/appearance_view.py:556
 msgid "No theme.txt found in archive"
 msgstr "归档文件中未找到 theme.txt"
 
-#: ui/views/appearance_view.py:571
+#: ui/views/appearance_view.py:572
 #, python-brace-format
 msgid "Theme '{}' installed successfully!"
 msgstr "主题“{}”安装成功！"
 
-#: ui/views/appearance_view.py:575
+#: ui/views/appearance_view.py:576
 #, python-brace-format
 msgid "Failed to install theme: {}"
 msgstr "安装主题失败：{}"
 
-#: ui/views/appearance_view.py:578
+#: ui/views/appearance_view.py:579
 #, python-brace-format
 msgid "Error installing theme: {}"
 msgstr "安装主题时出错：{}"
 
-#: ui/views/appearance_view.py:592
+#: ui/views/appearance_view.py:593
 msgid "Apply Theme"
 msgstr "应用主题"
 
-#: ui/views/appearance_view.py:595
+#: ui/views/appearance_view.py:596
 #, python-brace-format
 msgid ""
 "Applying theme '{}' will disable any custom background and colors. Continue?"
 msgstr "应用主题“{}”将禁用所有自定义背景和颜色。是否继续？"
 
-#: ui/views/appearance_view.py:608
+#: ui/views/appearance_view.py:609
 msgid "Theme applied successfully!"
 msgstr "主题应用成功！"
 
-#: ui/views/appearance_view.py:617
+#: ui/views/appearance_view.py:618
 msgid "Disable Theme"
 msgstr "禁用主题"
 
-#: ui/views/appearance_view.py:619
+#: ui/views/appearance_view.py:620
 msgid "This will remove the theme and set default colors. Continue?"
 msgstr "这将移除主题并设置默认颜色。是否继续？"
 
-#: ui/views/appearance_view.py:635
+#: ui/views/appearance_view.py:636
 msgid "Theme disabled."
 msgstr "主题已禁用。"
 
-#: ui/views/appearance_view.py:646 ui/views/boot_entries_view.py:186
+#: ui/views/appearance_view.py:647 ui/views/boot_entries_view.py:186
 #: ui/views/general_view.py:407
 msgid "Run update-grub now to apply changes?"
 msgstr "是否立即运行 update-grub 以应用更改？"
 
-#: ui/views/appearance_view.py:657 ui/views/appearance_view.py:952
+#: ui/views/appearance_view.py:658 ui/views/appearance_view.py:953
 #: ui/views/general_view.py:418
 msgid "Success"
 msgstr "成功"
 
-#: ui/views/appearance_view.py:659
+#: ui/views/appearance_view.py:660
 msgid "GRUB configuration updated successfully!"
 msgstr "GRUB 配置更新成功！"
 
-#: ui/views/appearance_view.py:668 ui/views/appearance_view.py:681
-#: ui/views/appearance_view.py:929 ui/views/appearance_view.py:966
-#: ui/views/appearance_view.py:978 ui/views/boot_entries_view.py:199
+#: ui/views/appearance_view.py:669 ui/views/appearance_view.py:682
+#: ui/views/appearance_view.py:930 ui/views/appearance_view.py:967
+#: ui/views/appearance_view.py:979 ui/views/boot_entries_view.py:199
 #: ui/views/general_view.py:429 ui/views/general_view.py:440
 msgid "Error"
 msgstr "错误"
 
-#: ui/views/appearance_view.py:670
+#: ui/views/appearance_view.py:671
 msgid "Failed to update GRUB. Check logs for details."
 msgstr "更新 GRUB 失败。请查看日志了解详情。"
 
-#: ui/views/appearance_view.py:694
+#: ui/views/appearance_view.py:695
 msgid "Information"
 msgstr "信息"
 
-#: ui/views/appearance_view.py:711
+#: ui/views/appearance_view.py:712
 msgid "Remove Theme"
 msgstr "移除主题"
 
-#: ui/views/appearance_view.py:714
+#: ui/views/appearance_view.py:715
 #, python-brace-format
 msgid "This will permanently delete theme '{}'. Are you sure?"
 msgstr "这将永久删除主题“{}”。确定吗？"
 
-#: ui/views/appearance_view.py:729
+#: ui/views/appearance_view.py:730
 #, python-brace-format
 msgid "Theme '{}' removed successfully!"
 msgstr "主题“{}”已成功移除！"
 
-#: ui/views/appearance_view.py:738
+#: ui/views/appearance_view.py:739
 #, python-brace-format
 msgid "Failed to remove theme: {}"
 msgstr "移除主题失败：{}"
 
-#: ui/views/appearance_view.py:749
+#: ui/views/appearance_view.py:750
 msgid "Select background image"
 msgstr "选择背景图像"
 
-#: ui/views/appearance_view.py:759
+#: ui/views/appearance_view.py:760
 msgid "Images"
 msgstr "图像"
 
-#: ui/views/appearance_view.py:777
+#: ui/views/appearance_view.py:778
 msgid "Remove Background"
 msgstr "移除背景"
 
-#: ui/views/appearance_view.py:779
+#: ui/views/appearance_view.py:780
 msgid "This will remove the background image from GRUB. Continue?"
 msgstr "这将从 GRUB 中移除背景图像。是否继续？"
 
-#: ui/views/appearance_view.py:814
+#: ui/views/appearance_view.py:815
 msgid ""
 "This will disable any theme and use your custom background/colors. Continue?"
 msgstr "这将禁用所有主题，并使用您自定义的背景/颜色。是否继续？"
 
-#: ui/views/appearance_view.py:856
+#: ui/views/appearance_view.py:857
 msgid "Settings applied successfully!"
 msgstr "设置应用成功！"
 
-#: ui/views/appearance_view.py:895
+#: ui/views/appearance_view.py:896
 msgid "Select font file"
 msgstr "选择字体文件"
 
-#: ui/views/appearance_view.py:906
+#: ui/views/appearance_view.py:907
 msgid "Font files"
 msgstr "字体文件"
 
-#: ui/views/appearance_view.py:931
+#: ui/views/appearance_view.py:932
 msgid "Please select a valid font file."
 msgstr "请选择有效的字体文件。"
 
-#: ui/views/appearance_view.py:954
+#: ui/views/appearance_view.py:955
 #, python-brace-format
 msgid "Font converted and installed: {}"
 msgstr "字体已转换并安装：{}"
 
-#: ui/views/appearance_view.py:968
+#: ui/views/appearance_view.py:969
 #, python-brace-format
 msgid "Failed to convert font: {}"
 msgstr "转换字体失败：{}"
