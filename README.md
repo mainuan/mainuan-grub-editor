@@ -1,145 +1,162 @@
+<div align="center">
+
+<img src="assets/icons/128x128/org.mainuan.grubeditor.png" width="96" alt="Ícone do Mainuan GRUB Editor">
+
 # Mainuan GRUB Editor
 
-[![License: GPL-3.0+](https://img.shields.io/badge/License-GPL--3.0%2B-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
-[![Version](https://img.shields.io/badge/version-2.0.2--8-green.svg)]()
+Editor gráfico da configuração do GRUB: inicialização, entradas do menu, temas, fundo, cores e fontes.
 
-## 📝 Description
+[![CI](https://github.com/mainuan/mainuan-grub-editor/actions/workflows/ci.yml/badge.svg)](https://github.com/mainuan/mainuan-grub-editor/actions/workflows/ci.yml)
+[![Release](https://img.shields.io/github/v/release/mainuan/mainuan-grub-editor)](https://github.com/mainuan/mainuan-grub-editor/releases/latest)
+[![Licença](https://img.shields.io/github/license/mainuan/mainuan-grub-editor)](LICENSE)
+![Plataforma](https://img.shields.io/badge/Kubuntu%2026.04%20%7C%20Plasma%206.6-0079c1)
 
-A GTK3 graphical interface to configure and customize the GRUB2 bootloader: entries, themes, fonts, backgrounds, advanced parameters and more, with complete internationalization support.
+**Português** · [English](README.en.md)
 
-## ✨ Features
+</div>
 
-- 🗂️ Visual editing of GRUB2 configuration
-- 🎨 Theme and background management and installation
-- 🔤 Custom font conversion and installation
-- 📝 Custom boot entry management
-- ⚙️ Advanced kernel parameter configuration
+---
 
-### 🚀 Recent Updates (v2.0.2)
-- **Hierarchical Submenus**: Full support for selecting kernels in submenus.
-- **Background Sync**: Automatic silent `update-grub` on startup.
-- **UI Optimizations**: Compact layouts and improved path selection.
-- **Localization**: Updated translations for all 8 supported languages.
-- 💾 Automatic backup and restore
-- 🌍 Complete internationalization (8 languages)
-- 🖥️ Compatible with XFCE, Plasma and GNOME
-- 🌊 **Full support for Wayland and X11**
-- ⌨️ Keyboard shortcuts for all actions
+## O que é
 
-## 🛠️ Requirements
+O Mainuan GRUB Editor altera o `/etc/default/grub` e a aparência do menu de
+boot sem que seja preciso abrir um editor de texto. Cada mudança é gravada no
+arquivo e aplicada com `update-grub`, que o próprio programa oferece executar.
 
-- Python 3.8+
-- GTK 3.0
-- GRUB 2.x installed
-- Dependencies: PyGObject (GTK 3), pkexec, unzip
+É um aplicativo Python com GTK 3. Ele roda como root: o lançador
+`mainuan-grub-editor` pede a senha pelo `pkexec` e repassa ao processo elevado
+o idioma e o tema da sessão. Ao abrir, executa um `update-grub` silencioso para
+que a lista de entradas reflita os kernels instalados.
 
-## 📥 Installation
+## Funcionalidades
+
+- **Configuração geral**
+  - modo de inicialização padrão: entrada fixa, último kernel instalado ou última entrada iniciada (`GRUB_DEFAULT`/`GRUB_SAVEDEFAULT`);
+  - entrada padrão, inclusive kernels dentro de submenus;
+  - tempo de espera, resolução da tela (`GRUB_GFXMODE`) e parâmetros do kernel (`GRUB_CMDLINE_LINUX_DEFAULT`);
+  - detectar outros sistemas operacionais, mostrar o menu e incluir as opções de recuperação.
+- **Entradas de inicialização**
+  - lista as entradas geradas pelo GRUB;
+  - ativa, desativa e remove entradas do memtest e entradas personalizadas, com confirmação antes de remover;
+  - adiciona entradas personalizadas em `/etc/grub.d/40_custom`.
+- **Aparência**
+  - instala temas de arquivos `.zip`, `.tar.gz`/`.tgz`, `.tar.xz` e `.tar.bz2` em `/boot/grub/themes/`, com pré-visualização; aplica, desativa e remove temas;
+  - imagem de fundo PNG ou JPEG e cores do texto normal e do item selecionado;
+  - converte fontes TTF/OTF para o formato do GRUB (PF2) com `grub-mkfont`.
+- Interface clara ou escura conforme o tema da sessão, em Wayland e X11.
+- Interface traduzida em 33 idiomas, que segue o idioma escolhido no KDE Plasma.
+
+## Instalação
+
+O Mainuan GRUB Editor já vem instalado na ISO do Mainuan Linux.
+
+Em outro sistema Kubuntu/Ubuntu 26.04, baixe o `.deb` e o `SHA256SUMS` da
+[última release](https://github.com/mainuan/mainuan-grub-editor/releases/latest),
+confira e instale:
 
 ```bash
-# System dependencies
-sudo apt install python3-gi gir1.2-gtk-3.0 grub2-common pkexec unzip
-
-# Python installation
-pip3 install -r requirements.txt
-
-# Manual installation
-sudo python3 setup.py install
-
-# Install desktop files and icons
-# (setup.py generates the translated files in build/metadata/; requires gettext)
-sudo cp build/metadata/org.mainuan.grubeditor.desktop /usr/share/applications/
-sudo cp assets/icons/org.mainuan.grubeditor.png /usr/share/icons/hicolor/128x128/apps/
-sudo cp build/metadata/org.mainuan.grubeditor.metainfo.xml /usr/share/metainfo/
-sudo update-desktop-database
-sudo gtk-update-icon-cache /usr/share/icons/hicolor/
+sha256sum --check --ignore-missing SHA256SUMS
+sudo apt install ./mainuan-grub-editor_2.1.0_all.deb
 ```
 
-## 🚀 Usage
+O `apt` instala as dependências (`python3-gi`, `gir1.2-gtk-3.0`,
+`grub2-common`, `pkexec`, `unzip`).
+
+## Uso
+
+Abra **Mainuan GRUB Editor** no menu de aplicativos (categoria Sistema/Configurações) ou execute:
 
 ```bash
-# Run the application
 mainuan-grub-editor
 ```
 
-The application will automatically request administrator privileges using `pkexec`.
+O programa não tem opções de linha de comando; tudo é feito pela interface
+(`man mainuan-grub-editor`). A senha de administrador é pedida pelo `pkexec`.
 
-## 📦 Building the .deb package
+| Arquivo | Uso |
+|---|---|
+| `/etc/default/grub` | configuração principal alterada pelo programa |
+| `/etc/grub.d/40_custom` | entradas personalizadas |
+| `/boot/grub/themes/` | temas instalados |
+| `/boot/grub/fonts/` | fontes convertidas |
 
-The package is built from the standard `debian/` directory (debhelper) on
-Kubuntu/Ubuntu 26.04:
-
-```bash
-sudo apt build-dep ./
-dpkg-buildpackage -us -uc -b      # writes ../mainuan-grub-editor_<version>_all.deb
-sudo apt install ../mainuan-grub-editor_*_all.deb
-```
-
-The package version comes from `debian/changelog`. The GitHub Actions
-workflow (`.github/workflows/ci.yml`) builds and tests the package on every
-pull request and push, checks it with lintian, installs and removes it in a
-clean Ubuntu 26.04 container, and publishes a release only for a `v*` tag.
-
-## 🌊 Wayland Compatibility
-
-The application is **fully compatible with Wayland** and works perfectly on:
-
-- **Plasma 6 + Wayland** (Mainuan Linux)
-- **GNOME + Wayland**
-- **Sway** and other Wayland compositors
-- **X11** (all traditional environments)
-
-### Wayland Specific Features:
-- ✅ Automatic window protocol detection
-- ✅ Automatic theme application (including dark theme on Plasma 6)
-- ✅ Correct scaling on HiDPI monitors
-- ✅ Native integration with the compositor
-
-### Theme Troubleshooting:
-
-If the application is not using the correct theme:
+Se a interface não acompanhar o tema da sessão, force-o por variável de ambiente:
 
 ```bash
-# Force dark theme
-GTK_THEME=Adwaita:dark mainuan-grub-editor
-
-# Force light theme
-GTK_THEME=Adwaita mainuan-grub-editor
-
-# For Plasma with Breeze theme
+MAINUAN_THEME_TYPE=dark mainuan-grub-editor   # dark ou light
 GTK_THEME=Breeze-Dark mainuan-grub-editor
 ```
 
-## 🖥️ Main Features
+## Informações técnicas
 
-- **General**: Timeout, default entry, resolution, kernel parameters, OS detection
-- **Appearance**: Themes, fonts, colors, backgrounds
-- **Entries**: Add, edit and manage custom boot entries
-- **Security**: Automatic backups before applying changes
-- **Validation**: Syntax and structure verification before saving
+| Item | Valor |
+|---|---|
+| Linguagem | Python 3 |
+| Toolkit | GTK 3 (PyGObject) |
+| Base | Kubuntu 26.04 LTS, KDE Plasma 6.6 |
+| Pacote | `mainuan-grub-editor`, `Architecture: all` |
+| Dependências | `python3-gi`, `gir1.2-gtk-3.0`, `grub2-common`, `pkexec`, `unzip` |
+| Privilégios | root via `pkexec` |
+| Arquitetura do sistema | amd64 |
+| ID do aplicativo | `org.mainuan.grubeditor` (`.desktop` e metainfo AppStream) |
 
-## 🌐 Supported Languages
+## Compilação e testes
 
-- 🇪🇸 Spanish
-- 🇺🇸 English
-- 🇵🇹 Portuguese
-- 🇫🇷 French
-- 🇩🇪 German
-- 🇮🇹 Italian
-- 🇷🇴 Romanian
-- 🇷🇺 Russian
+O pacote é gerado a partir de `debian/` (debhelper 13) num Kubuntu/Ubuntu 26.04:
 
-## 🐧 Distribution Compatibility
+```bash
+git clone https://github.com/mainuan/mainuan-grub-editor.git
+cd mainuan-grub-editor
+sudo apt build-dep ./
+dpkg-buildpackage -us -uc -b      # gera ../mainuan-grub-editor_<versão>_all.deb
+```
 
-- ✅ **Mainuan Linux** (Plasma 6 + Wayland)
+A versão vem de `debian/changelog`. O `debian/rules` executa os testes
+(`python3 -m unittest discover -s tests -v`) durante o build. Antes dele, o CI
+executa:
 
-## 📄 License
+```bash
+po/i18n.sh check-pot     # o POT está em dia com o código
+po/i18n.sh validate      # catálogos válidos e marcadores preservados
+bash -n packaging/mainuan-grub-editor packaging/build-data.sh po/i18n.sh
+```
 
-This project is licensed under [GPL-3.0+](https://www.gnu.org/licenses/gpl-3.0.html).
+e confere a sintaxe de todos os arquivos `.py`.
 
-## 👥 Developers
+O workflow [`CI`](.github/workflows/ci.yml) usa o pipeline Debian comum da
+organização: build num contêiner Ubuntu 26.04 fixado por digest, `lintian`,
+`SHA256SUMS`, instalação num Ubuntu 26.04 limpo, teste de fumaça (valida o
+`.desktop` e o metainfo e abre o aplicativo instalado sob Xvfb, em português e
+em inglês), reinstalação, remoção e expurgo. A release só é publicada por uma
+tag `v*` e nunca substitui uma existente.
 
-Developed by David Caixinha
+## Traduções
 
+A interface, o `.desktop` e o metainfo AppStream usam gettext (domínio
+`mainuan-grub-editor`, textos-fonte em inglês) e estão disponíveis em 33
+idiomas: ar, bn, cs, da, de, el, es, fa, fi, fr, he, hi, hu, id, it, ja, ko,
+nb, nl, pl, pt, pt_BR, ro, ru, sv, sw, th, tr, uk, ur, vi, zh_CN e zh_TW.
 
+Os catálogos ficam em `locale/<idioma>/LC_MESSAGES/`. Como atualizar, validar
+e acrescentar idiomas: [docs/i18n/README.md](docs/i18n/README.md).
 
+## Contribuição
 
+Relate problemas em [Issues](https://github.com/mainuan/mainuan-grub-editor/issues)
+e envie mudanças por pull request para `main`. Todo PR passa pelo
+[CI](https://github.com/mainuan/mainuan-grub-editor/actions/workflows/ci.yml),
+que precisa estar verde. Registre mudanças visíveis no
+[CHANGELOG.md](CHANGELOG.md) e em `debian/changelog`.
+
+## Créditos
+
+- David Caixinha ([@tugatechlabDC](https://github.com/tugatechlabDC)): desenvolvedor e mantenedor do pacote (`debian/control`).
+- Daigo ([@daigoasuka](https://github.com/daigoasuka)): versão original publicada neste repositório.
+- Rafael Ruscher ([@ruscher](https://github.com/ruscher)): internacionalização, empacotamento Debian, CI e correções.
+
+Origem: derivado do **Soplos GRUB Editor**, de Sergi Perich, citado na página
+de manual e nos cabeçalhos dos catálogos de tradução.
+
+## Licença
+
+[GPL-3.0-or-later](LICENSE).
