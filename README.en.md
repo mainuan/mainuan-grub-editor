@@ -87,8 +87,7 @@ CI must pass.
 
 David Caixinha ([@tugatechlabDC](https://github.com/tugatechlabDC)),
 Daigo ([@daigoasuka](https://github.com/daigoasuka)) and
-Rafael Ruscher ([@ruscher](https://github.com/ruscher)). Derived from
-**Soplos GRUB Editor** by Sergi Perich.
+Rafael Ruscher ([@ruscher](https://github.com/ruscher)).
 
 ## License
 
