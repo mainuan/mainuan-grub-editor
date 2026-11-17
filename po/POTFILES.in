@@ -8,3 +8,4 @@ ui/views/appearance_view.py
 ui/views/boot_entries_view.py
 ui/views/general_view.py
 assets/org.mainuan.grubeditor.desktop.in
+debian/org.mainuan.grubeditor.metainfo.xml.in

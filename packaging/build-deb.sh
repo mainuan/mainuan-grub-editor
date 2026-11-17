@@ -21,13 +21,12 @@ install -d "$STAGE/DEBIAN" "$STAGE$APP" "$STAGE/usr/bin" \
 # Application files (everything except packaging, VCS and build leftovers)
 tar -C "$ROOT" \
     --exclude='./packaging' --exclude='./dist' --exclude='./.git' \
-    --exclude='./locale' --exclude='./po' --exclude='./tests' --exclude='*.desktop.in' \
+    --exclude='./locale' --exclude='./po' --exclude='./tests' --exclude='*.desktop.in' --exclude='*.metainfo.xml.in' \
     --exclude='.gitignore' --exclude='.gitkeep' --exclude='__pycache__' \
     --exclude='*.pyc' --exclude='*.deb' -cf - . | tar -C "$STAGE$APP" -xf -
 
 # Launcher, desktop entry, metainfo, docs
 install -m 0755 "$ROOT/debian/mainuan-grub-editor" "$STAGE/usr/bin/mainuan-grub-editor"
-install -m 0644 "$ROOT/debian/org.mainuan.grubeditor.metainfo.xml" "$STAGE/usr/share/metainfo/"
 install -m 0644 "$ROOT/debian/copyright" "$STAGE/usr/share/doc/mainuan-grub-editor/copyright"
 gzip -9n -c "$ROOT/docs/mainuan-grub-editor.1" > "$STAGE/usr/share/man/man1/mainuan-grub-editor.1.gz"
 
@@ -45,6 +44,14 @@ done
 msgfmt --desktop --template="$ROOT/assets/org.mainuan.grubeditor.desktop.in" -d "$DESKTOP_PO" \
        -o "$STAGE/usr/share/applications/org.mainuan.grubeditor.desktop"
 chmod 0644 "$STAGE/usr/share/applications/org.mainuan.grubeditor.desktop"
+# AppStream metainfo: name, summary, description and keywords from the same
+# catalogs. msgfmt writes BCP 47 tags (pt-BR); AppStream and software centres
+# match POSIX locale names (pt_BR), so convert them.
+msgfmt --xml --template="$ROOT/debian/org.mainuan.grubeditor.metainfo.xml.in" -d "$DESKTOP_PO" \
+       -o "$STAGE/usr/share/metainfo/org.mainuan.grubeditor.metainfo.xml"
+sed -i -E 's/xml:lang="([a-z]{2,3})-(Hans-|Hant-)?([A-Z]{2})"/xml:lang="\1_\3"/g' \
+    "$STAGE/usr/share/metainfo/org.mainuan.grubeditor.metainfo.xml"
+chmod 0644 "$STAGE/usr/share/metainfo/org.mainuan.grubeditor.metainfo.xml"
 
 # Icons: one correctly sized PNG per hicolor size, generated from the 1024px master
 python3 - "$ROOT/assets/icons/org.mainuan.grubeditor.png" "$STAGE" <<'PY'

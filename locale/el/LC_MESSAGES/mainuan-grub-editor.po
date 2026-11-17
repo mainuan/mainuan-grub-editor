@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: Mainuan GRUB Editor\n"
 "Report-Msgid-Bugs-To: https://github.com/MainuanLinux/mainuan-grub-editor/"
 "issues\n"
-"POT-Creation-Date: 2026-11-16 11:30-0300\n"
+"POT-Creation-Date: 2026-11-17 04:08-0300\n"
 "PO-Revision-Date: 2026-11-16 11:30-0300\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: el <https://github.com/mainuan>\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #: assets/org.mainuan.grubeditor.desktop.in:4 core/application.py:23
-#: ui/main_window.py:14
+#: debian/org.mainuan.grubeditor.metainfo.xml.in:8 ui/main_window.py:14
 msgid "Mainuan GRUB Editor"
 msgstr "Επεξεργαστής GRUB του Mainuan"
 
@@ -213,6 +213,7 @@ msgid "Error running update-grub: {err}"
 msgstr "Σφάλμα εκτέλεσης του update-grub: {err}"
 
 #: core/grub_manager.py:603 core/grub_manager.py:669
+#: debian/org.mainuan.grubeditor.metainfo.xml.in:40
 #: ui/views/boot_entries_view.py:143
 msgid "system"
 msgstr "σύστημα"
@@ -287,6 +288,107 @@ msgstr ""
 #: core/theme_manager.py:186
 msgid "[ThemeManager] ✗✗✗ Failed to initialize theming ✗✗✗"
 msgstr "[ThemeManager] ✗✗✗ Αποτυχία αρχικοποίησης των θεμάτων ✗✗✗"
+
+#: debian/org.mainuan.grubeditor.metainfo.xml.in:9
+msgid "Advanced editor for the GRUB bootloader configuration"
+msgstr "Προηγμένος επεξεργαστής ρυθμίσεων του φορτωτή εκκίνησης GRUB"
+
+#: debian/org.mainuan.grubeditor.metainfo.xml.in:11
+msgid ""
+"Mainuan GRUB Editor is a comprehensive graphical tool for configuring and "
+"customizing the GRUB2 bootloader. It provides an intuitive interface for "
+"managing boot settings, themes, fonts and custom entries, and follows the "
+"language chosen in KDE Plasma."
+msgstr ""
+"Το Mainuan GRUB Editor είναι ένα ολοκληρωμένο γραφικό εργαλείο για τη "
+"ρύθμιση και την προσαρμογή του φορτωτή εκκίνησης GRUB2. Παρέχει ένα εύχρηστο "
+"περιβάλλον για τη διαχείριση των ρυθμίσεων εκκίνησης, των θεμάτων, των "
+"γραμματοσειρών και των προσαρμοσμένων καταχωρίσεων, και ακολουθεί τη γλώσσα "
+"που έχει επιλεγεί στο KDE Plasma."
+
+#: debian/org.mainuan.grubeditor.metainfo.xml.in:12
+msgid "Key Features:"
+msgstr "Κύρια χαρακτηριστικά:"
+
+#: debian/org.mainuan.grubeditor.metainfo.xml.in:14
+msgid "Available in more than 30 languages"
+msgstr "Διαθέσιμο σε περισσότερες από 30 γλώσσες"
+
+#: debian/org.mainuan.grubeditor.metainfo.xml.in:15
+msgid "Intuitive GTK3 interface with keyboard shortcuts"
+msgstr "Εύχρηστο περιβάλλον GTK3 με συντομεύσεις πληκτρολογίου"
+
+#: debian/org.mainuan.grubeditor.metainfo.xml.in:16
+msgid "Theme management and installation"
+msgstr "Διαχείριση και εγκατάσταση θεμάτων"
+
+#: debian/org.mainuan.grubeditor.metainfo.xml.in:17
+msgid "Custom font conversion and application"
+msgstr "Μετατροπή και εφαρμογή προσαρμοσμένων γραμματοσειρών"
+
+#: debian/org.mainuan.grubeditor.metainfo.xml.in:18
+msgid "Background image configuration"
+msgstr "Ρύθμιση εικόνας φόντου"
+
+#: debian/org.mainuan.grubeditor.metainfo.xml.in:19
+msgid "Custom boot entry management"
+msgstr "Διαχείριση προσαρμοσμένων καταχωρίσεων εκκίνησης"
+
+#: debian/org.mainuan.grubeditor.metainfo.xml.in:20
+msgid "Advanced kernel parameter configuration"
+msgstr "Προηγμένη ρύθμιση παραμέτρων πυρήνα"
+
+#: debian/org.mainuan.grubeditor.metainfo.xml.in:21
+msgid "Automatic backup and restore functionality"
+msgstr "Αυτόματη λήψη αντιγράφων ασφαλείας και επαναφορά"
+
+#: debian/org.mainuan.grubeditor.metainfo.xml.in:22
+msgid "Safe update-grub integration"
+msgstr "Ασφαλής ενσωμάτωση με το update-grub"
+
+#: debian/org.mainuan.grubeditor.metainfo.xml.in:23
+msgid "Multi-OS detection support"
+msgstr "Υποστήριξη ανίχνευσης πολλών λειτουργικών συστημάτων"
+
+#: debian/org.mainuan.grubeditor.metainfo.xml.in:38
+msgid "bootloader"
+msgstr "φορτωτής εκκίνησης"
+
+#: debian/org.mainuan.grubeditor.metainfo.xml.in:39
+msgid "boot"
+msgstr "εκκίνηση"
+
+#: debian/org.mainuan.grubeditor.metainfo.xml.in:41
+msgid "configure"
+msgstr "ρύθμιση"
+
+#: debian/org.mainuan.grubeditor.metainfo.xml.in:42
+msgid "settings"
+msgstr "ρυθμίσεις"
+
+#: debian/org.mainuan.grubeditor.metainfo.xml.in:43
+msgid "customize"
+msgstr "προσαρμογή"
+
+#: debian/org.mainuan.grubeditor.metainfo.xml.in:44
+msgid "theme"
+msgstr "θέμα"
+
+#: debian/org.mainuan.grubeditor.metainfo.xml.in:55
+msgid "General configuration"
+msgstr "Γενικές ρυθμίσεις"
+
+#: debian/org.mainuan.grubeditor.metainfo.xml.in:59
+msgid "Boot entries"
+msgstr "Καταχωρίσεις εκκίνησης"
+
+#: debian/org.mainuan.grubeditor.metainfo.xml.in:63
+msgid "Theme, background and color selector"
+msgstr "Επιλογέας θέματος, φόντου και χρωμάτων"
+
+#: debian/org.mainuan.grubeditor.metainfo.xml.in:67
+msgid "Typographic font converter"
+msgstr "Μετατροπέας γραμματοσειρών"
 
 #: main.py:71
 #, python-brace-format

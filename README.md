@@ -46,9 +46,10 @@ pip3 install -r requirements.txt
 sudo python3 setup.py install
 
 # Install desktop files and icons
-sudo cp assets/org.mainuan.grubeditor.desktop /usr/share/applications/
+# (setup.py generates the translated files in build/metadata/; requires gettext)
+sudo cp build/metadata/org.mainuan.grubeditor.desktop /usr/share/applications/
 sudo cp assets/icons/org.mainuan.grubeditor.png /usr/share/icons/hicolor/128x128/apps/
-sudo cp debian/org.mainuan.grubeditor.metainfo.xml /usr/share/metainfo/
+sudo cp build/metadata/org.mainuan.grubeditor.metainfo.xml /usr/share/metainfo/
 sudo update-desktop-database
 sudo gtk-update-icon-cache /usr/share/icons/hicolor/
 ```

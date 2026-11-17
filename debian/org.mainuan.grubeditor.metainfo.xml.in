@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component type="desktop-application">
+  <id>org.mainuan.grubeditor</id>
+  <pkgname>mainuan-grub-editor</pkgname>
+  <metadata_license>CC0-1.0</metadata_license>
+  <project_license>GPL-3.0-or-later</project_license>
+  <project_group>org.mainuanlinux</project_group>
+  <name>Mainuan GRUB Editor</name>
+  <summary>Advanced editor for the GRUB bootloader configuration</summary>
+  <description>
+    <p>Mainuan GRUB Editor is a comprehensive graphical tool for configuring and customizing the GRUB2 bootloader. It provides an intuitive interface for managing boot settings, themes, fonts and custom entries, and follows the language chosen in KDE Plasma.</p>
+    <p>Key Features:</p>
+    <ul>
+      <li>Available in more than 30 languages</li>
+      <li>Intuitive GTK3 interface with keyboard shortcuts</li>
+      <li>Theme management and installation</li>
+      <li>Custom font conversion and application</li>
+      <li>Background image configuration</li>
+      <li>Custom boot entry management</li>
+      <li>Advanced kernel parameter configuration</li>
+      <li>Automatic backup and restore functionality</li>
+      <li>Safe update-grub integration</li>
+      <li>Multi-OS detection support</li>
+    </ul>
+  </description>
+  <categories>
+    <category>System</category>
+    <category>Settings</category>
+    <category>Utility</category>
+  </categories>
+  <requires>
+    <display_length compare="ge">800</display_length>
+    <internet>offline-only</internet>
+    <memory compare="ge">256</memory>
+  </requires>
+  <keywords>
+    <keyword translate="no">grub</keyword>
+    <keyword>bootloader</keyword>
+    <keyword>boot</keyword>
+    <keyword>system</keyword>
+    <keyword>configure</keyword>
+    <keyword>settings</keyword>
+    <keyword>customize</keyword>
+    <keyword>theme</keyword>
+    <keyword translate="no">mainuan</keyword>
+  </keywords>
+  <translation type="gettext">mainuan-grub-editor</translation>
+  <launchable type="desktop-id">org.mainuan.grubeditor.desktop</launchable>
+  <icon type="stock">org.mainuan.grubeditor</icon>
+  <icon type="remote" width="128" height="128">
+    <url>https://raw.githubusercontent.com/MainuanLinux/tyron/main/media/mainuan-grub-editor/icons/org.mainuan.grubeditor.png</url>
+  </icon>
+  <screenshots>
+    <screenshot type="default">
+      <caption>General configuration</caption>
+      <image>https://raw.githubusercontent.com/MainuanLinux/tyron/main/media/mainuan-grub-editor/screenshots/screenshot1.png</image>
+    </screenshot>
+    <screenshot>
+      <caption>Boot entries</caption>
+      <image>https://raw.githubusercontent.com/MainuanLinux/tyron/main/media/mainuan-grub-editor/screenshots/screenshot2.png</image>
+    </screenshot>
+    <screenshot>
+      <caption>Theme, background and color selector</caption>
+      <image>https://raw.githubusercontent.com/MainuanLinux/tyron/main/media/mainuan-grub-editor/screenshots/screenshot3.png</image>
+    </screenshot>
+    <screenshot>
+      <caption>Typographic font converter</caption>
+      <image>https://raw.githubusercontent.com/MainuanLinux/tyron/main/media/mainuan-grub-editor/screenshots/screenshot4.png</image>
+    </screenshot>
+  </screenshots>
+  <url type="homepage">https://mainuan.org</url>
+  <url type="bugtracker">https://github.com/MainuanLinux/mainuan-grub-editor/issues</url>
+  <url type="donation">https://paypal.me/isubdes</url>
+  <url type="contact">https://forums.mainuan.org</url>
+  <url type="vcs-browser">https://github.com/MainuanLinux/tyron</url>
+  <developer id="org.mainuanlinux">
+    <name translate="no">David Caixinha</name>
+    <url type="email">tugatechlab.contacto@gmail.com</url>
+  </developer>
+  <provides>
+    <binary>mainuan-grub-editor</binary>
+    <size type="download">1203488</size>
+    <size type="installed">1631961</size>
+  </provides>
+  <releases>
+    <release version="2.0.2-8" date="2026-08-01">
+      <description translate="no">
+        <p>New "Default Boot Mode" selector lets you choose between a fixed entry, the last installed kernel or the last booted kernel. Applying changes in General settings no longer pins the boot entry to the current kernel, which prevented newly installed kernels from ever being booted.</p>
+      </description>
+    </release>
+    <release version="2.0.2-7" date="2026-07-29">
+      <description translate="no">
+        <p>Screen resolution is no longer saved using its translated label, custom boot entries can now be enabled, disabled and deleted, and the launcher wrapper registers the window under the same identifier as the desktop file.</p>
+      </description>
+    </release>
+    <release version="2.0.2-6" date="2026-07-23">
+      <description translate="no">
+        <p>Boot Entries tab now works for real: memtest entries can be disabled or removed, custom entries can be added, and duplicate/mislabeled entries were fixed.</p>
+      </description>
+    </release>
+    <release version="2.0.2-5" date="2026-07-07">
+      <description translate="no">
+        <p>Build dependency python3-all replaced with python3.</p>
+      </description>
+    </release>
+    <release version="2.0.2-4" date="2026-05-22">
+      <description translate="no">
+        <p>Aligned Tyson legacy 1.x release timeline to correct July 2025 timestamps and cleaned up obsolete metadata tags in metainfo.xml.</p>
+      </description>
+    </release>
+    <release version="2.0.2-3" date="2026-05-18">
+      <description translate="no">
+        <p>Historical correction of Tyron legacy versioning: the August 2025 package mislabelled as 1.0.4 is now correctly documented as 1.0.9; the original Tyron 1.0.4 from May 2025 has been restored to the changelog.</p>
+        <p>Historical correction of Tyron legacy versioning: the August 2025 package mislabelled as 1.0.4 is now correctly documented as 1.0.9; the original Tyron 1.0.4 from May 2025 has been restored to the changelog.</p>
+      </description>
+    </release>
+    <release version="2.0.2-2" date="2026-04-30">
+      <description translate="no">
+        <p>Simplified the footer UI text to match the modern Mainuan standard layout.</p>
+        <p>Simplified the footer UI text to match the modern Mainuan standard layout.</p>
+      </description>
+    </release>
+    <release version="2.0.2-1" date="2026-03-21">
+      <description translate="no">
+        <p>About dialog, F1 shortcut, CSS architecture refactor, icon renaming and minor fixes.</p>
+        <ul>
+          <li>F1 shortcut and GNOME menu About action open the About dialog</li>
+          <li>Ctrl+Shift+Tab to navigate to previous tab</li>
+          <li>Notebook tab labels no longer appear orange in inactive tabs</li>
+          <li>CSS split into base.css (structural) and dark/light.css (color variables only)</li>
+          <li>Icon files renamed from com.mainuan to org.mainuan for naming consistency</li>
+        </ul>
+      </description>
+    </release>
+    <release version="2.0.2" date="2026-03-11">
+      <description translate="no">
+        <p>Support for hierarchical submenus, option to enable/disable them (GRUB_DISABLE_SUBMENU), silent update on startup and visual optimizations.</p>
+        <ul>
+          <li>Full parsing of GRUB submenus</li>
+          <li>Option to enable/disable submenus (GRUB_DISABLE_SUBMENU)</li>
+          <li>Silent update-grub on application launch</li>
+          <li>Compact UI for boot entries table</li>
+          <li>Hierarchical path display in selectors</li>
+        </ul>
+      </description>
+    </release>
+    <release version="2.0.1" date="2026-03-07">
+      <description translate="no">
+        <p>Fixes for GRUB boot failures, cache conflicts, and UX improvements for timeout settings.</p>
+        <ul>
+          <li>
+            <em>Robust Theme Management</em>: Reliably disables Debian and Mainuan script defaults.</li>
+          <li>
+            <em>Cache Cleanup</em>: Prevents "invalid argument" crashes deleting stale `.background_cache` files.</li>
+          <li>
+            <em>Smart UI</em>: Auto-disables "Show boot menu" when Timeout is 0.</li>
+        </ul>
+      </description>
+    </release>
+    <release version="2.0.0" date="2026-01-10">
+      <description translate="no">
+        <p>Major Release - Complete Rewrite. Complete Internationalization (8 languages). Smart theme detection, GRUB theme manager, new resolutions, refined UI and improved desktop detection.</p>
+        <p>Major Release - Complete Rewrite. Complete Internationalization (8 languages). Smart theme detection, GRUB theme manager, new resolutions, refined UI and improved desktop detection.</p>
+        <ul>
+          <li>Smart light/dark theme detection (GNOME, KDE, XFCE)</li>
+          <li>Improved desktop &amp; environment detection</li>
+          <li>Refined UI layout with compact view</li>
+          <li>GRUB theme installer and remover</li>
+          <li>Expanded resolution support (16:9, 16:10, 4:3, 4K)</li>
+          <li>UUID control option</li>
+        </ul>
+      </description>
+    </release>
+  </releases>
+  <content_rating type="oars-1.1">
+    <content_attribute id="violence-cartoon">none</content_attribute>
+    <content_attribute id="sex-nudity">none</content_attribute>
+    <content_attribute id="language-profanity">none</content_attribute>
+    <content_attribute id="drugs-alcohol">none</content_attribute>
+    <content_attribute id="money-gambling">none</content_attribute>
+    <content_attribute id="money-purchasing">none</content_attribute>
+    <content_attribute id="social-chat">none</content_attribute>
+  </content_rating>
+</component>

@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: Mainuan GRUB Editor\n"
 "Report-Msgid-Bugs-To: https://github.com/MainuanLinux/mainuan-grub-editor/"
 "issues\n"
-"POT-Creation-Date: 2026-11-16 11:30-0300\n"
+"POT-Creation-Date: 2026-11-17 04:08-0300\n"
 "PO-Revision-Date: 2026-11-16 11:30-0300\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: zh_TW <https://github.com/mainuan>\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 
 #: assets/org.mainuan.grubeditor.desktop.in:4 core/application.py:23
-#: ui/main_window.py:14
+#: debian/org.mainuan.grubeditor.metainfo.xml.in:8 ui/main_window.py:14
 msgid "Mainuan GRUB Editor"
 msgstr "Mainuan GRUB 編輯器"
 
@@ -213,6 +213,7 @@ msgid "Error running update-grub: {err}"
 msgstr "執行 update-grub 時發生錯誤：{err}"
 
 #: core/grub_manager.py:603 core/grub_manager.py:669
+#: debian/org.mainuan.grubeditor.metainfo.xml.in:40
 #: ui/views/boot_entries_view.py:143
 msgid "system"
 msgstr "系統"
@@ -286,6 +287,105 @@ msgstr "[ThemeManager] ⚠ 無法設定 GTK 主題偏好：{}"
 #: core/theme_manager.py:186
 msgid "[ThemeManager] ✗✗✗ Failed to initialize theming ✗✗✗"
 msgstr "[ThemeManager] ✗✗✗ 初始化主題失敗 ✗✗✗"
+
+#: debian/org.mainuan.grubeditor.metainfo.xml.in:9
+msgid "Advanced editor for the GRUB bootloader configuration"
+msgstr "GRUB 開機載入程式設定的進階編輯器"
+
+#: debian/org.mainuan.grubeditor.metainfo.xml.in:11
+msgid ""
+"Mainuan GRUB Editor is a comprehensive graphical tool for configuring and "
+"customizing the GRUB2 bootloader. It provides an intuitive interface for "
+"managing boot settings, themes, fonts and custom entries, and follows the "
+"language chosen in KDE Plasma."
+msgstr ""
+"Mainuan GRUB 編輯器是一套功能完整的圖形化工具，用於設定與自訂 GRUB2 開機載入"
+"程式。它提供直覺的介面，可管理開機設定、主題、字型與自訂項目，並遵循 KDE "
+"Plasma 中選擇的語言。"
+
+#: debian/org.mainuan.grubeditor.metainfo.xml.in:12
+msgid "Key Features:"
+msgstr "主要功能："
+
+#: debian/org.mainuan.grubeditor.metainfo.xml.in:14
+msgid "Available in more than 30 languages"
+msgstr "提供超過 30 種語言"
+
+#: debian/org.mainuan.grubeditor.metainfo.xml.in:15
+msgid "Intuitive GTK3 interface with keyboard shortcuts"
+msgstr "直覺的 GTK3 介面，支援鍵盤快捷鍵"
+
+#: debian/org.mainuan.grubeditor.metainfo.xml.in:16
+msgid "Theme management and installation"
+msgstr "主題管理與安裝"
+
+#: debian/org.mainuan.grubeditor.metainfo.xml.in:17
+msgid "Custom font conversion and application"
+msgstr "自訂字型轉換與套用"
+
+#: debian/org.mainuan.grubeditor.metainfo.xml.in:18
+msgid "Background image configuration"
+msgstr "背景圖片設定"
+
+#: debian/org.mainuan.grubeditor.metainfo.xml.in:19
+msgid "Custom boot entry management"
+msgstr "自訂開機項目管理"
+
+#: debian/org.mainuan.grubeditor.metainfo.xml.in:20
+msgid "Advanced kernel parameter configuration"
+msgstr "進階核心參數設定"
+
+#: debian/org.mainuan.grubeditor.metainfo.xml.in:21
+msgid "Automatic backup and restore functionality"
+msgstr "自動備份與還原功能"
+
+#: debian/org.mainuan.grubeditor.metainfo.xml.in:22
+msgid "Safe update-grub integration"
+msgstr "安全整合 update-grub"
+
+#: debian/org.mainuan.grubeditor.metainfo.xml.in:23
+msgid "Multi-OS detection support"
+msgstr "支援多作業系統偵測"
+
+#: debian/org.mainuan.grubeditor.metainfo.xml.in:38
+msgid "bootloader"
+msgstr "開機載入程式"
+
+#: debian/org.mainuan.grubeditor.metainfo.xml.in:39
+msgid "boot"
+msgstr "開機"
+
+#: debian/org.mainuan.grubeditor.metainfo.xml.in:41
+msgid "configure"
+msgstr "設定"
+
+#: debian/org.mainuan.grubeditor.metainfo.xml.in:42
+msgid "settings"
+msgstr "設定值"
+
+#: debian/org.mainuan.grubeditor.metainfo.xml.in:43
+msgid "customize"
+msgstr "自訂"
+
+#: debian/org.mainuan.grubeditor.metainfo.xml.in:44
+msgid "theme"
+msgstr "主題"
+
+#: debian/org.mainuan.grubeditor.metainfo.xml.in:55
+msgid "General configuration"
+msgstr "一般設定"
+
+#: debian/org.mainuan.grubeditor.metainfo.xml.in:59
+msgid "Boot entries"
+msgstr "開機項目"
+
+#: debian/org.mainuan.grubeditor.metainfo.xml.in:63
+msgid "Theme, background and color selector"
+msgstr "主題、背景與色彩選擇器"
+
+#: debian/org.mainuan.grubeditor.metainfo.xml.in:67
+msgid "Typographic font converter"
+msgstr "字型轉換器"
 
 #: main.py:71
 #, python-brace-format

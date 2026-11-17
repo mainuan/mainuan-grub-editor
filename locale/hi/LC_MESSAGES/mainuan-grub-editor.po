@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: Mainuan GRUB Editor\n"
 "Report-Msgid-Bugs-To: https://github.com/MainuanLinux/mainuan-grub-editor/"
 "issues\n"
-"POT-Creation-Date: 2026-11-16 11:30-0300\n"
+"POT-Creation-Date: 2026-11-17 04:08-0300\n"
 "PO-Revision-Date: 2026-11-16 11:30-0300\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: hi <https://github.com/mainuan>\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 
 #: assets/org.mainuan.grubeditor.desktop.in:4 core/application.py:23
-#: ui/main_window.py:14
+#: debian/org.mainuan.grubeditor.metainfo.xml.in:8 ui/main_window.py:14
 msgid "Mainuan GRUB Editor"
 msgstr "Mainuan GRUB संपादक"
 
@@ -212,6 +212,7 @@ msgid "Error running update-grub: {err}"
 msgstr "update-grub चलाने में त्रुटि: {err}"
 
 #: core/grub_manager.py:603 core/grub_manager.py:669
+#: debian/org.mainuan.grubeditor.metainfo.xml.in:40
 #: ui/views/boot_entries_view.py:143
 msgid "system"
 msgstr "सिस्टम"
@@ -285,6 +286,105 @@ msgstr "[ThemeManager] ⚠ GTK थीम वरीयता सेट नही�
 #: core/theme_manager.py:186
 msgid "[ThemeManager] ✗✗✗ Failed to initialize theming ✗✗✗"
 msgstr "[ThemeManager] ✗✗✗ थीम आरंभ करने में विफल ✗✗✗"
+
+#: debian/org.mainuan.grubeditor.metainfo.xml.in:9
+msgid "Advanced editor for the GRUB bootloader configuration"
+msgstr "GRUB बूटलोडर कॉन्फ़िगरेशन के लिए उन्नत संपादक"
+
+#: debian/org.mainuan.grubeditor.metainfo.xml.in:11
+msgid ""
+"Mainuan GRUB Editor is a comprehensive graphical tool for configuring and "
+"customizing the GRUB2 bootloader. It provides an intuitive interface for "
+"managing boot settings, themes, fonts and custom entries, and follows the "
+"language chosen in KDE Plasma."
+msgstr ""
+"Mainuan GRUB संपादक GRUB2 बूटलोडर को कॉन्फ़िगर और अनुकूलित करने के लिए एक व्यापक "
+"ग्राफ़िकल टूल है। यह बूट सेटिंग्स, थीम, फ़ॉन्ट्स और कस्टम प्रविष्टियों को प्रबंधित करने के लिए "
+"एक सहज इंटरफ़ेस देता है, और KDE Plasma में चुनी गई भाषा का पालन करता है।"
+
+#: debian/org.mainuan.grubeditor.metainfo.xml.in:12
+msgid "Key Features:"
+msgstr "मुख्य विशेषताएँ:"
+
+#: debian/org.mainuan.grubeditor.metainfo.xml.in:14
+msgid "Available in more than 30 languages"
+msgstr "30 से अधिक भाषाओं में उपलब्ध"
+
+#: debian/org.mainuan.grubeditor.metainfo.xml.in:15
+msgid "Intuitive GTK3 interface with keyboard shortcuts"
+msgstr "कीबोर्ड शॉर्टकट के साथ सहज GTK3 इंटरफ़ेस"
+
+#: debian/org.mainuan.grubeditor.metainfo.xml.in:16
+msgid "Theme management and installation"
+msgstr "थीम प्रबंधन और स्थापना"
+
+#: debian/org.mainuan.grubeditor.metainfo.xml.in:17
+msgid "Custom font conversion and application"
+msgstr "कस्टम फ़ॉन्ट का रूपांतरण और उसे लागू करना"
+
+#: debian/org.mainuan.grubeditor.metainfo.xml.in:18
+msgid "Background image configuration"
+msgstr "पृष्ठभूमि छवि कॉन्फ़िगरेशन"
+
+#: debian/org.mainuan.grubeditor.metainfo.xml.in:19
+msgid "Custom boot entry management"
+msgstr "कस्टम बूट प्रविष्टियों का प्रबंधन"
+
+#: debian/org.mainuan.grubeditor.metainfo.xml.in:20
+msgid "Advanced kernel parameter configuration"
+msgstr "उन्नत कर्नेल पैरामीटर कॉन्फ़िगरेशन"
+
+#: debian/org.mainuan.grubeditor.metainfo.xml.in:21
+msgid "Automatic backup and restore functionality"
+msgstr "स्वचालित बैकअप और पुनर्स्थापना सुविधा"
+
+#: debian/org.mainuan.grubeditor.metainfo.xml.in:22
+msgid "Safe update-grub integration"
+msgstr "सुरक्षित update-grub एकीकरण"
+
+#: debian/org.mainuan.grubeditor.metainfo.xml.in:23
+msgid "Multi-OS detection support"
+msgstr "एकाधिक ऑपरेटिंग सिस्टम पहचानने की सुविधा"
+
+#: debian/org.mainuan.grubeditor.metainfo.xml.in:38
+msgid "bootloader"
+msgstr "बूटलोडर"
+
+#: debian/org.mainuan.grubeditor.metainfo.xml.in:39
+msgid "boot"
+msgstr "बूट"
+
+#: debian/org.mainuan.grubeditor.metainfo.xml.in:41
+msgid "configure"
+msgstr "कॉन्फ़िगर"
+
+#: debian/org.mainuan.grubeditor.metainfo.xml.in:42
+msgid "settings"
+msgstr "सेटिंग्स"
+
+#: debian/org.mainuan.grubeditor.metainfo.xml.in:43
+msgid "customize"
+msgstr "अनुकूलन"
+
+#: debian/org.mainuan.grubeditor.metainfo.xml.in:44
+msgid "theme"
+msgstr "थीम"
+
+#: debian/org.mainuan.grubeditor.metainfo.xml.in:55
+msgid "General configuration"
+msgstr "सामान्य कॉन्फ़िगरेशन"
+
+#: debian/org.mainuan.grubeditor.metainfo.xml.in:59
+msgid "Boot entries"
+msgstr "बूट प्रविष्टियाँ"
+
+#: debian/org.mainuan.grubeditor.metainfo.xml.in:63
+msgid "Theme, background and color selector"
+msgstr "थीम, पृष्ठभूमि और रंग चयनकर्ता"
+
+#: debian/org.mainuan.grubeditor.metainfo.xml.in:67
+msgid "Typographic font converter"
+msgstr "टाइपोग्राफ़िक फ़ॉन्ट कनवर्टर"
 
 #: main.py:71
 #, python-brace-format

@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: Mainuan GRUB Editor\n"
 "Report-Msgid-Bugs-To: https://github.com/MainuanLinux/mainuan-grub-editor/"
 "issues\n"
-"POT-Creation-Date: 2026-11-16 11:30-0300\n"
+"POT-Creation-Date: 2026-11-17 04:08-0300\n"
 "PO-Revision-Date: 2026-11-16 11:30-0300\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: hu <https://github.com/mainuan>\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: assets/org.mainuan.grubeditor.desktop.in:4 core/application.py:23
-#: ui/main_window.py:14
+#: debian/org.mainuan.grubeditor.metainfo.xml.in:8 ui/main_window.py:14
 msgid "Mainuan GRUB Editor"
 msgstr "Mainuan GRUB-szerkesztő"
 
@@ -213,6 +213,7 @@ msgid "Error running update-grub: {err}"
 msgstr "Hiba az update-grub futtatásakor: {err}"
 
 #: core/grub_manager.py:603 core/grub_manager.py:669
+#: debian/org.mainuan.grubeditor.metainfo.xml.in:40
 #: ui/views/boot_entries_view.py:143
 msgid "system"
 msgstr "rendszer"
@@ -286,6 +287,107 @@ msgstr "[ThemeManager] ⚠ Nem sikerült beállítani a GTK-témapreferenciát: 
 #: core/theme_manager.py:186
 msgid "[ThemeManager] ✗✗✗ Failed to initialize theming ✗✗✗"
 msgstr "[ThemeManager] ✗✗✗ Nem sikerült előkészíteni a témakezelést ✗✗✗"
+
+#: debian/org.mainuan.grubeditor.metainfo.xml.in:9
+msgid "Advanced editor for the GRUB bootloader configuration"
+msgstr "Fejlett szerkesztő a GRUB rendszerbetöltő beállításaihoz"
+
+#: debian/org.mainuan.grubeditor.metainfo.xml.in:11
+msgid ""
+"Mainuan GRUB Editor is a comprehensive graphical tool for configuring and "
+"customizing the GRUB2 bootloader. It provides an intuitive interface for "
+"managing boot settings, themes, fonts and custom entries, and follows the "
+"language chosen in KDE Plasma."
+msgstr ""
+"A Mainuan GRUB Editor átfogó grafikus eszköz a GRUB2 rendszerbetöltő "
+"beállításához és testreszabásához. Könnyen kezelhető felületet biztosít az "
+"indítási beállítások, a témák, a betűtípusok és az egyéni bejegyzések "
+"kezeléséhez, és a KDE Plasmában kiválasztott nyelvet használja."
+
+#: debian/org.mainuan.grubeditor.metainfo.xml.in:12
+msgid "Key Features:"
+msgstr "Fő jellemzők:"
+
+#: debian/org.mainuan.grubeditor.metainfo.xml.in:14
+msgid "Available in more than 30 languages"
+msgstr "Több mint 30 nyelven érhető el"
+
+# reviewed: helyesírás: betűszó + köznév kötőjellel (GTK3-felület)
+#: debian/org.mainuan.grubeditor.metainfo.xml.in:15
+msgid "Intuitive GTK3 interface with keyboard shortcuts"
+msgstr "Könnyen kezelhető GTK3-felület gyorsbillentyűkkel"
+
+#: debian/org.mainuan.grubeditor.metainfo.xml.in:16
+msgid "Theme management and installation"
+msgstr "Témák kezelése és telepítése"
+
+#: debian/org.mainuan.grubeditor.metainfo.xml.in:17
+msgid "Custom font conversion and application"
+msgstr "Egyéni betűtípusok átalakítása és alkalmazása"
+
+#: debian/org.mainuan.grubeditor.metainfo.xml.in:18
+msgid "Background image configuration"
+msgstr "Háttérkép beállítása"
+
+#: debian/org.mainuan.grubeditor.metainfo.xml.in:19
+msgid "Custom boot entry management"
+msgstr "Egyéni indítási bejegyzések kezelése"
+
+#: debian/org.mainuan.grubeditor.metainfo.xml.in:20
+msgid "Advanced kernel parameter configuration"
+msgstr "Kernelparaméterek speciális beállítása"
+
+#: debian/org.mainuan.grubeditor.metainfo.xml.in:21
+msgid "Automatic backup and restore functionality"
+msgstr "Automatikus biztonsági mentés és visszaállítás"
+
+#: debian/org.mainuan.grubeditor.metainfo.xml.in:22
+msgid "Safe update-grub integration"
+msgstr "Biztonságos update-grub integráció"
+
+#: debian/org.mainuan.grubeditor.metainfo.xml.in:23
+msgid "Multi-OS detection support"
+msgstr "Több operációs rendszer felismerése"
+
+#: debian/org.mainuan.grubeditor.metainfo.xml.in:38
+msgid "bootloader"
+msgstr "rendszerbetöltő"
+
+#: debian/org.mainuan.grubeditor.metainfo.xml.in:39
+msgid "boot"
+msgstr "rendszerindítás"
+
+#: debian/org.mainuan.grubeditor.metainfo.xml.in:41
+msgid "configure"
+msgstr "beállítás"
+
+#: debian/org.mainuan.grubeditor.metainfo.xml.in:42
+msgid "settings"
+msgstr "beállítások"
+
+#: debian/org.mainuan.grubeditor.metainfo.xml.in:43
+msgid "customize"
+msgstr "testreszabás"
+
+#: debian/org.mainuan.grubeditor.metainfo.xml.in:44
+msgid "theme"
+msgstr "téma"
+
+#: debian/org.mainuan.grubeditor.metainfo.xml.in:55
+msgid "General configuration"
+msgstr "Általános beállítások"
+
+#: debian/org.mainuan.grubeditor.metainfo.xml.in:59
+msgid "Boot entries"
+msgstr "Indítási bejegyzések"
+
+#: debian/org.mainuan.grubeditor.metainfo.xml.in:63
+msgid "Theme, background and color selector"
+msgstr "Téma-, háttér- és színválasztó"
+
+#: debian/org.mainuan.grubeditor.metainfo.xml.in:67
+msgid "Typographic font converter"
+msgstr "Betűtípus-átalakító"
 
 #: main.py:71
 #, python-brace-format
