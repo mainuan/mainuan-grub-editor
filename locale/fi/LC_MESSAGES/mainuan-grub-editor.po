@@ -1,0 +1,868 @@
+# Finnish translations for Mainuan GRUB package.
+# Copyright (C) 2026 Mainuan
+# This file is distributed under the same license as the Mainuan GRUB Editor package.
+# Automatically generated, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Mainuan GRUB Editor\n"
+"Report-Msgid-Bugs-To: https://github.com/MainuanLinux/mainuan-grub-editor/"
+"issues\n"
+"POT-Creation-Date: 2026-11-16 11:30-0300\n"
+"PO-Revision-Date: 2026-11-16 11:30-0300\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: fi <https://github.com/mainuan>\n"
+"Language: fi\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: assets/org.mainuan.grubeditor.desktop.in:4 core/application.py:23
+#: ui/main_window.py:14
+msgid "Mainuan GRUB Editor"
+msgstr "Mainuanin GRUB-editori"
+
+#: assets/org.mainuan.grubeditor.desktop.in:5
+msgid "Graphical editor for GRUB configuration"
+msgstr "GRUB-asetusten graafinen editori"
+
+#: assets/org.mainuan.grubeditor.desktop.in:10
+msgid "grub;boot;system;mainuan;"
+msgstr "grub;käynnistys;käynnistyslatain;järjestelmä;boot;mainuan;"
+
+#: core/application.py:64
+msgid "Shutting down Mainuan Grub Editor..."
+msgstr "Suljetaan Mainuanin GRUB-editoria..."
+
+#: core/application.py:82
+#, python-brace-format
+msgid "Cleanup warning: {err}"
+msgstr "Siivousvaroitus: {err}"
+
+#: core/application.py:86
+#, python-brace-format
+msgid "Starting {name} v{ver}..."
+msgstr "Käynnistetään {name} v{ver}..."
+
+#: core/application.py:95
+msgid "Application initialization completed"
+msgstr "Sovelluksen alustus valmis"
+
+#: core/application.py:123
+#, python-brace-format
+msgid "Desktop Environment: {env}"
+msgstr "Työpöytäympäristö: {env}"
+
+#: core/application.py:126
+#, python-brace-format
+msgid "Error initializing environment detection: {err}"
+msgstr "Virhe ympäristön tunnistuksen alustuksessa: {err}"
+
+#: core/application.py:134
+#, python-brace-format
+msgid "Language initialized: {lang}"
+msgstr "Kieli alustettu: {lang}"
+
+#: core/application.py:143
+#, python-brace-format
+msgid "Error initializing internationalization: {err}"
+msgstr "Virhe kotoistuksen alustuksessa: {err}"
+
+#: core/application.py:150
+#, python-brace-format
+msgid "Theme loaded: {theme}"
+msgstr "Teema ladattu: {theme}"
+
+#: core/application.py:152
+#, python-brace-format
+msgid "Error initializing theming: {err}"
+msgstr "Virhe teemoituksen alustuksessa: {err}"
+
+#: core/application.py:159
+msgid "Synchronizing GRUB configuration..."
+msgstr "Synkronoidaan GRUB-asetuksia..."
+
+#: core/application.py:164
+msgid "GRUB Manager initialized"
+msgstr "GRUB-hallinta alustettu"
+
+#: core/application.py:166
+#, python-brace-format
+msgid "Error initializing GRUB Manager: {err}"
+msgstr "Virhe GRUB-hallinnan alustuksessa: {err}"
+
+#: core/application.py:183
+#, python-brace-format
+msgid "Error setting application icon: {err}"
+msgstr "Virhe sovelluskuvakkeen asettamisessa: {err}"
+
+#: core/application.py:211
+#, python-brace-format
+msgid "Error creating main window: {err}"
+msgstr "Virhe pääikkunan luomisessa: {err}"
+
+#: core/application.py:226
+msgid "About"
+msgstr "Tietoa"
+
+#: core/application.py:232
+msgid "Quit"
+msgstr "Lopeta"
+
+#: core/application.py:236
+#, python-brace-format
+msgid "Error setting up application menu: {err}"
+msgstr "Virhe sovellusvalikon määrittämisessä: {err}"
+
+#: core/application.py:245
+#, python-brace-format
+msgid "Received signal {num}, shutting down..."
+msgstr "Vastaanotettiin signaali {num}, suljetaan..."
+
+#: core/application.py:261
+#, python-brace-format
+msgid "Application error: {err}"
+msgstr "Sovellusvirhe: {err}"
+
+#: core/grub_manager.py:38
+#, python-brace-format
+msgid "GRUB config not found at {}"
+msgstr "GRUB-asetuksia ei löytynyt sijainnista {}"
+
+#: core/grub_manager.py:56
+#, python-brace-format
+msgid "Error reading GRUB config: {}"
+msgstr "Virhe GRUB-asetusten lukemisessa: {}"
+
+#: core/grub_manager.py:168
+#, python-brace-format
+msgid "Successfully saved config to {path}"
+msgstr "Asetukset tallennettiin onnistuneesti: {path}"
+
+#: core/grub_manager.py:182
+msgid "Successfully saved config using pkexec"
+msgstr "Asetukset tallennettiin onnistuneesti pkexecillä"
+
+#: core/grub_manager.py:185
+#, python-brace-format
+msgid "Failed to save config: {err}"
+msgstr "Asetusten tallennus epäonnistui: {err}"
+
+#: core/grub_manager.py:189
+#, python-brace-format
+msgid "Error saving GRUB config: {err}"
+msgstr "Virhe GRUB-asetusten tallentamisessa: {err}"
+
+#: core/grub_manager.py:225 core/grub_manager.py:236
+#, python-brace-format
+msgid "Removed key {key} from config"
+msgstr "Avain {key} poistettiin asetuksista"
+
+#: core/grub_manager.py:241
+#, python-brace-format
+msgid "Error removing config key: {err}"
+msgstr "Virhe asetusavaimen poistamisessa: {err}"
+
+#: core/grub_manager.py:267
+#, python-brace-format
+msgid "Set {script} active={active}"
+msgstr "Asetettu {script} active={active}"
+
+#: core/grub_manager.py:269
+#, python-brace-format
+msgid "Failed to change {script} permissions: {err}"
+msgstr "Käyttöoikeuksien muuttaminen epäonnistui ({script}): {err}"
+
+#: core/grub_manager.py:306
+#, python-brace-format
+msgid "Removed background cache: {path}"
+msgstr "Taustakuvan välimuisti poistettiin: {path}"
+
+#: core/grub_manager.py:308
+#, python-brace-format
+msgid "Failed to remove cache {path}: {err}"
+msgstr "Välimuistin poisto epäonnistui ({path}): {err}"
+
+#: core/grub_manager.py:400
+#, python-brace-format
+msgid "Failed to write custom.cfg: {err}"
+msgstr "custom.cfg-tiedoston kirjoitus epäonnistui: {err}"
+
+#: core/grub_manager.py:403
+#, python-brace-format
+msgid "Error writing custom.cfg: {err}"
+msgstr "Virhe custom.cfg-tiedoston kirjoittamisessa: {err}"
+
+#: core/grub_manager.py:425
+msgid "update-grub not found"
+msgstr "update-grubia ei löytynyt"
+
+#: core/grub_manager.py:437
+msgid "Successfully updated GRUB"
+msgstr "GRUB päivitettiin onnistuneesti"
+
+#: core/grub_manager.py:440
+#, python-brace-format
+msgid "Failed to update GRUB: {err}"
+msgstr "GRUBin päivitys epäonnistui: {err}"
+
+#: core/grub_manager.py:443
+#, python-brace-format
+msgid "Error running update-grub: {err}"
+msgstr "Virhe update-grubin suorittamisessa: {err}"
+
+#: core/grub_manager.py:603 core/grub_manager.py:669
+#: ui/views/boot_entries_view.py:143
+msgid "system"
+msgstr "järjestelmä"
+
+#: core/grub_manager.py:605
+msgid "recovery"
+msgstr "palautus"
+
+#: core/grub_manager.py:607 core/grub_manager.py:660
+msgid "memtest"
+msgstr "muistitesti"
+
+#: core/grub_manager.py:609
+msgid "firmware"
+msgstr "laiteohjelmisto"
+
+#: core/grub_manager.py:650
+#, python-brace-format
+msgid "Error parsing grub.cfg: {}"
+msgstr "Virhe grub.cfg-tiedoston jäsentämisessä: {}"
+
+#: core/grub_manager.py:742
+#, python-brace-format
+msgid "Refusing to delete unexpected file: {}"
+msgstr "Odottamattoman tiedoston poisto estettiin: {}"
+
+#: core/grub_manager.py:752
+#, python-brace-format
+msgid "Could not delete {}: {}"
+msgstr "Poisto epäonnistui ({}): {}"
+
+#: core/grub_manager.py:776
+#, python-brace-format
+msgid "Could not write to {}: {}"
+msgstr "Kirjoitus epäonnistui ({}): {}"
+
+#: core/grub_manager.py:800 core/grub_manager.py:861
+#, python-brace-format
+msgid "Could not read {}: {}"
+msgstr "Luku epäonnistui ({}): {}"
+
+#: core/grub_manager.py:829 core/grub_manager.py:890
+#, python-brace-format
+msgid "Entry '{}' not found in {}"
+msgstr "Merkintää '{}' ei löytynyt tiedostosta {}"
+
+#: core/grub_manager.py:837 core/grub_manager.py:898
+#, python-brace-format
+msgid "Could not write {}: {}"
+msgstr "Kirjoitus epäonnistui ({}): {}"
+
+#: core/theme_manager.py:78
+msgid "[ThemeManager] WARNING: No theme found, using 'dark'"
+msgstr "[ThemeManager] VAROITUS: Teemaa ei löytynyt, käytetään teemaa 'dark'"
+
+#: core/theme_manager.py:101
+#, python-brace-format
+msgid "[ThemeManager] ✗ ERROR: Theme file not found: {}"
+msgstr "[ThemeManager] ✗ VIRHE: Teematiedostoa ei löytynyt: {}"
+
+#: core/theme_manager.py:115
+#, python-brace-format
+msgid "[ThemeManager] ✗ ERROR loading theme: {}"
+msgstr "[ThemeManager] ✗ VIRHE teeman latauksessa: {}"
+
+#: core/theme_manager.py:130
+#, python-brace-format
+msgid "[ThemeManager] ⚠ Could not set GTK theme preference: {}"
+msgstr "[ThemeManager] ⚠ GTK-teeman asetusta ei voitu määrittää: {}"
+
+#: core/theme_manager.py:186
+msgid "[ThemeManager] ✗✗✗ Failed to initialize theming ✗✗✗"
+msgstr "[ThemeManager] ✗✗✗ Teemoituksen alustus epäonnistui ✗✗✗"
+
+#: main.py:71
+#, python-brace-format
+msgid "Warning: Pre-elevation detection failed: {}"
+msgstr "Varoitus: Tunnistus ennen oikeuksien korotusta epäonnistui: {}"
+
+#: main.py:130
+#, python-brace-format
+msgid "Failed to elevate privileges: {}"
+msgstr "Oikeuksien korotus epäonnistui: {}"
+
+#: main.py:138
+#, python-brace-format
+msgid "Import error: {}"
+msgstr "Tuontivirhe: {}"
+
+#: main.py:139
+msgid ""
+"Ensure dependencies are installed: sudo apt install python3-gi python3-gi-"
+"cairo gir1.2-gtk-3.0"
+msgstr ""
+"Varmista, että riippuvuudet on asennettu: sudo apt install python3-gi "
+"python3-gi-cairo gir1.2-gtk-3.0"
+
+#: main.py:142
+#, python-brace-format
+msgid "Application error: {}"
+msgstr "Sovellusvirhe: {}"
+
+#: ui/main_window.py:68
+msgid "Main window created successfully"
+msgstr "Pääikkuna luotiin onnistuneesti"
+
+#: ui/main_window.py:83
+#, python-brace-format
+msgid "[DEBUG] Desktop detected: {}"
+msgstr "[DEBUG] Tunnistettu työpöytä: {}"
+
+#: ui/main_window.py:87
+msgid "Using native window decorations (SSD)"
+msgstr "Käytetään järjestelmän ikkunakehyksiä (SSD)"
+
+#: ui/main_window.py:91
+msgid "Creating Client-Side Decorations (CSD)"
+msgstr "Luodaan asiakaspuolen ikkunakehykset (CSD)"
+
+#: ui/main_window.py:129
+msgid "General Configuration"
+msgstr "Perusasetukset"
+
+#: ui/main_window.py:132
+msgid "Boot Entries"
+msgstr "Käynnistysvalikon merkinnät"
+
+#: ui/main_window.py:135
+msgid "Appearance"
+msgstr "Ulkoasu"
+
+#: ui/main_window.py:150 ui/main_window.py:246
+msgid "Ready"
+msgstr "Valmis"
+
+#: ui/main_window.py:210
+msgid "GNOME"
+msgstr "GNOME"
+
+#: ui/main_window.py:211 ui/main_window.py:212
+msgid "KDE Plasma"
+msgstr "KDE Plasma"
+
+#: ui/main_window.py:213
+msgid "XFCE"
+msgstr "XFCE"
+
+# from mainuan-gestao-drivers
+#: ui/main_window.py:214 ui/main_window.py:216 ui/main_window.py:223
+#: ui/main_window.py:225 ui/views/general_view.py:218
+msgid "Unknown"
+msgstr "Tuntematon"
+
+#: ui/main_window.py:221
+msgid "X11"
+msgstr "X11"
+
+#: ui/main_window.py:222
+msgid "Wayland"
+msgstr "Wayland"
+
+#: ui/main_window.py:236
+msgid "Working..."
+msgstr "Käsitellään..."
+
+#: ui/main_window.py:256
+msgid "GRUB boot loader manager for Mainuan Linux."
+msgstr "Mainuan Linuxin GRUB-käynnistyslataimen hallinta."
+
+#: ui/main_window.py:326
+msgid "Main window closing..."
+msgstr "Pääikkuna suljetaan..."
+
+#: ui/views/appearance_view.py:41 ui/views/appearance_view.py:119
+msgid "Theme"
+msgstr "Teema"
+
+#: ui/views/appearance_view.py:46
+msgid "Preview"
+msgstr "Esikatselu"
+
+#: ui/views/appearance_view.py:78
+msgid "Themes include colors and fonts. Use 'Background' tab for custom setup."
+msgstr ""
+"Teemat sisältävät värit ja fontit. Käytä Tausta-välilehteä omiin asetuksiin."
+
+#: ui/views/appearance_view.py:86
+msgid "Theme:"
+msgstr "Teema:"
+
+#: ui/views/appearance_view.py:99
+msgid "Install..."
+msgstr "Asenna..."
+
+#: ui/views/appearance_view.py:103
+msgid "Apply"
+msgstr "Käytä"
+
+#: ui/views/appearance_view.py:108
+msgid "Disable"
+msgstr "Poista käytöstä"
+
+#: ui/views/appearance_view.py:112 ui/views/appearance_view.py:143
+msgid "Remove"
+msgstr "Poista"
+
+#: ui/views/appearance_view.py:128
+msgid "Background image:"
+msgstr "Taustakuva:"
+
+#: ui/views/appearance_view.py:134
+msgid "No image selected"
+msgstr "Kuvaa ei ole valittu"
+
+#: ui/views/appearance_view.py:139 ui/views/appearance_view.py:231
+msgid "Browse..."
+msgstr "Selaa..."
+
+#: ui/views/appearance_view.py:155
+msgid "Colors (when not using theme):"
+msgstr "Värit (kun teemaa ei käytetä):"
+
+#: ui/views/appearance_view.py:162
+msgid "Text color:"
+msgstr "Tekstin väri:"
+
+#: ui/views/appearance_view.py:173
+msgid "Background color:"
+msgstr "Taustaväri:"
+
+#: ui/views/appearance_view.py:184
+msgid "Highlight text:"
+msgstr "Korostettu teksti:"
+
+#: ui/views/appearance_view.py:195
+msgid "Highlight background:"
+msgstr "Korostuksen tausta:"
+
+#: ui/views/appearance_view.py:205 ui/views/appearance_view.py:811
+msgid "Apply Appearance Settings"
+msgstr "Ota ulkoasuasetukset käyttöön"
+
+#: ui/views/appearance_view.py:210
+msgid "Background"
+msgstr "Tausta"
+
+#: ui/views/appearance_view.py:219
+msgid "Convert TrueType fonts to GRUB format (PF2):"
+msgstr "Muunna TrueType-fontit GRUB-muotoon (PF2):"
+
+#: ui/views/appearance_view.py:227
+msgid "Select TTF/OTF font file..."
+msgstr "Valitse TTF/OTF-fonttitiedosto..."
+
+#: ui/views/appearance_view.py:238
+msgid "Font size:"
+msgstr "Fonttikoko:"
+
+#: ui/views/appearance_view.py:248
+msgid "Convert and Install Font"
+msgstr "Muunna ja asenna fontti"
+
+#: ui/views/appearance_view.py:254
+msgid "Installed GRUB fonts:"
+msgstr "Asennetut GRUB-fontit:"
+
+#: ui/views/appearance_view.py:266
+msgid "Apply selected font"
+msgstr "Käytä valittua fonttia"
+
+#: ui/views/appearance_view.py:271
+msgid "Remove selected font"
+msgstr "Poista valittu fontti"
+
+#: ui/views/appearance_view.py:278
+msgid "Fonts"
+msgstr "Fontit"
+
+#: ui/views/appearance_view.py:294 ui/views/appearance_view.py:992
+msgid "Font Applied"
+msgstr "Fontti otettu käyttöön"
+
+#: ui/views/appearance_view.py:296
+msgid "Failed to save font configuration to /etc/default/grub"
+msgstr "Fonttiasetusten tallennus tiedostoon /etc/default/grub epäonnistui"
+
+#: ui/views/appearance_view.py:310
+msgid "Delete Font?"
+msgstr "Poistetaanko fontti?"
+
+#: ui/views/appearance_view.py:313
+#, python-brace-format
+msgid "Are you sure you want to permanently delete '{}'?"
+msgstr "Haluatko varmasti poistaa kohteen '{}' pysyvästi?"
+
+#: ui/views/appearance_view.py:345
+msgid "Font deleted. GRUB configuration updated."
+msgstr "Fontti poistettiin. GRUB-asetukset päivitettiin."
+
+#: ui/views/appearance_view.py:347
+msgid "Font deleted successfully."
+msgstr "Fontti poistettiin onnistuneesti."
+
+#: ui/views/appearance_view.py:350
+#, python-brace-format
+msgid "Failed to delete font: {}"
+msgstr "Fontin poisto epäonnistui: {}"
+
+#: ui/views/appearance_view.py:494
+msgid "Select theme archive"
+msgstr "Valitse teema-arkisto"
+
+#: ui/views/appearance_view.py:504
+msgid "Theme archives"
+msgstr "Teema-arkistot"
+
+#: ui/views/appearance_view.py:539
+msgid "Unsupported archive format"
+msgstr "Arkistomuotoa ei tueta"
+
+#: ui/views/appearance_view.py:544
+#, python-brace-format
+msgid "Failed to extract archive: {}"
+msgstr "Arkiston purku epäonnistui: {}"
+
+#: ui/views/appearance_view.py:555
+msgid "No theme.txt found in archive"
+msgstr "Arkistosta ei löytynyt tiedostoa theme.txt"
+
+#: ui/views/appearance_view.py:571
+#, python-brace-format
+msgid "Theme '{}' installed successfully!"
+msgstr "Teema '{}' asennettiin onnistuneesti!"
+
+#: ui/views/appearance_view.py:575
+#, python-brace-format
+msgid "Failed to install theme: {}"
+msgstr "Teeman asennus epäonnistui: {}"
+
+#: ui/views/appearance_view.py:578
+#, python-brace-format
+msgid "Error installing theme: {}"
+msgstr "Virhe teeman asennuksessa: {}"
+
+#: ui/views/appearance_view.py:592
+msgid "Apply Theme"
+msgstr "Ota teema käyttöön"
+
+#: ui/views/appearance_view.py:595
+#, python-brace-format
+msgid ""
+"Applying theme '{}' will disable any custom background and colors. Continue?"
+msgstr ""
+"Teeman '{}' käyttöönotto poistaa käytöstä mukautetun taustan ja värit. "
+"Jatketaanko?"
+
+#: ui/views/appearance_view.py:608
+msgid "Theme applied successfully!"
+msgstr "Teema otettiin käyttöön onnistuneesti!"
+
+#: ui/views/appearance_view.py:617
+msgid "Disable Theme"
+msgstr "Poista teema käytöstä"
+
+#: ui/views/appearance_view.py:619
+msgid "This will remove the theme and set default colors. Continue?"
+msgstr "Tämä poistaa teeman ja asettaa oletusvärit. Jatketaanko?"
+
+#: ui/views/appearance_view.py:635
+msgid "Theme disabled."
+msgstr "Teema poistettiin käytöstä."
+
+#: ui/views/appearance_view.py:646 ui/views/boot_entries_view.py:186
+#: ui/views/general_view.py:407
+msgid "Run update-grub now to apply changes?"
+msgstr "Suoritetaanko update-grub nyt muutosten käyttöön ottamiseksi?"
+
+#: ui/views/appearance_view.py:657 ui/views/appearance_view.py:952
+#: ui/views/general_view.py:418
+msgid "Success"
+msgstr "Onnistui"
+
+#: ui/views/appearance_view.py:659
+msgid "GRUB configuration updated successfully!"
+msgstr "GRUB-asetukset päivitettiin onnistuneesti!"
+
+#: ui/views/appearance_view.py:668 ui/views/appearance_view.py:681
+#: ui/views/appearance_view.py:929 ui/views/appearance_view.py:966
+#: ui/views/appearance_view.py:978 ui/views/boot_entries_view.py:199
+#: ui/views/general_view.py:429 ui/views/general_view.py:440
+msgid "Error"
+msgstr "Virhe"
+
+#: ui/views/appearance_view.py:670
+msgid "Failed to update GRUB. Check logs for details."
+msgstr "GRUBin päivitys epäonnistui. Katso lisätietoja lokeista."
+
+#: ui/views/appearance_view.py:694
+msgid "Information"
+msgstr "Tiedot"
+
+#: ui/views/appearance_view.py:711
+msgid "Remove Theme"
+msgstr "Poista teema"
+
+#: ui/views/appearance_view.py:714
+#, python-brace-format
+msgid "This will permanently delete theme '{}'. Are you sure?"
+msgstr "Tämä poistaa teeman '{}' pysyvästi. Oletko varma?"
+
+#: ui/views/appearance_view.py:729
+#, python-brace-format
+msgid "Theme '{}' removed successfully!"
+msgstr "Teema '{}' poistettiin onnistuneesti!"
+
+#: ui/views/appearance_view.py:738
+#, python-brace-format
+msgid "Failed to remove theme: {}"
+msgstr "Teeman poisto epäonnistui: {}"
+
+#: ui/views/appearance_view.py:749
+msgid "Select background image"
+msgstr "Valitse taustakuva"
+
+#: ui/views/appearance_view.py:759
+msgid "Images"
+msgstr "Kuvat"
+
+#: ui/views/appearance_view.py:777
+msgid "Remove Background"
+msgstr "Poista tausta"
+
+#: ui/views/appearance_view.py:779
+msgid "This will remove the background image from GRUB. Continue?"
+msgstr "Tämä poistaa taustakuvan GRUBista. Jatketaanko?"
+
+#: ui/views/appearance_view.py:814
+msgid ""
+"This will disable any theme and use your custom background/colors. Continue?"
+msgstr ""
+"Tämä poistaa käytöstä mahdollisen teeman ja käyttää omaa taustaasi ja "
+"värejäsi. Jatketaanko?"
+
+#: ui/views/appearance_view.py:856
+msgid "Settings applied successfully!"
+msgstr "Asetukset otettiin käyttöön onnistuneesti!"
+
+#: ui/views/appearance_view.py:895
+msgid "Select font file"
+msgstr "Valitse fonttitiedosto"
+
+#: ui/views/appearance_view.py:906
+msgid "Font files"
+msgstr "Fonttitiedostot"
+
+#: ui/views/appearance_view.py:931
+msgid "Please select a valid font file."
+msgstr "Valitse kelvollinen fonttitiedosto."
+
+#: ui/views/appearance_view.py:954
+#, python-brace-format
+msgid "Font converted and installed: {}"
+msgstr "Fontti muunnettiin ja asennettiin: {}"
+
+#: ui/views/appearance_view.py:968
+#, python-brace-format
+msgid "Failed to convert font: {}"
+msgstr "Fontin muunnos epäonnistui: {}"
+
+#: ui/views/boot_entries_view.py:59
+msgid "Name:"
+msgstr "Nimi:"
+
+#: ui/views/boot_entries_view.py:70
+msgid "Type:"
+msgstr "Tyyppi:"
+
+#: ui/views/boot_entries_view.py:80
+msgid "Path"
+msgstr "Polku"
+
+#: ui/views/boot_entries_view.py:90
+msgid "Enabled"
+msgstr "Käytössä"
+
+#: ui/views/boot_entries_view.py:103
+msgid "Add entry"
+msgstr "Lisää merkintä"
+
+#: ui/views/boot_entries_view.py:108
+msgid "Remove entry"
+msgstr "Poista merkintä"
+
+#: ui/views/boot_entries_view.py:134
+#, python-brace-format
+msgid "Entry {}"
+msgstr "Merkintä {}"
+
+#: ui/views/boot_entries_view.py:212
+msgid "Not supported"
+msgstr "Ei tuettu"
+
+#: ui/views/boot_entries_view.py:215
+msgid ""
+"This entry belongs to an installed kernel or operating system. GRUB "
+"regenerates it automatically from what's installed on your disk, so it can't "
+"be disabled or removed individually here — you would need to uninstall the "
+"kernel or operating system itself."
+msgstr ""
+"Tämä merkintä kuuluu asennettuun ytimeen tai käyttöjärjestelmään. GRUB luo "
+"sen automaattisesti uudelleen levylle asennettujen ohjelmien perusteella, "
+"joten sitä ei voi poistaa käytöstä tai poistaa yksittäin täällä – sinun "
+"pitäisi poistaa itse ydin tai käyttöjärjestelmä."
+
+#: ui/views/boot_entries_view.py:242 ui/views/boot_entries_view.py:357
+msgid "Could not update the entry"
+msgstr "Merkintää ei voitu päivittää"
+
+#: ui/views/boot_entries_view.py:250
+msgid "Add Entry"
+msgstr "Lisää merkintä"
+
+#: ui/views/boot_entries_view.py:255
+msgid "Cancel"
+msgstr "Peru"
+
+#: ui/views/boot_entries_view.py:256
+msgid "Save"
+msgstr "Tallenna"
+
+#: ui/views/boot_entries_view.py:268
+msgid ""
+"Write the raw GRUB menuentry block (this is appended to /etc/grub.d/"
+"40_custom):"
+msgstr ""
+"Kirjoita GRUBin menuentry-lohko raakamuodossa (se lisätään tiedoston /etc/"
+"grub.d/40_custom loppuun):"
+
+#: ui/views/boot_entries_view.py:300
+msgid "Failed to save the custom entry"
+msgstr "Mukautetun merkinnän tallennus epäonnistui"
+
+#: ui/views/boot_entries_view.py:325 ui/views/boot_entries_view.py:344
+msgid "Remove Entry"
+msgstr "Poista merkintä"
+
+#: ui/views/boot_entries_view.py:328
+#, python-brace-format
+msgid ""
+"Delete '{}' from /boot? This also removes its serial-console variant, since "
+"both share the same file."
+msgstr ""
+"Poistetaanko '{}' kansiosta /boot? Tämä poistaa myös sen "
+"sarjakonsoliversion, koska molemmat käyttävät samaa tiedostoa."
+
+#: ui/views/boot_entries_view.py:347
+#, python-brace-format
+msgid "Delete '{}' from /etc/grub.d/40_custom? This cannot be undone."
+msgstr ""
+"Poistetaanko '{}' tiedostosta /etc/grub.d/40_custom? Tätä ei voi kumota."
+
+#: ui/views/general_view.py:40
+msgid "Boot Configuration"
+msgstr "Käynnistysasetukset"
+
+#: ui/views/general_view.py:50
+msgid "Default Boot Mode:"
+msgstr "Oletuskäynnistystila:"
+
+#: ui/views/general_view.py:57
+msgid "Fixed entry"
+msgstr "Kiinteä merkintä"
+
+#: ui/views/general_view.py:58
+msgid "Last installed kernel"
+msgstr "Viimeksi asennettu ydin"
+
+#: ui/views/general_view.py:59
+msgid "Last booted kernel"
+msgstr "Viimeksi käynnistetty ydin"
+
+#: ui/views/general_view.py:68
+msgid "Default Boot Entry:"
+msgstr "Oletuskäynnistysmerkintä:"
+
+#: ui/views/general_view.py:86
+msgid "Timeout (seconds):"
+msgstr "Aikakatkaisu (sekuntia):"
+
+#: ui/views/general_view.py:101
+msgid "Screen Resolution:"
+msgstr "Näytön tarkkuus:"
+
+#: ui/views/general_view.py:121
+msgid "auto"
+msgstr "automaattinen"
+
+#: ui/views/general_view.py:138
+msgid "Advanced Options"
+msgstr "Lisäasetukset"
+
+#: ui/views/general_view.py:147
+msgid "Detect other operating systems"
+msgstr "Tunnista muut käyttöjärjestelmät"
+
+#: ui/views/general_view.py:151
+msgid "Show boot menu"
+msgstr "Näytä käynnistysvalikko"
+
+#: ui/views/general_view.py:156
+msgid "Include recovery options"
+msgstr "Sisällytä palautusvaihtoehdot"
+
+#: ui/views/general_view.py:164
+msgid "Kernel Parameters"
+msgstr "Ytimen parametrit"
+
+#: ui/views/general_view.py:174
+msgid "Kernel Parameters:"
+msgstr "Ytimen parametrit:"
+
+#: ui/views/general_view.py:179
+msgid "quiet splash resume=UUID=..."
+msgstr "quiet splash resume=UUID=..."
+
+#: ui/views/general_view.py:188
+msgid "Apply Changes"
+msgstr "Ota muutokset käyttöön"
+
+#: ui/views/general_view.py:302
+#, python-brace-format
+msgid "Error loading GRUB config: {}"
+msgstr "Virhe GRUB-asetusten lataamisessa: {}"
+
+#: ui/views/general_view.py:330
+msgid "Menu cannot be shown when timeout is 0"
+msgstr "Valikkoa ei voi näyttää, kun aikakatkaisu on 0"
+
+#: ui/views/general_view.py:405
+msgid "Changes Saved"
+msgstr "Muutokset tallennettu"
+
+#: ui/views/general_view.py:420
+msgid "GRUB updated successfully!"
+msgstr "GRUB päivitettiin onnistuneesti!"
+
+#: ui/views/general_view.py:431
+msgid "Failed to update GRUB"
+msgstr "GRUBin päivitys epäonnistui"
+
+#: ui/views/general_view.py:442
+msgid "Failed to save configuration"
+msgstr "Asetusten tallennus epäonnistui"
