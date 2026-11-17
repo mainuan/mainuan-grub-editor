@@ -17,6 +17,9 @@ Graphical editor for the GRUB configuration: boot settings, menu entries, themes
 
 ---
 
+<p align="center"><img src="docs/screenshots/grub-editor.png" width="760" alt="Mainuan GRUB Editor, General settings tab"></p>
+
+
 ## About
 
 Mainuan GRUB Editor edits `/etc/default/grub` and the boot menu appearance

@@ -17,6 +17,9 @@ Editor gráfico da configuração do GRUB: inicialização, entradas do menu, te
 
 ---
 
+<p align="center"><img src="docs/screenshots/grub-editor.png" width="760" alt="Editor GRUB Mainuan, aba Configuração geral"></p>
+
+
 ## O que é
 
 O Mainuan GRUB Editor altera o `/etc/default/grub` e a aparência do menu de
